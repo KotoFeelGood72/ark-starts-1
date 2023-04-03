@@ -5,7 +5,6 @@ mixin head(array)
 	meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
 	meta(name="apple-mobile-web-app-capable", content="yes")
 	meta(name="format-detection", content="telephone=no")
-
 	if production_status === 'production'
 		link(rel='shortcut icon' href='/i/global/favicon.ico')
 		link(rel='icon' sizes='16x16 32x32 64x64' href='/i/global/favicon.ico')
@@ -45,6 +44,8 @@ mixin scripts
 	script(src="js/libs.js")
 	script(src='js/menu.js')
 	script(src='js/main.js')
+	if iconFramework === true 
+		<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
 //- scripts from cdn
 mixin script_cdn(array)

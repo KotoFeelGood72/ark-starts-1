@@ -22,10 +22,7 @@ function modal() {
 		el.addEventListener('click', function(e) {
 			e.preventDefault();
 			let path = e.currentTarget.dataset.target
-			
 			popup.forEach((el) => {
-				isRemove(el)
-				console.log('Good')
 				if(el.dataset.id == path) {
 					isOpen(el)
 				}

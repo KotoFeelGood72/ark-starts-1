@@ -378,13 +378,17 @@ gulp.task('set-prod-node-env', function(done) {
 	done();
 });
 
+
+
+
+
+
 let taskArray = {
 	development: gulp.series(
 		'set-dev-node-env',
 		gulp.parallel(
 			'pug',
 			'sass',
-			// 'imgWebp',
 			'imgMinify',
 			'imageSync',
 			'fontsSync',
