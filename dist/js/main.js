@@ -16,6 +16,7 @@ $(document).ready(function ($) {
 	$body = $('body');
 });
 
+
 $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
@@ -76,6 +77,23 @@ if ('objectFit' in document.documentElement.style === false) {
 		);
 	});
 }
+
+
+let randomAlert = true
+const btnSubmit = document.querySelectorAll('input[type="submit"]')
+Array.from(btnSubmit).map((item) => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
+
+		if(randomAlert) {
+			succes('.success')
+			randomAlert = false
+		} else {
+			failed('.failed')
+			randomAlert = true
+		}
+	})
+})
 
 function succes(success) {
 	$(success).toggleClass('active');

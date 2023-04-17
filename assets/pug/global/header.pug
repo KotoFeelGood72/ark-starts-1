@@ -1,4 +1,15 @@
 header.header 
 	.section_in 
 		.header_main
-				
+			.header_col--right
+				.header_logo 
+					include ../components/logo
+				nav.header_nav 
+					ul 	
+						each item in ['Чем занимаемся', 'Преимущества', 'Услуги', 'Отзывы', 'Контакты']
+							li 
+								a(href="#")=item
+			ul.header_contacts 
+				each item in ['mail@mail.ru', '+7 000 000 00 00']
+					li 
+						a(href="#") 

@@ -1,0 +1,8 @@
+mixin btn(data)
+	.btn
+		if data.link
+			a(href=data.linkUrl)=data.link
+		else if data.submit
+			input(type="submit" value=data.submit)
+		else
+			button(type="button" data-target=data.target class="trigger")=data.name

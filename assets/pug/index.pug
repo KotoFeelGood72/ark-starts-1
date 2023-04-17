@@ -3,9 +3,50 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
-	section.start(style="background: url('../i/start.jpg') center/cover no-repeat") 
+	section.hero 
 		.section_in 
-			.start_row 
-				h1 Start development by Arkada Web Studio
-				<span class="iconify-inline" data-icon="fa-solid:home"></span>
-	
+			.hero_main 
+				.hero_title_w 
+					h1 Изделия из металла
+					+btn({
+						name: 'Оставить заявку',
+					})
+				.hero_txt 
+					p Находимся в Краснодаре.
+					p Работаем с большой разновидностью металлов, придавая им самые замысловатые формы и узоры.
+			.hero_bottom 
+				ul.social-list 
+					each item in ['wa', 'tg', 'vk']
+						li 
+							a(href="#")
+								+icon(item)
+	section.about 
+		.section_in 
+			.about_main 
+				.about_head 
+					h2 металл, говорящий за себя 
+					.about_txt 
+						p Изготовление металлических изделий в Краснодаре под заказ является основным направлением деятельности компании.
+						p Мы располагаем собственной производственной базой, а также оборудованием, позволяющим с высокой точностью обрабатывать детали.
+				.about_img 
+					img(src="i/about-bg.jpg", alt="")
+	section.production 
+		.section_in 
+			.production_main 
+				.production_head 
+					h3 изготовление под заказ
+					.production_txt 
+						p Изготовление в Краснодаре под заказ: мебель в стиле лофт, мангалы, печи, навесы, лестницы и перила, 3д изделия из металла, заборы, ворота, ворота секционные, ролеты, любые изделия из металла.
+				.production_slider_w 
+					.slider-nav 
+						.slide-prev
+							+icon('prev')
+						.slide-next
+							+icon('next')
+					.production_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 14; i++)
+								 
+							.swiper-slide 
+								.production-slide 
+									img(src="", alt="")
