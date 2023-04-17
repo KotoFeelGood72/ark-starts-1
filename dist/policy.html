@@ -1,5 +1,8 @@
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
+<!-- Btn mixin-->
+<!-- End-->
+<!-- Input-->
+<!-- End input--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -13,10 +16,23 @@
   <body>
     <header class="header"> 
       <div class="section_in"> 
-        <div class="header_main"></div>
+        <div class="header_main">
+          <div class="header_logo"> <a href="#"><img src="i/logo.svg" alt=""></a></div>
+          <nav class="header_nav">
+            <ul id="header_navigation">
+              <li data-menuanchor="main"> <a href="#main">главная</a></li>
+              <li data-menuanchor="about"> <a href="#about">обо мне</a></li>
+              <li data-menuanchor="course"> <a href="#course">курсы</a></li>
+              <li data-menuanchor="studio"> <a href="#studio">студия</a></li>
+              <li data-menuanchor="reviews"> <a href="#reviews">отзывы</a></li>
+              <li data-menuanchor="contacts"> <a href="#contacts">контакты</a></li>
+            </ul>
+          </nav>
+          <div class="burger-nav trigger" data-target="burger"> <span> </span><span> </span><span> </span></div>
+        </div>
       </div>
     </header>
-    <div class="wrapper">
+    <div class="wrapper" id="pagepiling">
       <div class="base">
         <section class="policy"> 
           <div class="section_in"> 
@@ -210,11 +226,6 @@
           </div>
         </section>
       </div>
-      <footer class="footer"> 
-        <div class="section_in"> 
-          <div class="footer_main"> </div>
-        </div>
-      </footer>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
@@ -222,8 +233,89 @@
     <script>window.TweenMax || document.write('<script src="js/gsap.min.js"><\/script>')</script>
     <script type="text/javascript">window.productionStatus = 'development';</script>
     <script src="js/libs.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_course" data-id="course"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main_w"> 
+        <div class="popup_close remove">
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <h3 class="fz32">Базовый курс по маникюру с нуля</h3>
+        <div class="popup_main"> 
+          <div class="popup_content vertical-scroll"> 
+            <div class="popup_time"> 
+              <svg class="icon icon-time ">
+                <use xlink:href="i/sprite/sprite.svg#time"></use>
+              </svg><span class="fz16">4 дня</span>
+            </div>
+            <div class="popup-txt"> <b>Теоретический блок включает:</b>
+              <ul class="default-list">
+                <li>Строение ногтевого аппарата;</li>
+                <li>Материаловедение. Разбор инструментов, необходимых для выполнения работы;</li>
+                <li>Санитарная обработка инструментов, рабочего места мастера;</li>
+                <li>Последовательность выполнения работы.</li>
+              </ul>
+            </div>
+            <div class="popup-txt"> <b>Практический блок включает:</b>
+              <ul class="default-list">
+                <li>Строение ногтевого аппарата;</li>
+                <li>Материаловедение. Разбор инструментов, необходимых для выполнения работы;</li>
+                <li>Санитарная обработка инструментов, рабочего места мастера;</li>
+                <li>Последовательность выполнения работы.</li>
+              </ul>
+            </div>
+            <div class="popup-txt"> 
+              <ul class="quote_list">
+                <li> 
+                  <div class="list-icon"><img src="i/global/check.svg" alt=""></div>
+                  <p>По окончанию выдается сертификат и диплом гос. образца</p>
+                </li>
+                <li> 
+                  <div class="list-icon"><img src="i/global/check.svg" alt=""></div>
+                  <p>Все инструменты и материалы предоставляются на время курса</p>
+                </li>
+                <li>
+                  <div class="list-icon"><img src="i/global/question.svg" alt=""></div>
+                  <p>Подходит для тех, кто никогда не работал в сфере маникюра или работает в классической технике, но решил освоить аппарат</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="popup_right"> 
+            <div class="popup_img"> <img src="i/popup.jpg" alt=""></div>
+            <div class="popup_bottom--action">
+              <div class="popup_price"> <span class="fz20">Стоимость:</span>
+                <p class="fz32">100 000</p>
+              </div>
+              <div class="btn btn_border--big remove" data-menuanchor="contacts"><a href="#contacts" target="">Записаться на обучение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup burger" data-id="burger"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main_w">
+        <div class="popup_close remove">
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <nav class="burger_nav remove">
+          <ul>
+            <li> <a href="#main">главная</a></li>
+            <li> <a href="#about">обо мне</a></li>
+            <li> <a href="#course">курсы</a></li>
+            <li> <a href="#studio">студия</a></li>
+            <li> <a href="#reviews">отзывы</a></li>
+            <li> <a href="#contacts">контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

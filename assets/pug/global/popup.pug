@@ -1,0 +1,65 @@
+.popup.popup_course(data-id="course") 
+	.popup_bg.remove 
+	.popup_main_w 
+		.popup_close.remove
+			+icon('close')
+		h3.fz32 Базовый курс по маникюру с нуля
+		.popup_main 
+			.popup_content.vertical-scroll  
+				.popup_time 
+					+icon('time')
+					span.fz16 4 дня
+				.popup-txt 
+					b Теоретический блок включает:
+					ul.default-list
+						each item in ['Строение ногтевого аппарата;', 'Материаловедение. Разбор инструментов, необходимых для выполнения работы;', 'Санитарная обработка инструментов, рабочего места мастера;', 'Последовательность выполнения работы.']
+							li=item
+				.popup-txt 
+					b Практический блок включает:
+					ul.default-list
+						each item in ['Строение ногтевого аппарата;', 'Материаловедение. Разбор инструментов, необходимых для выполнения работы;', 'Санитарная обработка инструментов, рабочего места мастера;', 'Последовательность выполнения работы.']
+							li=item
+				.popup-txt 
+					ul.quote_list
+						each item, i in ['По окончанию выдается сертификат и диплом гос. образца', 'Все инструменты и материалы предоставляются на время курса', 'Подходит для тех, кто никогда не работал в сфере маникюра или работает в классической технике, но решил освоить аппарат']
+							if i === 2
+								li
+									.list-icon
+										img(src="i/global/question.svg", alt="")
+									p=item
+							else
+								li 
+									.list-icon
+										img(src="i/global/check.svg", alt="")
+									p=item
+
+			.popup_right 
+				.popup_img 
+					img(src="i/popup.jpg", alt="")
+				.popup_bottom--action
+					.popup_price 
+						span.fz20 Стоимость:
+						p.fz32 100 000
+					+btn({
+						link: 'Записаться на обучение',
+						menu: 'contacts',
+						mod: 'btn_border--big remove'
+					})
+
+
+.popup.burger(data-id="burger") 
+	.popup_bg.remove 
+	.popup_main_w
+		.popup_close.remove
+			+icon('close')
+		nav.burger_nav.remove
+			ul
+				-for(i = 0; i < 6; i++)
+					- let linkName = ['главная', 'обо мне', 'курсы', 'студия', 'отзывы', 'контакты']
+					- let linkUrl = ['main', 'about', 'course', 'studio', 'reviews', 'contacts']
+							li 
+								a(href=`#${linkUrl[i]}`)=linkName[i]
+
+
+
+

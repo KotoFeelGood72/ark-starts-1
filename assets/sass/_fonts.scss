@@ -1,4 +1,5 @@
-@include font_face('Roboto-Light', 'Roboto-Light', $font_path, 300);
-@include font_face('Roboto-Regular', 'Roboto-Regular', $font_path, 400);
-@include font_face('Roboto-Medium', 'Roboto-Medium', $font_path, 500);
-@include font_face('Roboto-Bold', 'Roboto-Bold', $font_path, 600);
+@include font_face('OrchideaPro-Medium', 'OrchideaPro-Medium', $font_path, 500);
+@include font_face('OrchideaPro-Bold', 'OrchideaPro-Bold', $font_path, 700);
+@include font_face('ProximaNova-Regular', 'ProximaNova-Regular', $font_path, 400);
+@include font_face('ProximaNova-Semibold', 'ProximaNova-Semibold', $font_path, 600);
+@include font_face('ProximaNova-Bold', 'ProximaNova-Bold', $font_path, 700);

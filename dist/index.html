@@ -1,5 +1,8 @@
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
+<!-- Btn mixin-->
+<!-- End-->
+<!-- Input-->
+<!-- End input--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -13,24 +16,405 @@
   <body>
     <header class="header"> 
       <div class="section_in"> 
-        <div class="header_main"></div>
+        <div class="header_main">
+          <div class="header_logo"> <a href="#"><img src="i/logo.svg" alt=""></a></div>
+          <nav class="header_nav">
+            <ul id="header_navigation">
+              <li data-menuanchor="main"> <a href="#main">главная</a></li>
+              <li data-menuanchor="about"> <a href="#about">обо мне</a></li>
+              <li data-menuanchor="course"> <a href="#course">курсы</a></li>
+              <li data-menuanchor="studio"> <a href="#studio">студия</a></li>
+              <li data-menuanchor="reviews"> <a href="#reviews">отзывы</a></li>
+              <li data-menuanchor="contacts"> <a href="#contacts">контакты</a></li>
+            </ul>
+          </nav>
+          <div class="burger-nav trigger" data-target="burger"> <span> </span><span> </span><span> </span></div>
+        </div>
       </div>
     </header>
-    <div class="wrapper">
+    <div class="wrapper" id="pagepiling">
       <div class="base">
-        <section class="start" style="background: url('../i/start.jpg') center/cover no-repeat"> 
+        <section class="screen" id="main" style="background: url('../../i/screen/screen-1.jpg') center/cover no-repeat">
           <div class="section_in"> 
-            <div class="start_row"> 
-              <h1>Start development by Arkada Web Studio</h1><span class="iconify-inline" data-icon="fa-solid:home"></span>
+            <div class="hero">
+              <div class="hero_content">
+                <p class="fz32">Обучающая студия маникюра</p>
+                <h1>Маргариты Щербаковой</h1>
+                <div class="btn-group">
+                  <div class="btn btn_border--big" data-menuanchor="studio"><a href="#studio" target="">Записаться на услугу</a>
+                  </div>
+                  <div class="btn btn_border--big" data-menuanchor="course"><a href="#course" target="">Записаться на обучение</a>
+                  </div>
+                </div>
+              </div>
+              <div class="hero_quote">“Вы создаете маникюр — я создаю мастера”</div>
+            </div>
+          </div>
+        </section>
+        <section class="screen" id="about" style="background: url('../../i/screen/screen-2.jpg') center/cover no-repeat">
+          <div class="section_in"> 
+            <div class="education_content" data-aos="fade-down"> 
+              <p class="fz24 quote">“Все мои ученики приступают к работе сразу после прохождения курсов...”</p><b class="fz20">Меня зовут Маргарита Щербакова, и я являюсь основателем студии маникюра и педикюра Kult Nails</b>
+              <p class="fz16">Первые ногти я начала делать в возрасте 13 лет. И вот уже более 13 лет я профессионально работаю в этой сфере. За это </br>время я научилась не только выполнять качественный маникюр, но и добилась определенного успеха в nail-сфере.</p><b class="fz20">Я являюсь многократным чемпионом региональных и международных чемпионатов:</b>
+              <ul class="arrow-list"> 
+                <li>
+                  <div class="items fz14">Победитель Краса Дона 2016 в номинации салонное моделирование френч, юниор</div>
+                </li>
+                <li>
+                  <div class="items fz14">Первое место в международном конкурсе “Christmas Star”, номинация “Постер”</div>
+                </li>
+                <li>
+                  <div class="items fz14">Первое место в конкурсе “Шарм 2021”, номинации “Стилет мастер”, “Салонное моделирование</div>
+                </li>
+                <li>
+                  <div class="items fz14">Первое место в конкурсе “Краса Дона 2016”, Салонное моделирование. Френч, юниор</div>
+                </li>
+                <li>
+                  <div class="items fz14">Первое место в конкурсе “Nail Olymp 2021”, номинация маникюр гель-лак</div>
+                </li>
+              </ul>
+              <ul class="year-list">
+                <li> 
+                  <p class="color-gradient year">2022:</p>
+                  <ul class="stadart-list">
+                    <li class="fz16">Участвовала в качестве приглашенного спикера на различных марафонах;</li>
+                    <li class="fz16">Получила лицензию на свои авторские курсы и могу присваивать профессию мастера маникюра;</li>
+                    <li class="fz16">За 2022 год я провела порядка 23 живых курсов.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="screen" id="course"> 
+          <div class="section_in"> 
+            <div class="service_main"> 
+              <div class="service-block" data-aos="fade-down"> 
+                <h2 class="fz32">Базовые программы обучения</h2>
+                <ul class="service_list"> 
+                  <li class="service_item trigger" data-target="course"><img src="i/service/service-0.jpg" alt="">
+                    <h3 class="fz20">Базовый курс по маникюру с нуля</h3>
+                    <p class="fz16">Подходит для тех, кто никогда не работал в сфере маникюра или работает в классической технике, но решил освоить аппарат</p>
+                    <button class="service_item--link fz16" type="button">Узнать подробнее</button>
+                  </li>
+                  <li class="service_item trigger" data-target="course"><img src="i/service/service-1.jpg" alt="">
+                    <h3 class="fz20">Базовый курс по моделированию ногтей с нуля</h3>
+                    <p class="fz16">Подходит для мастеров, которые никогда не наращивали ногти или сталкиваются с трудностями выполнения постановки шаблона</p>
+                    <button class="service_item--link fz16" type="button">Узнать подробнее</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-block" data-aos="fade-down"> 
+                <h2 class="fz32">Курсы повышения</h2>
+                <p>Предназначены для мастеров с наличием базового курса маникюра и опытом работы не менее 6 месяцев</p>
+                <ul class="service_list"> 
+                  <li class="service_item trigger" data-target="course"><img src="i/service/service-2.jpg" alt="">
+                    <h3 class="fz20">Классический курс повышения по маникюру</h3>
+                    <p class="fz16">Подходит для мастеров, желающих усовершенствовать свой навык в выполнении комбинированного маникюра</p>
+                    <button class="service_item--link fz16" type="button">Узнать подробнее</button>
+                  </li>
+                  <li class="service_item trigger" data-target="course"><img src="i/service/service-3.jpg" alt="">
+                    <h3 class="fz20">Курс повышения по маникюру. Продвинутый уровень</h3>
+                    <p class="fz16">Подходит для мастеров, которые хотели бы освоить или улучшить свои навыки по работе с акри/поли-гелем</p>
+                    <button class="service_item--link fz16" type="button">Узнать подробнее</button>
+                  </li>
+                  <li class="service_item trigger" data-target="course"><img src="i/service/service-4.jpg" alt="">
+                    <h3 class="fz20">Курс повышения по работе с жестким материалом</h3>
+                    <p class="fz16">Поможет усовершенствовать свои навыки в укреплении натуральных ногтей при помощи системы жестких материалов</p>
+                    <button class="service_item--link fz16" type="button">Узнать подробнее</button>
+                  </li>
+                  <li class="service_item trigger" data-target="course"><img src="i/service/service-5.jpg" alt="">
+                    <h3 class="fz20">Курс повышения по прокачиванию скорости</h3>
+                    <p class="fz16">Подходит для мастеров, желающих сократить свое время выполнения процедуры маникюр-гельлак</p>
+                    <button class="service_item--link fz16" type="button">Узнать подробнее</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="screen" id="studio"> 
+          <div class="section_in"> 
+            <div class="studio_main"> 
+              <div class="studio_about" data-aos="fade-down"> 
+                <h4 class="fz32">Студия маникюра</h4>
+                <div class="studio_about--action"> 
+                  <p class="fz24">Наша цель сделать для Вас это место особенным и любимым.</p>
+                  <div class="btn btn-fill" data-menuanchor=""><a href="https://dikidi.net/473493?p=0.pi" target="_blank">Записаться</a>
+                  </div>
+                </div>
+                <p class="fz16">В нашей студии самое современное оборудование для выполнения качественной услуги каждому клиенту. Наши клиенты, а так же ученики, доверяют нам, возвращаются вновь и вновь, становятся постоянными и приезжают с других городов. Индивидуальный подход гарантирует, что мы учтем все ваши пожелания. Мы работаем только на одноразовых расходных материалах и стерильных инструментах согласно требованиям СанПиН.</p>
+                <div class="studio_about--img"> <img src="i/studio.jpg" alt=""></div>
+              </div>
+              <div class="studio_masters" data-aos="fade-down" data-aos-delay="250"> 
+                <h4 class="fz32">Наши мастера</h4>
+                <ul class="masters_list vertical-scroll"> 
+                  <li class="masters_item"> 
+                    <div class="masters_item--img"> <img src="i/masters/master-0.jpg" alt=""></div>
+                    <div class="masters_item--content"> 
+                      <p class="fz20">Елена</p><span class="fz16">Мастер педикюра и маникюра. Опыт работы в ногтевой сфере 5 лет.  Имеет базовое образование подолога, что позволяет не только выполнять эстетический педикюр, но и корректировать небольшие проблемы на ножках.  Мастер Елена выполнит любую процедуру аккуратно и бережно даже на самых чувствительных клиентах.</span>
+                    </div>
+                  </li>
+                  <li class="masters_item"> 
+                    <div class="masters_item--img"> <img src="i/masters/master-1.jpg" alt=""></div>
+                    <div class="masters_item--content"> 
+                      <p class="fz20">Эльмира</p><span class="fz16">Эльмира является мастером, в совершенстве владеющим аппаратом. Прошла базовые программы и курсы повышения в рамках студии. Выполняет однотонные покрытия и чистый маникюр. Опыт работы 1 год.</span>
+                    </div>
+                  </li>
+                  <li class="masters_item"> 
+                    <div class="masters_item--img"> <img src="i/masters/master-2.jpg" alt=""></div>
+                    <div class="masters_item--content"> 
+                      <p class="fz20">Анастасия</p><span class="fz16">Анастасия является мастером маникюра, который успешно прошел базовую программу по маникюру в рамках студии. Успешно прошла стажировку и зарекомендовала себя, как ответственный и внимательный к клиенту мастер.  Выполняет следующие услуги:</br></br>Комбинированный/аппаратный маникюр; укрепление/выравнивание ногтевой пластины; ремонт и донаращивание сломанных ногтей; укрепление гелем; дизайн ногтей, французский маникюр; наращивание ногтей любой длины и сложности.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="screen" id="reviews"> 
+          <div class="reviews_slider--nav">
+            <div class="btn-nav prev"> <img src="i/global/arrow-slider.svg" alt=""></div>
+            <div class="btn-nav next"> <img src="i/global/arrow-slider.svg" alt=""></div>
+          </div>
+          <div class="section_in"> 
+            <div class="reviews_main"> 
+              <h5 class="fz32">Мнения о нас</h5>
+              <div class="reviews_slider_w">
+                <div class="reviews_slider swiper mb3"> 
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="100">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-0.jpg" alt=""></div>
+                          <p class="name">Маргарита</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur.</br> Est bibendum ac feugiat nam. In quam</br> enim aliquam nam sit nullam mi tempus.</br> Elit sollicitudin cursus nunc diam. At platea</br> vitae lacinia pellentesque lectus posuere. </br>Eu rhoncus platea et faucibus pretium </br>enim dignissim in. Gravida faucibus</br> suscipit amet elit. In pulvinar laoreet lectus</br> purus. Sem ipsum cursus vel odio vitae.</br> Mattis sed aenean facilisi sit aliquet lacus.</br> Ut cras felis cursus interdum.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="110">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-1.jpg" alt=""></div>
+                          <p class="name">Анна</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur. Est bibendum ac</br> feugiat nam. In quam enim aliquam nam sit nullam mi tempus. </br>Elit sollicitudin cursus nunc diam. At platea vitae lacinia</br> pellentesque lectus posuere. Eu rhoncus platea et faucibus </br>pretium enim dignissim in. Gravida faucibus suscipit amet elit.</br> In pulvinar laoreet lectus purus. Sem ipsum cursus vel odio </br>vitae. Mattis sed aenean facilisi sit aliquet lacus. Ut cras felis </br>cursus interdum.At platea vitae lacinia pellentesque lectus </br>posuere. Eu rhoncus platea et faucibus pretium enim</br> dignissim in. Gravida faucibus suscipit amet elit. In pulvinar</br> laoreet lectus purus. Sem ipsum cursus vel odio vitae.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="120">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-2.jpg" alt=""></div>
+                          <p class="name">Анастасия</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur.</br> Est bibendum ac feugiat nam. In quam</br> enim aliquam nam sit nullam mi tempus.</br> Elit sollicitudin cursus nunc diam. At platea</br> vitae lacinia pellentesque lectus posuere. </br>Eu rhoncus platea et faucibus pretium </br>enim dignissim in. Gravida faucibus</br> suscipit amet elit. In pulvinar laoreet lectus</br> purus. Sem ipsum cursus vel odio vitae.</br> Mattis sed aenean facilisi sit aliquet lacus.</br> Ut cras felis cursus interdum.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="130">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-3.jpg" alt=""></div>
+                          <p class="name">Мария</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur. Est bibendum ac</br> feugiat nam. In quam enim aliquam nam sit nullam mi tempus. </br>Elit sollicitudin cursus nunc diam. At platea vitae lacinia</br> pellentesque lectus posuere. Eu rhoncus platea et faucibus </br>pretium enim dignissim in. Gravida faucibus suscipit amet elit.</br> In pulvinar laoreet lectus purus. Sem ipsum cursus vel odio </br>vitae. Mattis sed aenean facilisi sit aliquet lacus. Ut cras felis </br>cursus interdum.At platea vitae lacinia pellentesque lectus </br>posuere. Eu rhoncus platea et faucibus pretium enim</br> dignissim in. Gravida faucibus suscipit amet elit. In pulvinar</br> laoreet lectus purus. Sem ipsum cursus vel odio vitae.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="140">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-4.jpg" alt=""></div>
+                          <p class="name">Елена</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur.</br> Est bibendum ac feugiat nam. In quam</br> enim aliquam nam sit nullam mi tempus.</br> Elit sollicitudin cursus nunc diam. At platea</br> vitae lacinia pellentesque lectus posuere. </br>Eu rhoncus platea et faucibus pretium </br>enim dignissim in. Gravida faucibus</br> suscipit amet elit. In pulvinar laoreet lectus</br> purus. Sem ipsum cursus vel odio vitae.</br> Mattis sed aenean facilisi sit aliquet lacus.</br> Ut cras felis cursus interdum.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="150">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-5.jpg" alt=""></div>
+                          <p class="name">Ольга</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur. Est bibendum ac</br> feugiat nam. In quam enim aliquam nam sit nullam mi tempus. </br>Elit sollicitudin cursus nunc diam. At platea vitae lacinia</br> pellentesque lectus posuere. Eu rhoncus platea et faucibus </br>pretium enim dignissim in. Gravida faucibus suscipit amet elit.</br> In pulvinar laoreet lectus purus. Sem ipsum cursus vel odio </br>vitae. Mattis sed aenean facilisi sit aliquet lacus. Ut cras felis </br>cursus interdum.At platea vitae lacinia pellentesque lectus </br>posuere. Eu rhoncus platea et faucibus pretium enim</br> dignissim in. Gravida faucibus suscipit amet elit. In pulvinar</br> laoreet lectus purus. Sem ipsum cursus vel odio vitae.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews_slider swiper"> 
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="100">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-0.jpg" alt=""></div>
+                          <p class="name">Маргарита</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur. Est bibendum ac</br> feugiat nam. In quam enim aliquam nam sit nullam mi tempus. </br>Elit sollicitudin cursus nunc diam. At platea vitae lacinia</br> pellentesque lectus posuere. Eu rhoncus platea et faucibus </br>pretium enim dignissim in. Gravida faucibus suscipit amet elit.</br> In pulvinar laoreet lectus purus. Sem ipsum cursus vel odio </br>vitae. Mattis sed aenean facilisi sit aliquet lacus. Ut cras felis </br>cursus interdum.At platea vitae lacinia pellentesque lectus </br>posuere. Eu rhoncus platea et faucibus pretium enim</br> dignissim in. Gravida faucibus suscipit amet elit. In pulvinar</br> laoreet lectus purus. Sem ipsum cursus vel odio vitae.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="110">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-1.jpg" alt=""></div>
+                          <p class="name">Анна</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur.</br> Est bibendum ac feugiat nam. In quam</br> enim aliquam nam sit nullam mi tempus.</br> Elit sollicitudin cursus nunc diam. At platea</br> vitae lacinia pellentesque lectus posuere. </br>Eu rhoncus platea et faucibus pretium </br>enim dignissim in. Gravida faucibus</br> suscipit amet elit. In pulvinar laoreet lectus</br> purus. Sem ipsum cursus vel odio vitae.</br> Mattis sed aenean facilisi sit aliquet lacus.</br> Ut cras felis cursus interdum.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="120">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-2.jpg" alt=""></div>
+                          <p class="name">Анастасия</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur. Est bibendum ac</br> feugiat nam. In quam enim aliquam nam sit nullam mi tempus. </br>Elit sollicitudin cursus nunc diam. At platea vitae lacinia</br> pellentesque lectus posuere. Eu rhoncus platea et faucibus </br>pretium enim dignissim in. Gravida faucibus suscipit amet elit.</br> In pulvinar laoreet lectus purus. Sem ipsum cursus vel odio </br>vitae. Mattis sed aenean facilisi sit aliquet lacus. Ut cras felis </br>cursus interdum.At platea vitae lacinia pellentesque lectus </br>posuere. Eu rhoncus platea et faucibus pretium enim</br> dignissim in. Gravida faucibus suscipit amet elit. In pulvinar</br> laoreet lectus purus. Sem ipsum cursus vel odio vitae.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="130">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-3.jpg" alt=""></div>
+                          <p class="name">Мария</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur.</br> Est bibendum ac feugiat nam. In quam</br> enim aliquam nam sit nullam mi tempus.</br> Elit sollicitudin cursus nunc diam. At platea</br> vitae lacinia pellentesque lectus posuere. </br>Eu rhoncus platea et faucibus pretium </br>enim dignissim in. Gravida faucibus</br> suscipit amet elit. In pulvinar laoreet lectus</br> purus. Sem ipsum cursus vel odio vitae.</br> Mattis sed aenean facilisi sit aliquet lacus.</br> Ut cras felis cursus interdum.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="140">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-4.jpg" alt=""></div>
+                          <p class="name">Елена</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur. Est bibendum ac</br> feugiat nam. In quam enim aliquam nam sit nullam mi tempus. </br>Elit sollicitudin cursus nunc diam. At platea vitae lacinia</br> pellentesque lectus posuere. Eu rhoncus platea et faucibus </br>pretium enim dignissim in. Gravida faucibus suscipit amet elit.</br> In pulvinar laoreet lectus purus. Sem ipsum cursus vel odio </br>vitae. Mattis sed aenean facilisi sit aliquet lacus. Ut cras felis </br>cursus interdum.At platea vitae lacinia pellentesque lectus </br>posuere. Eu rhoncus platea et faucibus pretium enim</br> dignissim in. Gravida faucibus suscipit amet elit. In pulvinar</br> laoreet lectus purus. Sem ipsum cursus vel odio vitae.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="150">
+                      <div class="reviews_slide showMoreBlock"> 
+                        <div class="reviews_slide--left">
+                          <div class="reviews_slide--img"> <img src="i/reviews/revier-5.jpg" alt=""></div>
+                          <p class="name">Ольга</p>
+                        </div>
+                        <div class="reviews_slide--txt showMoreTxt"> 
+                          <div class="reviews-txt fz16">Lorem ipsum dolor sit amet consectetur.</br> Est bibendum ac feugiat nam. In quam</br> enim aliquam nam sit nullam mi tempus.</br> Elit sollicitudin cursus nunc diam. At platea</br> vitae lacinia pellentesque lectus posuere. </br>Eu rhoncus platea et faucibus pretium </br>enim dignissim in. Gravida faucibus</br> suscipit amet elit. In pulvinar laoreet lectus</br> purus. Sem ipsum cursus vel odio vitae.</br> Mattis sed aenean facilisi sit aliquet lacus.</br> Ut cras felis cursus interdum.</div>
+                        </div>
+                        <div class="showMoreBtn rev-more">Показать больше</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="screen" id="contacts"> 
+          <div class="section_in"> 
+            <div class="contacts_main"> 
+              <div class="contacts_info" data-aos="fade-down"> 
+                <h6 class="fz32">Как вы можете связаться с нами:</h6>
+                <div class="contacts_data"> 
+                  <ul> 
+                    <li> <span>Позвонить:</span>
+                      <ul>
+                        <li> <a href="#">
+                            <svg class="icon icon-tel ">
+                              <use xlink:href="i/sprite/sprite.svg#tel"></use>
+                            </svg>
+                            <p class="fz20">8 (961) 294-43-46</p></a></li>
+                        <li> <a href="#">
+                            <svg class="icon icon-tel ">
+                              <use xlink:href="i/sprite/sprite.svg#tel"></use>
+                            </svg>
+                            <p class="fz20">8 (989) 621-51-21</p></a></li>
+                      </ul>
+                    </li>
+                    <li> <span>Написать:</span>
+                      <ul> 
+                        <li> <a href="#">
+                            <svg class="icon icon-mail ">
+                              <use xlink:href="i/sprite/sprite.svg#mail"></use>
+                            </svg>
+                            <p>Milanajesekiil@mail.ru</p></a></li>
+                      </ul>
+                    </li>
+                    <li> <span>Социальные сети:</span>
+                      <ul class="social_list"> 
+                        <li> <a href="#">
+                            <svg class="icon icon-vk ">
+                              <use xlink:href="i/sprite/sprite.svg#vk"></use>
+                            </svg></a></li>
+                        <li> <a href="#">
+                            <svg class="icon icon-wa ">
+                              <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                            </svg></a></li>
+                        <li> <a href="#">
+                            <svg class="icon icon-in ">
+                              <use xlink:href="i/sprite/sprite.svg#in"></use>
+                            </svg></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="contacts_address"> <span>Наш адрес:</span>
+                  <div class="address"> 
+                    <svg class="icon icon-map ">
+                      <use xlink:href="i/sprite/sprite.svg#map"></use>
+                    </svg>
+                    <p class="fz20">г. Ростов-на-Дону, ул. Очаковская 39, вход в офисы номер 1, офис 3</p>
+                  </div>
+                </div>
+                <div class="contacts_map">
+                   <script type="text/javascript" charset="utf-8" defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab200aba91a2940ec1bee74e55b64238f49c67b7324db66357791d88f8e3951f0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script></div>
+              </div>
+              <div class="contacts_form_w" data-aos="fade-down" data-aos-delay="250"> 
+                <h6 class="fz32">Оставить заявку на курс:</h6>
+                <div class="contacts_form"> 
+                  <div class="global_input form_input">
+                    <input type="text" placeholder="Имя"/>
+                  </div>
+                  <div class="global_input form_input">
+                    <input type="tel" placeholder="Номер телефона*"/>
+                  </div>
+                  <div class="form_notice">Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="/" target="_blank">Политику конфиденциальности</a></div>
+                  <div class="btn btn-fill" data-menuanchor="">
+                    <input type="submit" value="Отправить"/>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
-      <footer class="footer"> 
-        <div class="section_in"> 
-          <div class="footer_main"> </div>
-        </div>
-      </footer>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
@@ -38,8 +422,89 @@
     <script>window.TweenMax || document.write('<script src="js/gsap.min.js"><\/script>')</script>
     <script type="text/javascript">window.productionStatus = 'development';</script>
     <script src="js/libs.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_course" data-id="course"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main_w"> 
+        <div class="popup_close remove">
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <h3 class="fz32">Базовый курс по маникюру с нуля</h3>
+        <div class="popup_main"> 
+          <div class="popup_content vertical-scroll"> 
+            <div class="popup_time"> 
+              <svg class="icon icon-time ">
+                <use xlink:href="i/sprite/sprite.svg#time"></use>
+              </svg><span class="fz16">4 дня</span>
+            </div>
+            <div class="popup-txt"> <b>Теоретический блок включает:</b>
+              <ul class="default-list">
+                <li>Строение ногтевого аппарата;</li>
+                <li>Материаловедение. Разбор инструментов, необходимых для выполнения работы;</li>
+                <li>Санитарная обработка инструментов, рабочего места мастера;</li>
+                <li>Последовательность выполнения работы.</li>
+              </ul>
+            </div>
+            <div class="popup-txt"> <b>Практический блок включает:</b>
+              <ul class="default-list">
+                <li>Строение ногтевого аппарата;</li>
+                <li>Материаловедение. Разбор инструментов, необходимых для выполнения работы;</li>
+                <li>Санитарная обработка инструментов, рабочего места мастера;</li>
+                <li>Последовательность выполнения работы.</li>
+              </ul>
+            </div>
+            <div class="popup-txt"> 
+              <ul class="quote_list">
+                <li> 
+                  <div class="list-icon"><img src="i/global/check.svg" alt=""></div>
+                  <p>По окончанию выдается сертификат и диплом гос. образца</p>
+                </li>
+                <li> 
+                  <div class="list-icon"><img src="i/global/check.svg" alt=""></div>
+                  <p>Все инструменты и материалы предоставляются на время курса</p>
+                </li>
+                <li>
+                  <div class="list-icon"><img src="i/global/question.svg" alt=""></div>
+                  <p>Подходит для тех, кто никогда не работал в сфере маникюра или работает в классической технике, но решил освоить аппарат</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="popup_right"> 
+            <div class="popup_img"> <img src="i/popup.jpg" alt=""></div>
+            <div class="popup_bottom--action">
+              <div class="popup_price"> <span class="fz20">Стоимость:</span>
+                <p class="fz32">100 000</p>
+              </div>
+              <div class="btn btn_border--big remove" data-menuanchor="contacts"><a href="#contacts" target="">Записаться на обучение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup burger" data-id="burger"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main_w">
+        <div class="popup_close remove">
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <nav class="burger_nav remove">
+          <ul>
+            <li> <a href="#main">главная</a></li>
+            <li> <a href="#about">обо мне</a></li>
+            <li> <a href="#course">курсы</a></li>
+            <li> <a href="#studio">студия</a></li>
+            <li> <a href="#reviews">отзывы</a></li>
+            <li> <a href="#contacts">контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

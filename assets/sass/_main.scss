@@ -6,10 +6,10 @@ img {
 }
 
 h1 {
-	font-size: 5.5rem;
-	font-family: $font_3;
-	color: $white;
-	font-weight: 500;
+	font-size: 6.4rem;
+	font-family: $font_5;
+	// line-height: 6.6rem;
+	color: $brow;
 	@include bp($point_2) {
 		font-size: 3rem;
 	}
@@ -17,11 +17,15 @@ h1 {
 // End
 h2, h3, h4, h5, h6 {
 	font-size: 4.5rem;
-	font-family: $font_3;
+	font-family: $font_5;
 	color: $dark;
 	font-weight: 500;
 	@include bp($point_2) {
 		font-size: 2.6rem;
+	}
+
+	@include bp($point_4) {
+		font-size: 2.4rem;
 	}
 }
 

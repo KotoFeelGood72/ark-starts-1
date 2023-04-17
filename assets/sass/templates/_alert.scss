@@ -12,7 +12,7 @@
   @include bp($point_2) {
     width: 100%;
     bottom: 2rem;
-    right: auto;
+    right: 0;
     left: auto;
     @include flex-center;
     margin: 0 auto;

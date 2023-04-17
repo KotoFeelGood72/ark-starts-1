@@ -1,5 +1,5 @@
 // Global 
-$header: 6rem;
+$header: 17.8rem;
 $footer: 22.8rem;
 
 // Mobile
@@ -8,10 +8,11 @@ $footer_mob: 10rem;
 
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Roboto-Light', sans-serif;
-$font_11: 'Roboto-Regular', sans-serif;
-$font_2: 'Roboto-Medium', serif;
-$font_3: 'Roboto-Bold', serif;
+$font_1: 'ProximaNova-Regular', sans-serif;
+$font_2: 'ProximaNova-Semibold', sans-serif;
+$font_3: 'ProximaNova-Bold', sans-serif;
+$font_4: 'OrchideaPro-Medium', sans-serif;
+$font_5: 'OrchideaPro-Bold', sans-serif;
 
 $font_size_base: 1.8rem;
 //---------------------------------------------fonts###
@@ -19,14 +20,16 @@ $font_size_base: 1.8rem;
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
-$dark: #282828;
+$dark: #3C3C3B;
 $trans: transparent;
 
+$brow: #6C4A3F;
 
 
-$color_text_base: $black;
-$color_link_base: $black;
-$body_bg: $white;
+
+$color_text_base: $dark;
+$color_link_base: $dark;
+$body_bg: #E0E0DF;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
@@ -40,7 +43,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 132.1rem;
+$page_width: 180rem;
 
 //---------------------------------------------layout###
 
@@ -68,3 +71,8 @@ $input_placeholder_color: rgba($dark, .5);
 $input_text_color: $dark;
 
 //---------------------------------------------forms###
+
+// Custom max width
+
+$pages: 149.5rem;
+

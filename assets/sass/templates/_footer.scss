@@ -4,5 +4,167 @@
 	flex: 0 0 auto;
 	will-change: transform;
 	position: relative;
-	display: none;
+}
+
+.contacts_info {
+	padding-right: 15rem;
+	margin-right: 15rem;
+	border-right: .2rem solid rgba(60, 60, 59, 0.082);
+
+	@include bp($point_2) {
+		margin: 0;
+		padding: 0;
+		border-right: none;
+		order: 1;
+	}
+	h2, h3, h4, h5, h6 {
+		margin-bottom: 5rem;
+	}
+}
+
+.contacts_data {
+	margin-bottom: 5rem;
+	&>ul {
+		@include flex-start;
+		margin: -3rem -11.3rem 0 0;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		&>li {
+			padding: 3rem 11.3rem 0 0;
+
+			span {
+				display: block;
+				font-size: 1.6rem;
+				margin-bottom: 1.5rem;
+			}
+			ul {
+				li {
+					&:not(:last-child) {
+						margin-bottom: 1.5rem;
+					}
+					a {
+						@include flex-start;
+						p {
+							font-family: $font_2;
+							line-height: 2.6rem;
+						}
+						.icon-tel {
+							width: 1.8rem;
+							height: 1.8rem;
+							@include flex-center;
+							margin-right: 0.7rem;
+						}
+						.icon-mail {
+							margin-right: 0.9rem;
+							width: 2.1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.social_list {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -1.8rem -1.8rem 0 0;
+
+	li {
+		padding: 1.8rem 1.8rem 0 0;
+		margin-bottom: 0!important;
+		a {
+			width: 3rem;
+			height: 3rem;
+			@include flex-center;
+
+			&:hover {
+				color: $brow;
+			}
+		}
+	}
+}
+
+.contacts_address {
+	margin-bottom: 5rem;
+	&>span {
+		margin-bottom: 1.5rem;
+		display: block;
+	}
+
+	.address {
+		@include flex-start;
+		@include bp($point_2) {
+			align-items: flex-start;
+		}
+
+		.icon-map {
+			margin-right: 1.2rem;
+			@include bp($point_2) {
+				min-width: 1.7rem;
+			}
+		}
+
+		p {
+			font-family: $font_2;
+		}
+	}
+}
+
+.contacts_main {
+	@include flex-start;
+	flex-wrap: wrap;
+}
+
+.contacts_form_w {
+	max-width: 42.8rem;
+	text-align: center;
+	@include bp($point_2) {
+		text-align: left;
+		margin-bottom: 5rem;
+	}
+	@include bp($point_4) {
+		text-align: center;
+	}
+
+
+	.fz32 {
+		margin-bottom: 5rem;
+		@include bp($point_4) {
+			max-width: 80%;
+			margin: 0 auto 3rem auto;
+		}
+	}
+
+	.btn {
+		@include flex-center;
+		@include bp($point_4) {
+			order: 2;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		input {
+			@include bp($point_4) {
+				width: 100%
+			}
+		}
+	}
+}
+
+.contacts_form  {
+	@include bp($point_4) {
+		@include flex-start;
+		flex-direction: column;
+	}
+}
+
+.contacts_map {
+	width: 100%;
+	border-radius: 3.8rem;
+	overflow: hidden;
+	height: 33.7rem;
+	@include bp($point_4) {
+		border-radius: 1rem;
+	}
 }

@@ -1,0 +1,55 @@
+section.screen#contacts 
+	.section_in 
+		.contacts_main 
+			.contacts_info(data-aos="fade-down") 
+				h6.fz32 Как вы можете связаться с нами:
+				.contacts_data 
+					ul 
+						li 
+							span Позвонить:
+							ul
+								each item in ['8 (961) 294-43-46', '8 (989) 621-51-21']
+									li 
+										a(href="#")
+											+icon('tel')
+											p.fz20=item
+						li 
+							span Написать:
+							ul 
+								li 
+									a(href="#")
+										+icon('mail')
+										p Milanajesekiil@mail.ru
+						li 
+							span Социальные сети:
+							ul.social_list 
+								each item in ['vk', 'wa', 'in']
+									li 
+										a(href="#")
+											+icon(item)
+				.contacts_address 
+					span Наш адрес:
+					.address 
+						+icon('map')
+						p.fz20 г. Ростов-на-Дону, ул. Очаковская 39, вход в офисы номер 1, офис 3
+				.contacts_map 
+					<script type="text/javascript" charset="utf-8" defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab200aba91a2940ec1bee74e55b64238f49c67b7324db66357791d88f8e3951f0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+			.contacts_form_w(data-aos="fade-down" data-aos-delay="250") 
+				h6.fz32 Оставить заявку на курс:
+				.contacts_form 
+					-for(i = 0; i < 2; i++)
+						- let place = ['Имя', 'Номер телефона*']
+								if i != 0
+									+input({
+										place: place[i],
+										type: 'tel'
+									})
+								else 
+									+input({
+										place: place[i],
+									})
+					.form_notice!=`Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="/" target="_blank">Политику конфиденциальности</a>`
+					+btn({
+						submit: 'Отправить',
+						mod: 'btn-fill'
+					})

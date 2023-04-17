@@ -42,7 +42,6 @@ mixin scripts
 		script(type='text/javascript')
 			|window.productionStatus = 'development';
 	script(src="js/libs.js")
-	script(src='js/menu.js')
 	script(src='js/main.js')
 	if iconFramework === true 
 		<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
@@ -52,9 +51,6 @@ mixin script_cdn(array)
 	each item in array
 		script(src=item.link)
 
-+script_cdn([
-	{link:'https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&lang=ru_RU'}
-])
 
 
 //- //- form element v2

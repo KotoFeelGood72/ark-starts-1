@@ -1,4 +1,17 @@
 header.header 
 	.section_in 
 		.header_main
-				
+			.header_logo 
+				a(href="#")
+					img(src="i/logo.svg", alt="")
+			nav.header_nav
+				ul#header_navigation
+					-for(i = 0; i < 6; i++)
+						- let linkName = ['главная', 'обо мне', 'курсы', 'студия', 'отзывы', 'контакты']
+						- let linkUrl = ['main', 'about', 'course', 'studio', 'reviews', 'contacts']
+								li(data-menuanchor=`${linkUrl[i]}`) 
+									a(href=`#${linkUrl[i]}`)=linkName[i]
+			.burger-nav.trigger(data-target="burger") 
+				span 
+				span 
+				span 

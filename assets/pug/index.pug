@@ -3,9 +3,10 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
-	section.start(style="background: url('../i/start.jpg') center/cover no-repeat") 
-		.section_in 
-			.start_row 
-				h1 Start development by Arkada Web Studio
-				<span class="iconify-inline" data-icon="fa-solid:home"></span>
+	include blocks/screen-1
+	include blocks/screen-2
+	include blocks/screen-3
+	include blocks/screen-4
+	include blocks/screen-5
+	include blocks/screen-6
 	

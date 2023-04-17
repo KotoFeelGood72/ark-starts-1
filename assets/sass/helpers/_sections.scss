@@ -6,6 +6,14 @@
 	@include bp($point_2) {
 		padding: 0 2rem;
 	}
+	@include bp(1420px) {
+		max-width: 100%;
+		padding: 0 3rem;
+	}
+
+	@include bp($point_2) {
+		padding: 0 1.5rem;
+	}
 }
 // End Style
 

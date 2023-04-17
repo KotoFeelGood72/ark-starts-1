@@ -1,0 +1,358 @@
+.popup  {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include z-index(popup);
+	@include flex-center;
+	transition: all .3s ease;
+
+	opacity: 0;
+	visibility: hidden;
+
+	@include bp($point_4) {
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		.popup_main_w {
+			transform: translateY(0);
+		}
+ 	}
+
+
+
+	.fz32 {
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+}
+
+.popup_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+	opacity: .5;
+}
+
+.popup_main_w {
+	transition: all .3s ease;
+	position: relative;
+	background-color: $white;
+	border-radius: 3.8rem;
+	transform: translateY(5rem);
+	@include bp($point_4) {
+		border-radius: 2rem;
+	}
+}
+
+.popup_course {
+	@include bp($point_2) {
+		padding: 2rem;
+	}
+
+	@include bp($point_4) {
+		padding: 0;
+	}
+	.popup_main_w {
+		max-width: 119rem;
+		padding: 7rem;
+		width: 100%;
+		@include bp($point_4) {
+			max-width: 100%;
+			height: 100%;
+			max-height: 90%;
+		}
+		.fz32 {
+			@include bp($point_4){
+				font-size: 2.2rem!important;
+				margin-bottom: 3rem;
+				text-align: left;
+			}
+		}
+		@include bp($point_2) {
+			max-width: 100%;
+			padding: 5rem 2rem
+		}
+	}
+	.popup_main {
+		@include flex-start;
+		flex-wrap: wrap;
+		margin: -3rem -3rem 0 0;
+		align-items: flex-start;
+		@include bp($point_2) {
+			margin: 0;
+		}
+		@include bp($point_4) {
+			height: 100%;
+		}
+
+
+		&>div {
+			&:first-child {
+				padding: 3rem 3rem 0 0;
+				@include bp($point_2) {
+					padding: 0 3rem 0 0;
+				}
+			}
+		}
+	}
+
+	.popup_content {
+		max-width: 48%;
+		margin-right: 3rem;
+		max-height: 50rem;
+		overflow-y: auto;
+		@include bp($point_2) {
+			max-width: 100%;
+			margin: 0 0 3rem 0;
+		}
+		@include bp($point_4) {
+			max-height: calc(100% - 10rem);
+			// max-height: 100%;
+			overflow-y: scroll;
+		}
+	}
+}
+
+.popup_close {
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	width: 1.8rem;
+	height: 1.8rem;
+	cursor: pointer;
+	@include flex-center;
+
+	font-weight: 600;
+	svg {
+		stroke-width: .3rem;
+	}
+}
+
+.popup_time {
+	background-color: rgba(60, 60, 59, 0.100);
+	@include flex-start;
+	display: inline-flex;
+	padding: 1.1rem;
+	border-radius: 1rem;
+	margin-bottom: 3rem;
+	@include bp($point_4) {
+		margin-bottom: 1.5rem;
+		border-radius: 0.5rem;
+		padding: .5rem 1rem;
+	}
+
+	.icon-time {
+		margin-right: 0.8rem;
+		width: 1.8rem;
+		height: 1.8rem;
+		@include flex-center;
+	}
+
+	.fz16 {
+		line-height: 2rem;
+	}
+}
+
+
+
+.popup_content {
+	b {
+		font-size: 2rem;
+		padding: 1rem 0;
+		display: block;
+		@include bp($point_4) {
+			font-size: 1.6rem;
+		}
+	}
+
+	ul.default-list {
+		font-size: 1.6rem;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
+		li {
+			position: relative;
+			padding-left: 1.5rem;
+			@include bp($point_4) {
+				padding-left: 1rem;
+			}
+			&:before {
+				position: absolute;
+				top: .8rem;
+				left: 0;
+				width: .3rem;
+				height: .3rem;
+				background-color: $dark;
+				border-radius: 100%;
+				content: '';
+			}
+		}
+	}
+}
+
+.quote_list {
+	padding: 3rem 0;
+	@include bp($point_4) {
+		margin-bottom: 2rem;
+	}
+	li {
+		position: relative;
+		background-color: rgba(60, 60, 59, 0.100);
+		font-size: 1.6rem;
+		padding: 1rem 1.2rem 1rem 1.2rem;
+		border-radius: 1rem;
+		@include flex-start;
+		align-items: flex-start;
+
+		.list-icon {
+			margin-right: 0.8rem;
+			width: 1.8rem;
+			height: 1.8rem;
+			min-width: 1.8rem;
+			@include bp($point_4) {
+				width: 1.5rem;
+				height: 1.5rem;
+				min-width: 1.5rem;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+			@include bp($point_4) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+.popup_img {
+	width: 100%;
+	margin-bottom: 3rem;
+	@include bp($point_2) {
+		display: none
+	}
+}
+
+.popup_bottom--action {
+	@include flex-start;
+	@include bp($point_4) {
+		// flex-direction: column;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: #ffffff28;
+		backdrop-filter: blur(2rem);
+		padding: 2rem 1rem;
+	}
+
+	.btn {
+		a {
+			@include bp($point_4) {
+				padding: 1rem 2rem!important;
+				font-size: 1.4rem!important;
+			}
+		}
+	}
+}
+
+.popup_price {
+	flex-grow: 1;
+	@include flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-left: 2rem;
+	@include bp($point_2) {
+		padding-left: 0;
+	}
+	.fz20 {
+		font-family: $font_2;
+		@include bp($point_4) {
+			display: none;
+		}
+	}
+	.fz32 {
+		font-family: $font_3;
+		margin-bottom: 0;
+
+		@include bp($point_4) {
+			font-size: 2rem;
+			margin-bottom: 0!important;
+		}
+
+		&:after {
+			content: ' ₽';
+			font-family: $font_3;
+			font-weight: 700;
+		}
+	}
+}
+
+.popup_right {
+	flex-grow: 1;
+	// @include bp($point_2) {
+	// 	max-width: 48%;
+	// }
+}
+
+.popup_content::-webkit-scrollbar-track {
+	border-radius: .3rem;
+	background-color: rgba(60, 60, 59, 0.103);
+}
+
+.popup_content::-webkit-scrollbar {
+	width: .5rem;
+	background-color: rgba(60, 60, 59, 0.103);
+}
+
+.popup_content::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: $dark;
+}
+
+
+.burger  {
+	left: 0;
+	.popup_main_w {
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		max-width: 40rem;
+		padding: 3rem 4rem;
+		transform: translateX(-5rem);
+
+		@include bp($point_4) {
+			max-width: 30rem;
+			margin-right: auto;
+			margin-left: 0;
+		}
+	}
+}
+
+.burger_nav {
+	ul {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+
+			a {
+				font-size: 2.6rem;
+				font-family: $font_5;
+
+				&.active {
+					color: $brow;
+					border-bottom: .1rem solid $brow;
+				}
+			}
+		}
+	}
+}

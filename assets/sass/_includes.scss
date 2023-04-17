@@ -22,11 +22,11 @@
 
 // Page
 
-@import "page/start";
 @import "page/home";
 @import "page/policy";
 
 // plugins
 @import "plugins/swiper";
-// @import "plugins/fancybox";
+@import "plugins/aos";
+// @import "plugins/jquery.pagepiling";
 // @import "plugins/simplebar";
