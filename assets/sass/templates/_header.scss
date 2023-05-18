@@ -1,10 +1,130 @@
 .header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: $header;
 	width: 100%;
 	will-change: transform;
 	@include z-index(header);
+	@include flex-center;
+	background-color: #ffffffbd;
+	backdrop-filter: blur(2rem);
+
+	@include bp($point_2) {
+		height: $header_mob
+	}
+}
+
+.header {
+}
+.section_in {
+}
+.header_main, .header_main ul, .phone a, .hero_main {
+	@include flex-start;
+}
+.header_main {
+	padding: 2.5rem 0;
+	justify-content: space-between;
+	@include bp($point_2) {
+		padding: 1.5rem 0;
+	}
+}
+.nav {
+	margin-right: 10rem;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_nav--list {
+
+	li {
+		a {
+			font-family: $font_2;
+			&:hover {
+				color: $gold;
+			}
+			
+		}
+		&:not(:last-child) {
+			margin-right: 6rem;
+		}
+	}
+}
+.phone {
+	font-family: $font_3;
+	a {
+		transition: all .3s ease;
+		&:hover {
+			color: $gold;
+		}
+	}
+	a p {
+		@include bp($point_2) {
+			font-size: 2.6rem;
+		}
+
+		@include bp($point_4) {
+			font-size: 1.8rem;
+		}
+	}
+}
+.phone_icon {
+	margin-right: 1.5rem;
+	width: 2.5rem;
+	@include bp($point_2) {
+		width: 3rem;
+		@include flex-center;
+	}
+
+	@include bp($point_4) {
+		width: 2rem;
+	}
+}
+.icon {
+}
+.icon-phone {
+}
+
+.header_burger_w {
 	display: none;
+	@include bp($point_2) {
+		display: block;
+		// padding: 2rem;
+	}
+}
+
+.header_burger {
+	position: relative;
+	@include bp($point_2) {
+		width: 6rem;
+		height: 4rem;
+	}
+
+	@include bp($point_4) {
+		width: 5.5rem;
+		height: 4rem;
+	}
+
+	span {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: .7rem;
+		background-color: $dark;
+		border-radius: 1rem;
+		&:nth-child(1) {
+
+		}
+		&:nth-child(2) {
+			max-width: 80%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:nth-child(3) {
+			max-width: 60%;
+			top: auto;
+			bottom: 0;
+		}
+	}
 }

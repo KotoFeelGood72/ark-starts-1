@@ -19,8 +19,9 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
-	.svg-call-dims { width: 28px; height: 28px; }
 	.svg-close-dims { width: 25px; height: 25px; }
+	.svg-phone-dims { width: 25px; height: 25px; }
+	.svg-slider-nav-dims { width: 10px; height: 16px; }
 	.svg-wa-dims { width: 28px; height: 28px; }
 </style>
 <!--
@@ -44,8 +45,9 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
-		<symbol viewBox="0 0 28 28" id="call" xmlns="http://www.w3.org/2000/svg"><path d="M28 19.45v6.84c0 .476-.192.931-.534 1.262a1.582 1.582 0 01-1.17.446 27.438 27.438 0 01-18.257-8.036A27.438 27.438 0 01.001 1.703 1.58 1.58 0 01.448.533 1.76 1.76 0 011.71 0h6.84a1.69 1.69 0 011.662 1.442l.904 6.324a1.688 1.688 0 01-.475 1.425l-2.683 2.683a.564.564 0 00-.094.683 22.965 22.965 0 007.578 7.578c.223.129.504.09.684-.094l2.682-2.682a1.686 1.686 0 011.426-.475l6.324.903A1.689 1.689 0 0128 19.45z"/></symbol>
 		<symbol viewBox="0 0 25 25" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M23.649 0L12.5 11.149 1.351 0 0 1.351 11.149 12.5 0 23.649 1.351 25 12.5 13.851 23.649 25 25 23.649 13.851 12.5 25 1.351 23.649 0z"/></symbol>
+		<symbol viewBox="0 0 25 25" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M16.366 17.393l2-2a1.956 1.956 0 012.089-.429l2.438.973a1.946 1.946 0 011.214 1.786v4.464a1.938 1.938 0 01-2.036 1.92C4.991 23.044 1.544 8.58.893 3.044A1.937 1.937 0 012.83.893h4.313a1.929 1.929 0 011.785 1.214l.973 2.437a1.928 1.928 0 01-.42 2.09l-2 2s1.153 7.794 8.885 8.759z"/></symbol>
+		<symbol viewBox="0 0 10 16" id="slider-nav" xmlns="http://www.w3.org/2000/svg"><path d="M7.981 15.5l1.332-1.331L3.143 8l6.17-6.169L7.98.5.481 8l7.5 7.5z"/></symbol>
 		<symbol viewBox="0 0 28 28" id="wa" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 0C6.262 0 0 6.258 0 14c0 2.92.89 5.62 2.472 7.94a.7.7 0 01.087.602L1.137 27.3l4.66-1.608a.7.7 0 01.602.077 13.917 13.917 0 007.6 2.231C21.743 28 28 21.742 28 14S21.742 0 14 0zM8.27 6.103l2.548 4.211-1.06 1.05a.7.7 0 00-.11.842c1.62 2.804 3.537 4.985 6.223 6.17a.7.7 0 00.777-.143l1.127-1.126 4.112 2.57c-.455 1.025-1.049 1.635-1.728 1.99-.787.412-1.747.49-2.844.263-2.193-.455-4.841-2.178-7-4.386-2.158-2.208-3.829-4.893-4.254-7.077-.213-1.092-.12-2.033.284-2.778.347-.642.937-1.192 1.925-1.586z"/></symbol>
 </svg>
 
@@ -76,17 +78,6 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
-				<li title="call">
-					<div class="icon-box">
-
-						<!-- call -->
-						<svg class="svg-call-dims">
-							<use xlink:href="#call"></use>
-						</svg>
-
-					</div>
-					<h2>call</h2>
-				</li>
 				<li title="close">
 					<div class="icon-box">
 
@@ -97,6 +88,28 @@ embedded above. They may be styled via CSS.
 
 					</div>
 					<h2>close</h2>
+				</li>
+				<li title="phone">
+					<div class="icon-box">
+
+						<!-- phone -->
+						<svg class="svg-phone-dims">
+							<use xlink:href="#phone"></use>
+						</svg>
+
+					</div>
+					<h2>phone</h2>
+				</li>
+				<li title="slider-nav">
+					<div class="icon-box">
+
+						<!-- slider-nav -->
+						<svg class="svg-slider-nav-dims">
+							<use xlink:href="#slider-nav"></use>
+						</svg>
+
+					</div>
+					<h2>slider-nav</h2>
 				</li>
 				<li title="wa">
 					<div class="icon-box">
@@ -130,17 +143,6 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 
-				<li title="call">
-					<div class="icon-box">
-
-						<!-- call -->
-						<svg class="svg-call-dims">
-							<use xlink:href="../sprite.svg#call"></use>
-						</svg>
-
-					</div>
-					<h2>call</h2>
-				</li>
 				<li title="close">
 					<div class="icon-box">
 
@@ -151,6 +153,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 					</div>
 					<h2>close</h2>
+				</li>
+				<li title="phone">
+					<div class="icon-box">
+
+						<!-- phone -->
+						<svg class="svg-phone-dims">
+							<use xlink:href="../sprite.svg#phone"></use>
+						</svg>
+
+					</div>
+					<h2>phone</h2>
+				</li>
+				<li title="slider-nav">
+					<div class="icon-box">
+
+						<!-- slider-nav -->
+						<svg class="svg-slider-nav-dims">
+							<use xlink:href="../sprite.svg#slider-nav"></use>
+						</svg>
+
+					</div>
+					<h2>slider-nav</h2>
 				</li>
 				<li title="wa">
 					<div class="icon-box">
@@ -171,7 +195,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Mon, 28 Nov 2022 10:19:11 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Tue, 16 May 2023 08:06:46 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

@@ -10,6 +10,16 @@ html {
 	@include bp(1920px, $direction:min) {
 		font-size: 10px;
 	}
+
+	@include bp(1620px) {
+		font: 400 calc(100vw / 1920 * 13)/1.33 $font_1;
+	}
+	@include bp($point_2) {
+		font-size: 10px;
+	}
+	@include bp($point_4) {
+		font-size: 10px;
+	}
 }
 
 body {
@@ -32,6 +42,10 @@ body {
 	@supports (display: grid) {
 		display: block;
 	}
+
+	@include bp($point_4) {
+		font-size: 1.6rem;
+	}
 }
 
 .wrapper {
@@ -42,12 +56,13 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 	height: auto !important;
+	overflow-x: hidden!important;
 }
 
 .base {
 	width: 100%;
 	position: relative;
-	// padding: $header 0 0;
+	padding: calc($header + 6.6rem) 0 0;
 
 	flex: 1 0 auto;
 }

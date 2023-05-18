@@ -1,17 +1,16 @@
 // Global 
-$header: 6rem;
+$header: 7.5rem;
 $footer: 22.8rem;
 
 // Mobile
-$header_mob: 6rem;
+$header_mob: 11rem;
 $footer_mob: 10rem;
 
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Roboto-Light', sans-serif;
-$font_11: 'Roboto-Regular', sans-serif;
-$font_2: 'Roboto-Medium', serif;
-$font_3: 'Roboto-Bold', serif;
+$font_1: 'Inter-Light', sans-serif;
+$font_2: 'Inter-Regular', sans-serif;
+$font_3: 'Inter-Medium', sans-serif;
 
 $font_size_base: 1.8rem;
 //---------------------------------------------fonts###
@@ -19,7 +18,10 @@ $font_size_base: 1.8rem;
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
-$dark: #282828;
+$dark: #2C2C2C;
+$yellow: #EDBB5A;
+$gold: #A97000;
+$gray: #D9D9D9;
 $trans: transparent;
 
 
@@ -40,7 +42,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 132.1rem;
+$page_width: 132rem;
 
 //---------------------------------------------layout###
 
@@ -68,3 +70,6 @@ $input_placeholder_color: rgba($dark, .5);
 $input_text_color: $dark;
 
 //---------------------------------------------forms###
+
+
+

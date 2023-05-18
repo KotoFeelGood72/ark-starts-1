@@ -1,0 +1,46 @@
+.popup.popup_form(data-id="form") 
+	.popup_bg.remove 
+	.popup_main.popup_form--main 
+		.close.remove 
+			+icon('close')
+		h3.fz35 Оставьте заявку
+		.popup_form--form 
+			+input({
+				place: 'Ваше имя',
+				class: 'popup_input',
+			})
+			+input({
+				place: 'Ваш телефон',
+				type: 'tel',
+				class: 'popup_input',
+			})
+			.action_form--bottom
+				+input({
+					submit: 'Записаться',
+					class: 'default-btn'
+				})
+				.form_policy!='Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности.</a>'
+
+.popup.burger(data-id="burger") 
+	.popup_bg.remove 
+	.popup_main.burger_main 
+		.close.remove 
+			+icon('close')
+		nav.burger_nav.remove
+			ul.burger_nav--list 
+				-for(i = 0; i < 6; i++)
+					- let navName = ['Обо мне', 'Направления работы', 'Образование', 'Услуги', 'Этапы работы', 'Отзывы']
+					- let navLink = ['about', 'work', 'education', 'services', 'step', 'reviews']
+						li
+							a(href=`#${navLink[i]}`)=navName[i]
+.social-popup
+	.social-open 
+		+iconify({icon: 'ion:share-social'})
+		+iconify({icon: 'iconamoon:close-thin'})
+	ul.social-list
+		each item in ['ri:whatsapp-fill', 'cib:telegram-plane', 'ion:logo-vk']
+			li 
+				a(href="#")
+					+iconify({
+						icon: item
+					})

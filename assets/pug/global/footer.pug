@@ -1,3 +1,47 @@
 footer.footer 
 	.section_in 
-		.footer_main 
+		.footer_main.pt10
+			.footer_form_w.mb8 
+				h6.fz35.mb5 Запишитесь на бесплатную первую сессию!
+				.footer_form
+					.footer_level--top
+						.footer_input--group.grid-2
+							+input({
+								place: 'Ваше имя',
+								class: 'action_input'
+							})
+							+input({
+								place: 'Ваш телефон',
+								type: 'tel',
+								class: 'action_input'
+							})
+						+input({
+							submit: 'Записаться',
+							class: 'yellow default-btn'
+						})
+					.acceptance!='Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности</a>.'
+			.footer_info--level.mb8 
+				ul.footer_contacts 
+					-for(i = 0; i < 2; i++)
+						- let icons = ['ic:sharp-local-phone', 'heroicons:envelope-solid']
+						- let link = ['+7 000 000 00 00', 'test@mail.ru']
+							li.footer_contacts--item
+								a(href="#")
+									+iconify({
+										icon: icons[i]
+									})
+									p=link[i]
+				ul.social-list
+					each item in ['ri:whatsapp-fill', 'cib:telegram-plane', 'ion:logo-vk']
+						li 
+							a(href="#")
+								+iconify({
+									icon: item
+								})
+			.footer_bottom--level 
+				.footer_col--left 
+					p © 2022 Все права защищены
+					a(href="#") Политика конфиденциальности
+				.footer_col--right 
+					a(href="#")
+						img(src="i/brand.svg", alt="")

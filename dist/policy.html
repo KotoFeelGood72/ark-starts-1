@@ -1,5 +1,9 @@
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script>
+<!-- Btn mixin-->
+<!-- End-->
+<!-- Input-->
+<!-- End input--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -13,7 +17,28 @@
   <body>
     <header class="header"> 
       <div class="section_in"> 
-        <div class="header_main"></div>
+        <div class="header_main">
+          <nav class="nav"> 
+            <ul class="header_nav--list">
+              <li><a href="#about">Обо мне</a></li>
+              <li><a href="#work">Направления работы</a></li>
+              <li><a href="#education">Образование</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#step">Этапы работы</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+          </nav>
+          <div class="phone"> <a href="#">
+              <div class="phone_icon">
+                <svg class="icon icon-phone ">
+                  <use xlink:href="i/sprite/sprite.svg#phone"></use>
+                </svg>
+              </div>
+              <p class="fz20">+7 000 000 00 00</p></a></div>
+          <div class="header_burger_w trigger" data-target="burger"> 
+            <div class="header_burger"><span> </span><span> </span><span></span></div>
+          </div>
+        </div>
       </div>
     </header>
     <div class="wrapper">
@@ -212,7 +237,51 @@
       </div>
       <footer class="footer"> 
         <div class="section_in"> 
-          <div class="footer_main"> </div>
+          <div class="footer_main pt10">
+            <div class="footer_form_w mb8"> 
+              <h6 class="fz35 mb5">Запишитесь на бесплатную первую сессию!</h6>
+              <div class="footer_form">
+                <div class="footer_level--top">
+                  <div class="footer_input--group grid-2">
+                    <div class="global_input action_input">
+                      <input type="text" placeholder="Ваше имя"/>
+                    </div>
+                    <div class="global_input action_input">
+                      <input type="tel" placeholder="Ваш телефон"/>
+                    </div>
+                  </div>
+                  <div class="global_input yellow default-btn">
+                    <input type="submit" value="Записаться"/>
+                  </div>
+                </div>
+                <div class="acceptance">Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности</a>.</div>
+              </div>
+            </div>
+            <div class="footer_info--level mb8"> 
+              <ul class="footer_contacts"> 
+                <li class="footer_contacts--item"><a href="#">
+                    <div class="icons ic:sharp-local-phone"><span class="iconify" data-icon="ic:sharp-local-phone"></span></div>
+                    <p>+7 000 000 00 00</p></a></li>
+                <li class="footer_contacts--item"><a href="#">
+                    <div class="icons heroicons:envelope-solid"><span class="iconify" data-icon="heroicons:envelope-solid"></span></div>
+                    <p>test@mail.ru</p></a></li>
+              </ul>
+              <ul class="social-list">
+                <li> <a href="#">
+                    <div class="icons whatsapp-fill"><span class="iconify" data-icon="ri:whatsapp-fill"></span></div></a></li>
+                <li> <a href="#">
+                    <div class="icons telegram-plane"><span class="iconify" data-icon="cib:telegram-plane"></span></div></a></li>
+                <li> <a href="#">
+                    <div class="icons ion:logo-vk"><span class="iconify" data-icon="ion:logo-vk"></span></div></a></li>
+              </ul>
+            </div>
+            <div class="footer_bottom--level"> 
+              <div class="footer_col--left"> 
+                <p>© 2022 Все права защищены</p><a href="#">Политика конфиденциальности</a>
+              </div>
+              <div class="footer_col--right"> <a href="#"><img src="i/brand.svg" alt=""></a></div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
@@ -223,7 +292,66 @@
     <script type="text/javascript">window.productionStatus = 'development';</script>
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script><script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <div class="popup popup_form" data-id="form"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main popup_form--main"> 
+        <div class="close remove"> 
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <h3 class="fz35">Оставьте заявку</h3>
+        <div class="popup_form--form"> 
+          <div class="global_input popup_input">
+            <input type="text" placeholder="Ваше имя"/>
+          </div>
+          <div class="global_input popup_input">
+            <input type="tel" placeholder="Ваш телефон"/>
+          </div>
+          <div class="action_form--bottom">
+            <div class="global_input default-btn">
+              <input type="submit" value="Записаться"/>
+            </div>
+            <div class="form_policy">Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности.</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup burger" data-id="burger"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main burger_main"> 
+        <div class="close remove"> 
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <nav class="burger_nav remove">
+          <ul class="burger_nav--list"> 
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#work">Направления работы</a></li>
+            <li><a href="#education">Образование</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#step">Этапы работы</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="social-popup">
+      <div class="social-open"> 
+        <div class="icons ion:share-social"><span class="iconify" data-icon="ion:share-social"></span></div>
+        <div class="icons iconamoon:close-thin"><span class="iconify" data-icon="iconamoon:close-thin"></span></div>
+      </div>
+      <ul class="social-list">
+        <li> <a href="#">
+            <div class="icons whatsapp-fill"><span class="iconify" data-icon="ri:whatsapp-fill"></span></div></a></li>
+        <li> <a href="#">
+            <div class="icons telegram-plane"><span class="iconify" data-icon="cib:telegram-plane"></span></div></a></li>
+        <li> <a href="#">
+            <div class="icons ion:logo-vk"><span class="iconify" data-icon="ion:logo-vk"></span></div></a></li>
+      </ul>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

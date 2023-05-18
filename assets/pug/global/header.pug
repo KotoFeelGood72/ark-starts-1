@@ -1,4 +1,20 @@
 header.header 
 	.section_in 
 		.header_main
-				
+			nav.nav 
+				ul.header_nav--list
+					-for(i = 0; i < 6; i++)
+						- let navName = ['Обо мне', 'Направления работы', 'Образование', 'Услуги', 'Этапы работы', 'Отзывы']
+						- let navLink = ['about', 'work', 'education', 'services', 'step', 'reviews']
+							li
+								a(href=`#${navLink[i]}`)=navName[i]
+			.phone 
+				a(href="#")
+					.phone_icon
+						+icon('phone')
+					p.fz20 +7 000 000 00 00
+			.header_burger_w.trigger(data-target="burger") 
+				.header_burger
+					span 
+					span 
+					span

@@ -4,5 +4,199 @@
 	flex: 0 0 auto;
 	will-change: transform;
 	position: relative;
-	display: none;
+	background-color: $dark;
+	color: $white;
+
+	@include bp($point_2) {
+		min-height: 62rem;
+	}
+	a {
+		color: inherit;
+	}
+
+	.social-list {
+		li {
+			a {
+				background-color: $white;
+				color: $dark;
+			}
+		}
+	}
+}
+
+.footer {
+}
+.section_in {
+}
+.footer_main {
+}
+.footer_form_w {
+	.fz35 {
+		max-width: 47.9rem
+	}
+}
+.footer_form {
+}
+.footer_level--top {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -3rem -3rem 0 0;
+
+
+
+	@include bp($point_2) {
+		margin: -1rem -1rem 0 0;
+	}
+
+	@include bp($point_4) {
+		flex-direction: column;
+		width: 100%;
+	}
+	
+
+	&>div {
+		padding: 3rem 3rem 3.5rem 0;
+
+		@include bp($point_2) {
+			padding: 1rem 1rem 2rem 0;
+		}
+	}
+	.global_input {
+		margin-bottom: 0;
+
+		@include bp($point_4) {
+			width: 100%;
+		}
+	}
+	.default-btn {
+		input[type="submit"] {
+			font-size: 2rem;
+			padding: 1.9rem 12.8rem;
+
+			@include bp($point_2) {
+				padding: 1.9rem 3rem;
+			}
+
+			@include bp($point_4) {
+				width: 100%;
+			}
+		}
+	}
+}
+.footer_input--group {
+	flex: 1;
+	grid-gap: 2rem;
+
+	@include bp($point_4) {
+		width: 100%
+	}
+}
+.global_input {
+}
+.form_input {
+}
+.yellow {
+}
+.default-btn {
+}
+.acceptance {
+}
+.footer_info--level {
+	@include flex-space;
+}
+.footer_contacts {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -3rem -17rem 0 0;
+	@include bp($point_2) {
+		margin: -2rem -10rem 0 0;
+	}
+	li {
+		padding: 3rem 17rem 0 0;
+
+		@include bp($point_2) {
+			padding: 2rem 10rem 0 0
+		}
+		a {
+			@include flex-start;
+			font-size: 2rem;
+			font-family: $font_3;
+			transition: all .3s ease;
+			&:hover {
+				color: $yellow;
+			}
+			.icons {
+				margin-right: 1rem;
+				font-size: 2.7rem;
+			}
+
+		}
+	}
+}
+.footer_contacts--item {
+}
+.icons {
+}
+.ic:sharp-local-phone {
+}
+.iconify {
+}
+.heroicons:envelope-solid {
+}
+.social-list {
+}
+.whatsapp-fill {
+}
+.telegram-plane {
+}
+.ion:logo-vk {
+}
+.footer_bottom--level {
+	@include flex-space;
+	padding: 2.4rem 0;
+	border-top: .1rem solid rgba(255, 255, 255, 0.2);
+
+	@include bp($point_4) {
+		flex-direction: column;
+		align-items: center
+	}
+}
+.footer_col--left {
+	@include flex-start;
+	font-size: 1.6rem;
+
+	@include bp($point_2) {
+		font-size: 1.4rem;
+	}
+
+	@include bp($point_4) {
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.2rem;
+	}
+	p {
+		margin-right: 10rem;
+
+		@include bp($point_2) {
+			margin-right: 2rem;
+		}
+
+		@include bp($point_4) {
+			margin-right: 0;
+		}
+	}
+
+	a {
+		@include bp($point_4) {
+			display: block;
+			margin: 1rem 0;
+		}
+	}
+}
+.footer_col--right {
+	img {
+		@include bp($point_4) {
+			max-width: 15rem;
+		}
+	}
 }

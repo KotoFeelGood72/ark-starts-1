@@ -1,0 +1,398 @@
+.fz16 {
+	font-size: 1.6rem;
+}
+.fz18 {
+	font-size: 1.8rem;
+}
+.fz20 {
+	font-size: 2rem;
+
+	@include bp($point_4) {
+		font-size: 1.8rem;
+	}
+}
+.fz23 {
+	font-size: 2.3rem;
+	@include bp($point_4) {
+		font-size: 2rem;
+	}
+}
+.fz30 {
+	font-size: 3rem;
+	@include bp($point_4) {
+		font-size: 2.4rem;
+	}
+}
+.fz35 {
+	font-size: 3.5rem;
+	font-family: $font_3;
+	font-weight: 500;
+
+	@include bp($point_4) {
+		font-size: 2.6rem;
+	}
+}
+.fz40 {
+	font-size: 4rem;
+	@include bp($point_4) {
+		font-size: 3rem;
+	}
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr))
+	}
+}
+
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr))
+	}
+
+	@include bp($point_4) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr))
+	}
+}
+
+.btn {
+	overflow: hidden;
+	position: relative;
+	border-radius: 5rem;
+}
+
+.default-btn {
+	transition: all .3s ease;
+	&:hover {
+		opacity: .8;
+	}
+	a, input[type="submit"], button {
+		@include flex-center;
+		background-color: $dark;
+		color: $white;
+		padding: 2.4rem 6rem;
+		border-radius: 10rem;
+		font-family: $font_2;
+		cursor: pointer;
+
+		@include bp($point_4) {
+			padding: 1.5rem 4rem;
+			font-size: 1.6rem;
+		}
+	}
+
+	&.yellow {
+		a, input[type="submit"], button {
+			background-color: $yellow;
+			color: $dark;
+			cursor: pointer;
+		}
+	}
+}
+
+.link-btn {
+	a {
+		@include flex-center;
+		padding: 2.4rem 0;
+		font-size: 2rem;
+		color: $dark;
+		font-family: $font_2;
+		position: relative;
+		&:hover {
+			color: $gold;
+		}
+		@include bp($point_4) {
+			padding: 1.5rem 4rem;
+			font-size: 1.6rem;
+			justify-content: flex-start;
+		}
+	}
+	
+	&.yellow {
+		position: relative;
+		display: inline-flex;
+		padding-right: 2.5rem;
+		&:after {
+			position: absolute;
+			top: 55%;
+			transform: translateY(-50%);
+			right: 0;
+			content: '';
+			background: url('../../i/arrow-right.svg') center/contain no-repeat;
+			width: .8rem;
+			height: 1.5rem;
+		}
+		button {
+			color: $yellow;
+		}
+	}
+}
+
+.section_head {
+	@include flex-space;
+}
+
+.section_nav {
+	@include flex-end;
+
+	@include bp($point_2) {
+		display: none;
+	}
+
+	div {
+		width: 5rem;
+		height: 5rem;
+		border-radius: 0.5rem;
+		@include flex-center;
+		background-color: $yellow;
+		color: $dark;
+		cursor: pointer;
+		&:first-child {
+			margin-right: 3.5rem;
+		}
+		&:last-child {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+
+
+
+
+.mb10 {
+	margin-bottom: 10rem;
+
+	@include bp($point_4) {
+		margin-bottom: 5rem;
+	}
+}
+.mt10 {
+	margin-top: 10rem;
+}
+
+.mt20 {
+	margin-top: 20rem;
+
+	@include bp($point_2) {
+		margin-top: 15rem;
+	}
+	@include bp($point_4) {
+		margin-top: 10rem;
+	}
+}
+.mb20 {
+	margin-bottom: 20rem;
+	@include bp($point_2) {
+		margin-bottom: 15rem;
+	}
+	@include bp($point_4) {
+		margin-bottom: 10rem;
+	}
+}
+.m10 {
+	margin: 10rem 0;
+}
+
+.m20 {
+	margin: 20rem 0;
+	@include bp($point_2) {
+		margin: 15rem 0;
+	}
+	@include bp($point_4) {
+		margin: 10rem 0;
+	}
+}
+
+.mb8 {
+	margin-bottom: 8rem;
+
+	@include bp($point_4) {
+		margin-bottom: 5rem;
+	}
+}
+
+.mb5 {
+	margin-bottom: 5rem;
+}
+
+.mb3 {
+	margin-bottom: 3rem;
+}
+
+/////////////////////////////////
+
+.p20 {
+	padding: 20rem 0;
+	@include bp($point_2) {
+		padding: 15rem 0;
+	}
+	@include bp($point_4) {
+		padding: 10rem 0;
+	}
+}
+.pb10 {
+	padding-bottom: 10rem;
+}
+.pt10 {
+	padding-top: 10rem;
+}
+
+.pt20 {
+	padding-top: 20rem;
+	@include bp($point_2) {
+		padding-top: 15rem;
+	}
+	@include bp($point_4) {
+		padding-top: 10rem;
+	}
+}
+
+.global_input {
+	margin-bottom: 2rem;
+
+	@include bp($point_4) {
+		margin-bottom: 1.5rem;
+	}
+	input {
+		@include app;
+		padding: 2rem 2.6rem;
+		border-radius: 0.5rem;
+
+		@include bp($point_4) {
+			padding: 1.5rem 2rem;
+			font-size: 1.6rem;
+		}
+	}
+
+	&.action_input {
+		width: 100%;
+		input {
+			border: .1rem solid rgba($color: $white, $alpha: .1);
+			color: $white;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.07);
+			&::-webkit-input-placeholder {
+				color: $white;
+				opacity: .7;
+			}
+			&:-ms-input-placeholder {
+				color: $white;
+				opacity: .7;
+			}
+		}
+	}
+}
+
+
+
+
+
+.social-popup {
+	position: fixed;
+	bottom: 2rem;
+	right: 1rem;
+	z-index: 103;
+	border-radius: 10rem;
+	max-height: 5rem;
+	width: 6.8rem;
+	transition: all .1s ease;
+
+	display: none;
+
+	@include bp($point_2) {
+		display: block;
+	}
+	
+	&.active {
+		padding: 1.5rem 1rem 7rem 1rem;
+		background-color: $gray;
+		max-height: 100%;
+		overflow: hidden;
+
+
+
+		.social-open {
+			&:after {
+				display: none;
+			}
+
+			.icons {
+				&:first-child {
+					display: none;
+				}
+				&:last-child {
+					display: block;
+				}
+ 			}
+		}
+		.social-list {
+			display: block;
+		}
+	}
+	.social-open {
+		position: absolute;
+		bottom: .7rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $yellow;
+		width: 5rem;
+		height: 5rem;
+		@include flex-center;
+		font-size: 2.4rem;
+		border-radius: 100%;
+
+		.icons {
+			&:last-child {
+				font-size: 3.4rem;
+				display: none;
+			}
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $yellow;
+			width: 90%;
+			height: 90%;
+			border-radius: 50%;
+			animation-name: pulse;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+			animation-direction: normal;
+			animation-iteration-count: infinite;
+			@include z-index(el)
+		}
+	}
+
+
+
+
+	.social-list {
+		margin: 0;
+		li {
+			padding: 0;
+			&:not(:last-child) {
+				margin-bottom: .7rem;
+			}
+		}
+	}
+}
+
+
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2, 2);
+  }
+}

@@ -269,3 +269,9 @@ mixin picture(data)
 				source(srcset=`${data.img}.${imgType}${is2x ? `, ${data.img}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
 		img(class= customClass src=`${data.img}.${type}` alt="")
 
+
+mixin iconify(data)
+	- let iconsClass = data.icon ? data.icon : 'icons-empty'
+	- let icon = iconsClass.replace(/[0-9]/g, '').replace(/rs:|cib:|ri:/g, '')
+	.icons(class=icon)
+		span.iconify(data-icon=data.icon ? data.icon : 'svg-spinners:180-ring-with-bg')

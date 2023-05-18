@@ -3,9 +3,171 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
-	section.start(style="background: url('../i/start.jpg') center/cover no-repeat") 
+	section.hero
 		.section_in 
-			.start_row 
-				h1 Start development by Arkada Web Studio
-				<span class="iconify-inline" data-icon="fa-solid:home"></span>
-	
+			.hero_main 
+				.hero_content 
+					h1.fz40 Бабкин Александр
+					p.fz30 психолог, коуч, бизнес-консультант
+					ul.yellow-list 
+						each item in ['Помогу найти себя', 'Помогу вырасти в доходе в 3 раза за 6 месяцев', 'Помогу вырасти в доходе в 3 раза за 6 месяцев']
+							li=item 
+					.hero_content--bottom.grid-2 
+						+btn({
+							class: 'default-btn fz20',
+							name: 'Записаться',
+							target: 'form',
+						})
+						+btn({
+							class: 'link-btn',
+							link: 'Перейти к услугам',
+							url: '#services',
+						})
+					ul.social-list
+						each item in ['ri:whatsapp-fill', 'cib:telegram-plane', 'ion:logo-vk']
+							li 
+								a(href="#")
+									+iconify({
+										icon: item
+									})
+				.hero_img 
+					img(src="i/hero.jpg", alt="")
+	section.about.m20#about 
+		.section_in 
+			.about_main.p20 
+				.about_slider_w.mb20 
+					.about_slider--head.mb10.section_head
+						h2.fz35 Если у вас:
+						.about_slider--nav.section_nav 
+							.prev.about-prev 
+								+icon('slider-nav')
+							.next.about-next 
+								+icon('slider-nav')
+					.about_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 10; i++) 
+								.swiper-slide 
+									.about_slide
+										.icon-decor
+										h3.fz20 Есть страхи и ограничивающие убеждения
+										p Страхи и ограничивающие убеждения могут быть серьезными препятствиями на пути к успеху.
+				.default-block 
+					.default_block--img 
+						img(src="i/hero.jpg", alt="")
+					.default_block--content.global_txt 
+						h3.fz35.mb3 Я помогу найти решение!
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						+btn({
+							name: 'Записаться',
+							target: 'form',
+							class: 'default-btn yellow fz20'
+						})
+	section.work#work 
+		.section_in 
+			.work_main 
+				h4.fz35.mb8 Основные направления работы
+				ul.work_grid 
+					-for(i = 0; i < 3; i++)
+						- let workName = ['Коучинг', 'Бизнес-консультирование', 'Психология']
+						- let workImg = 'i/work-' + i + '.jpg';
+							li.work_item_w 
+								.work_item
+									img(src=`${workImg}`, alt="") 
+									h3.fz23=workName[i]
+									.global_txt
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+									+btn({
+										name: 'Записаться',
+										class: 'link-btn yellow',
+										target: 'form'
+									})
+	section.education#education
+		.section_in 
+			.education_main.pt20 
+				.education_slider_w 
+					.education_slider--head.section_head.mb8
+						h2.fz35 Образование и сертификаты
+						.education_slider--nav.section_nav 
+							.prev.ed-prev 
+								+icon('slider-nav')
+							.next.ed-next 
+								+icon('slider-nav')
+					.education_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 10; i++) 
+								.swiper-slide 
+									.education_slide
+										a(href="i/ed.jpg" data-fancybox)
+											img(src="i/ed.jpg", alt="")
+	section.action.mb20
+		.section_in 
+			.action_main 
+				h5.fz35 Запишитесь на бесплатную первую сессию!
+				.action_form 
+					+input({
+						place: 'Ваше имя',
+						class: 'action_input',
+					})
+					+input({
+						place: 'Ваш телефон',
+						type: 'tel',
+						class: 'action_input',
+					})
+					.action_form--bottom
+						.form_policy!='Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности.</a>'
+						+input({
+							submit: 'Записаться',
+							class: 'default-btn yellow'
+						})
+	section.services#services 
+		.section_in 
+			.services_main 
+				h5.fz35.mb8 Мои услуги
+				ul.services-list.grid-4 
+					-for(i = 0; i < 4; i++)
+						li.services_item
+							.icon-decor
+							h3.fz20 Разовая консультация
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+							span 50 минут
+							+btn({
+								name: 'Записаться',
+								target: 'form',
+								class: 'default-btn yellow'
+							})
+			.default-block.pt20#step 
+					.default_block--img 
+						img(src="i/hero.jpg", alt="")
+					.default_block--content 
+						h3.fz35.mb8 Как строится работа
+						ul.custom-list 
+							-for(i = 1; i < 5; i++)
+								li.custom-item 
+									span.fz20!=`0${i}`
+									h3.fz20 Вы оставляете заявку
+									p Вы можете оставить заявку на сайте, позвонить по телефону или написать в мессенджер.
+	section.reviews#reviews
+		.section_in 
+			.reviews_main.m20 
+				.reviews_head.section_head.mb8 
+					h5.fz35 Отзывы клиентов
+					.reviews_slider--nav.section_nav 
+						.prev.reviews-prev 
+							+icon('slider-nav')
+						.next.reviews-next 
+							+icon('slider-nav')
+				.reviews_slider.swiper
+					.swiper-wrapper
+						-for(i = 0; i < 12; i++) 
+							.swiper-slide 
+								.reviews_slide
+									.reviews_slide--img 
+										img(src="i/reviews.jpg", alt="")
+									p Имя Фамилия
+									.reviews_txt!='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+									.loadmore_txt 
+										p Показать больше
+										img(src="i/arrow-yellow.svg", alt="")
+			

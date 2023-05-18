@@ -19,6 +19,13 @@ $(document).ready(function ($) {
 $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
+	modal();
+	loadVisibleContent();
+	if(windowWidth < mediaPoint1) {
+		shareOpen();
+	}
+
+
 });
 
 $(window).on('resize', function () {
@@ -53,29 +60,7 @@ function updateSizes() {
 	windowHeight = window.innerHeight;
 }
 
-if ('objectFit' in document.documentElement.style === false) {
-	document.addEventListener('DOMContentLoaded', function () {
-		Array.prototype.forEach.call(
-			document.querySelectorAll('img[data-object-fit]'),
-			function (image) {
-				(image.runtimeStyle || image.style).background =
-					'url("' +
-					image.src +
-					'") no-repeat 50%/' +
-					(image.currentStyle
-						? image.currentStyle['object-fit']
-						: image.getAttribute('data-object-fit'));
 
-				image.src =
-					"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='" +
-					image.width +
-					"' height='" +
-					image.height +
-					"'%3E%3C/svg%3E";
-			}
-		);
-	});
-}
 
 function succes(success) {
 	$(success).toggleClass('active');
@@ -105,96 +90,100 @@ console.info('%c%s', styles, message);
 
 
 
-$(document).ready(function() {
-	const btns = document.querySelectorAll('.btn')
+// $(document).ready(function() {
+// 	const btns = document.querySelectorAll('.btn')
 
-	btns.forEach(el => {
-			el.addEventListener('click', function(e) {
-					let
-							size = Math.max(this.offsetWidth, this.offsetHeight),
-							x = e.offsetX - size / 2,
-							y = e.offsetY - size / 2,
-							wave = this.querySelector('.wave')
-	
-					// Create an element if it doesn't exist
-					if (!wave) {
-							wave = document.createElement('span')
-							wave.className = 'wave'
-					}
-					wave.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`
-					this.appendChild(wave)
-			})
-	})
-})
+// 	btns.forEach(el => {
+// 			el.addEventListener('click', function(e) {
+// 					let
+// 							size = Math.max(this.offsetWidth, this.offsetHeight),
+// 							x = e.offsetX - size / 2,
+// 							y = e.offsetY - size / 2,
+// 							wave = this.querySelector('.wave')
 
-
-
-// const btnSubmit = document.querySelectorAll('button[type="submit"]')
-// Array.from(btnSubmit).map((item) => {
-// 	item.addEventListener('click', (e) => {
-// 		e.preventDefault();
-// 		succes('.succes')
+// 					if (!wave) {
+// 							wave = document.createElement('span')
+// 							wave.className = 'wave'
+// 					}
+// 					wave.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`
+// 					this.appendChild(wave)
+// 			})
 // 	})
 // })
 
 
-// function allDefautAnim(bottom = false, start = '-=30% center', end = 'bottom') {
-// 	const paralaxWrapper = Array.from(document.querySelectorAll('.sec_anim')).map(function(el) {
-// 		const arr = Array.from(el.querySelectorAll('.el_anim')).map(function (item, index) {
-// 			const tl = gsap.timeline();
-// 			ScrollTrigger.create({
-// 				animation: tl,
-// 				trigger: el,
-// 				start: start,
-// 				end: end,
-// 				ease: 'none',
-// 			})
-// 			tl.fromTo(item, {
-// 				y: 100, 
-// 				duration: .4,
-// 				autoAlpha: 0,
-// 			}, {
-// 				y: 0,
-// 				autoAlpha: 1,
-// 				delay: 0.1 + (0.1 * index),
-// 			});
-// 		});
-// 	});
-// }
 
-// function popupForms(pr) {
+let randomAlert = true
+const btnSubmit = document.querySelectorAll('input[type="submit"]')
+Array.from(btnSubmit).map((item) => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
 
-// 	let popupForms = document.querySelector('.callback')
-// 	let popupFormsTrigger = document.querySelectorAll('.btn_popup')
-// 	let popupFormsClose = document.querySelectorAll('.remove_popup')
-// 	let popupFormsSubmit = popupForms.querySelector('button[type="submit"]')
-// 	const burgerPopup = document.querySelector('.burger')
+		if(randomAlert) {
+			succes('.success')
+			randomAlert = false
+		} else {
+			failed('.failed')
+			randomAlert = true
+		}
+	})
+})
+
+function succes(success) {
+	$(success).toggleClass('active');
+		setTimeout(function() {
+			$(success).removeClass('active')
+		}, 3000)
+}
+
+function failed(failed) {
+	$(failed).toggleClass('active');
+		setTimeout(function() {
+			$(failed).removeClass('active')
+		}, 3000)
+}
+
+
+
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
 	
-// 	Array.from(popupFormsTrigger).map((item) => {
-// 		item.addEventListener('click', () => {
-// 			popupForms.classList.add('active');
-// 			win.style.overflow = "hidden";
-// 			win.style.paddingRight = pr; 
-// 			burgerPopup.classList.remove('active')
-// 		})
-// 	})
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			popup.forEach((el) => {
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
 
 
-// 	Array.from(popupFormsClose).map((item) => {
-// 		item.addEventListener('click', () => {
-// 			popupForms.classList.remove('active')
-// 			win.style.overflow = "";
-// 			win.style.paddingRight = ""; 
-// 		})
-// 	})
 
-// 	popupFormsSubmit.addEventListener('click', () => {
-// 		popupForms.classList.remove('active')
-// 		win.style.overflow = "";
-// 		win.style.paddingRight = ""; 
-// 		succes('.succes')
-// 	})
-// }
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
+}
 
 
 
@@ -214,49 +203,163 @@ $(document).ready(function()  {
 
 
 
-async function maps(street, city, size) {
 
-	function init() {
-		const geocoder = ymaps.geocode(`${street} ${city}`);
-		geocoder.then(
-			async function (res) {
-				var myMapMobile = await new ymaps.Map('map', {
-						center: res.geoObjects.get(0).geometry.getCoordinates(),
-						zoom: 16,
-					}, {
-						searchControlProvider: 'yandex#search'
-					}),
-					myPlacemark = new ymaps.Placemark(myMapMobile.getCenter(), {
-						balloonContent: `${street} ${city}`
-					}, {
-						iconLayout: 'default#image',
-						iconImageHref: '/i/global/map.svg',
-						iconImageSize: size,
-						iconImageOffset: [-5, -38]
-					});
 
-				myMapMobile.geoObjects
-					.add(myPlacemark)
-				myMapMobile.behaviors.disable('scrollZoom')
-			}
-		);
+
+const aboutSlider = new Swiper('.about_slider', {
+	navigation: {
+		nextEl: '.about-next',
+		prevEl: '.about-prev'
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1200: {
+			slidesPerView: 2.8,
+			spaceBetween: 40,
+		} 
 	}
-	await ymaps.ready(init);
+})
 
+const educationSlider = new Swiper('.education_slider', {
+	navigation: {
+		nextEl: '.ed-next',
+		prevEl: '.ed-prev'
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 40,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 40,
+		},
+		1200: {
+			slidesPerView: 'auto',
+			spaceBetween: 40,
+		} 
+	}
+})
+
+
+const reviewsSlider = new Swiper('.reviews_slider', {
+	navigation: {
+		nextEl: '.reviews-next',
+		prevEl: '.reviews-prev'
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1200: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+		} 
+	}
+})
+
+
+function shareOpen() {
+	const share = document.querySelector('.social-popup')
+	share.addEventListener('click', (e) => {
+		if(share.classList.contains('active')) {
+			share.classList.remove('active')
+		} else {
+			share.classList.add('active')
+		}
+	})
+}
+
+function loadVisibleContent() {
+  let seoBlocks = document.querySelectorAll(".reviews_slide");
+
+  Array.from(seoBlocks).forEach((seoBlock) => {
+    let loadMoreButton = seoBlock.querySelector(".loadmore_txt");
+    let smallBlock = seoBlock.querySelector(".reviews_txt");
+
+		let countTxt = smallBlock.innerHTML.split(' ').join('').length 
+
+		if(countTxt <= 210) {
+			loadMoreButton.style.display = 'none'
+		} else {
+			loadMoreButton.style.display = 'flex'
+		}
+    smallBlock.classList.remove("visible");
+		
+    loadMoreButton.addEventListener("click", function () {
+      if (smallBlock.classList.contains("visible")) {
+        smallBlock.classList.remove("visible");
+        loadMoreButton.querySelector("p").innerHTML = "Показать больше";
+      } else {
+        smallBlock.classList.add("visible");
+        loadMoreButton.querySelector("p").innerHTML = "Скрыть";
+      }
+    });
+  });
 }
 
 
-function getData() {
-  return axios.get('https://api.example.com/data')
-              .then(response => response.data)
-              .catch(error => console.error(error));
+
+window.onscroll = function showHeader() {
+	var header = document.querySelector('.header');
+	if(window.pageYOffset > 100){
+			header.classList.add('fixed');
+	} else{
+			header.classList.remove('fixed');
+	}
 }
 
+const menuLinks = document.querySelectorAll('nav li a');
+function highlightActiveMenuItem() {
+  const scrollPosition = window.scrollY;
+  menuLinks.forEach((link) => {
+    const targetElement = document.querySelector(link.hash);
+    if (targetElement.offsetTop <= scrollPosition + 200 && targetElement.offsetTop + targetElement.offsetHeight > scrollPosition + 200) {
+      link.closest('li').classList.add('active');
+    } else {
+      link.closest('li').classList.remove('active');
+    }
+  });
+}
 
+window.addEventListener('load', highlightActiveMenuItem);
+window.addEventListener('scroll', highlightActiveMenuItem);
 
+function smoothScrollTo(target) {
+  const startPosition = window.pageYOffset;
+  const targetPosition = target.offsetTop;
+  const distance = targetPosition - startPosition;
+  const duration = 500;
+  let start = null;
 
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    const scrollY = startPosition + distance * (progress / duration);
+    window.scrollTo(0, scrollY);
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
 
-
+  window.requestAnimationFrame(step);
+}
+menuLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = document.querySelector(link.hash);
+    smoothScrollTo(target);
+  });
+});
 
 
 
