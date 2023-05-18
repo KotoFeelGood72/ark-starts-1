@@ -542,6 +542,9 @@
 	opacity: .8;
 	max-height: 9.5rem;
 	overflow: hidden;
+	@include bp($point_4) {
+		max-height: 8.8rem;
+	}
 	&.visible {
 		max-height: 100%
 	}
