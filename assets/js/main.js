@@ -211,6 +211,9 @@ const aboutSlider = new Swiper('.about_slider', {
 		nextEl: '.about-next',
 		prevEl: '.about-prev'
 	},
+	pagination: {
+		el: '.about-pagination'
+	},
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -230,6 +233,9 @@ const educationSlider = new Swiper('.education_slider', {
 	navigation: {
 		nextEl: '.ed-next',
 		prevEl: '.ed-prev'
+	},
+	pagination: {
+		el: '.ed-pagination'
 	},
 	breakpoints: {
 		320: {
@@ -252,6 +258,9 @@ const reviewsSlider = new Swiper('.reviews_slider', {
 	navigation: {
 		nextEl: '.reviews-next',
 		prevEl: '.reviews-prev'
+	},
+	pagination: {
+		el: '.rev-pagination'
 	},
 	breakpoints: {
 		320: {

@@ -7,8 +7,10 @@
 	will-change: transform;
 	@include z-index(header);
 	@include flex-center;
-	background-color: #ffffffbd;
-	backdrop-filter: blur(2rem);
+	&.fixed {
+		backdrop-filter: blur(2rem);
+		background-color: #ffffffbd;
+	}
 
 	@include bp($point_2) {
 		height: $header_mob

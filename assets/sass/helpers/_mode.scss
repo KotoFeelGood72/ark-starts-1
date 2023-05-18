@@ -396,3 +396,21 @@
     transform: scale(2, 2);
   }
 }
+
+.slider-pagination {
+	display: none;
+	position: absolute;
+	bottom: 0!important;
+	@include bp($point_4) {
+		@include flex-center;
+	}
+	.swiper-pagination-bullet {
+		background-color: $yellow;
+	}
+}
+
+.swiper {
+	@include bp($point_4) {
+		padding-bottom: 5rem!important;
+	}
+}

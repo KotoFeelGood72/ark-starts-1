@@ -1,4 +1,28 @@
 .hero {
+	position: relative;
+	&:before {
+		position: absolute;
+		top: -20rem;
+		left: -19rem;
+		width: 47.9rem;
+		height: 18.8rem;
+		border-radius: 100%;
+		content: '';
+		transform: matrix(0.92, -0.39, -0.01, 1, 0, 0);
+		border: .2rem solid rgba(44, 44, 44, 0.05);
+	}
+
+	&:after {
+		position: absolute;
+		top: -19rem;
+		left: -17rem;
+		width: 40.5rem;
+		height: 18.8rem;
+		border-radius: 100%;
+		content: '';
+		transform: rotate(20.03deg);
+		border: .2rem solid rgba(44, 44, 44, 0.05);
+	}
 }
 .section_in {
 }
@@ -125,6 +149,30 @@
 .about {
 	background-color: $dark;
 	color: $white;
+	position: relative;
+	&:before {
+		position: absolute;
+		bottom: -4rem;
+		right: -19rem;
+		width: 66.5rem;
+		height: 18.8rem;
+		border-radius: 100%;
+		content: '';
+		transform: matrix(0.92, -0.39, -0.01, 1, 0, 0);
+		border: .2rem solid rgba(255, 255, 255, 0.100);
+	}
+
+	&:after {
+		position: absolute;
+		bottom: -5rem;
+		right: -30rem;
+		width: 66.5rem;
+		height: 18.8rem;
+		border-radius: 100%;
+		content: '';
+		transform: rotate(20.03deg);
+		border: .2rem solid rgba(255, 255, 255, 0.100);
+	}
 }
 
 .about_slider_w {
