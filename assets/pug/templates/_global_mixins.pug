@@ -188,15 +188,22 @@ mixin loop_while_sub(counter)
 			block
 
 //- works
-mixin breadcrumbs(array,add_class)
-	- add_class = add_class || ''
-	ul.breadcrumbs_list(class=add_class)
-		each crumb, index in array
-			li.breadcrumbs_item
-				if (index == array.length - 1)
-					a.breadcrumbs_link.current_mod=crumb.text
-				else
-					a.breadcrumbs_link(href= crumb.url)= crumb.text
+mixin bread(items, last)
+	.breadcrumb
+		.section_in 
+			.breadcrumb_main
+				ul.breadcrumb__list&attributes(attributes)
+					each item in items
+						li.breadcrumb__item
+							// if breadcrumb is single
+							if (items.length === 0)
+								span.breadcrumb__link= item
+							else
+								a(href="#" title=item).breadcrumb__link= item
+
+					if last
+						li.breadcrumb__item
+							span.breadcrumb__link-current= last
 
 //- works
 mixin menu(menuArray)
@@ -268,4 +275,10 @@ mixin picture(data)
 			else
 				source(srcset=`${data.img}.${imgType}${is2x ? `, ${data.img}@2x.${imgType} 2x` : ''}` type=`image/${imgType}`)
 		img(class= customClass src=`${data.img}.${type}` alt="")
+
+mixin iconify(data)
+	- let iconsClass = data.icon ? data.icon : 'icons-empty'
+	- let icon = iconsClass.replace(/[0-9]/g, '').replace(/rs:|cib:|ri:/g, '')
+	.icons(class=icon)
+		span.iconify(data-icon=data.icon ? data.icon : 'svg-spinners:180-ring-with-bg')
 

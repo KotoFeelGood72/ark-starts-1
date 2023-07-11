@@ -6,5 +6,198 @@
 	width: 100%;
 	will-change: transform;
 	@include z-index(header);
-	display: none;
+}
+
+.header {
+}
+.section_in {
+}
+.header_main {
+	padding: 1.5rem 0 2.2rem 0
+}
+.header_top {
+	@include flex-space;
+	margin-bottom: 3.6rem;
+}
+.logo {
+	margin-right: 7rem;
+	a {
+		@include flex-start;
+
+		img {
+			&:first-child {
+				margin-right: 1.2rem;
+				max-width: 5.2rem;
+			}
+		}
+	}
+}
+.search-input {
+	position: relative;
+	max-width: 45.2rem;
+	width: 100%;
+	margin-right: 8rem;
+	input {
+		@include app;
+		border: .1rem solid $light-gray;
+		padding: 1.1rem 2rem;
+		border-radius: $rounded-sm;
+		transition: all .3s ease;
+		width: 100%;
+		&:focus {
+			border-color: $light-green;
+		}
+	}
+
+
+
+
+	button {
+		position: absolute;
+		top: 50%;
+		right: 2rem;
+		font-size: $md;
+		transform: translateY(-50%);
+		@include flex-center;
+		color: $light-gray;
+		transition: all .3s ease;
+		&:hover {
+			color: $dark;
+		}
+	}
+}
+.icons {
+}
+.heroicons:magnifying-glass-solid {
+}
+.iconify {
+}
+.top-menu {
+	margin-right: 9rem;
+	ul {
+		display: none;
+	}
+}
+.top_menu--label {
+
+	position: relative;
+	padding-right: 2.4rem;
+	cursor: pointer;
+	transition: all .3s ease;
+	&:hover {
+		color: $green;
+	}
+	&:after {
+		content: url('https://api.iconify.design/material-symbols/arrow-back-ios-rounded.svg?color=%238faa1a');
+		position: absolute;
+		top: 43%;
+		right: 0;
+		line-height: 0;
+		height: 1.1rem;
+		width: .7rem;
+		transform: translateY(-56%) rotate(-90deg);
+		@include flex-center;
+	}
+}
+.phone {
+	margin-right: 10rem;
+	a {
+		@include flex-start;
+		color: $dark;
+
+		.icons {
+			display: block;
+			margin-right: 1.2rem;
+			width: 2rem;
+			height: 2.1rem;
+			font-size: $md;
+		}
+	}
+}
+.ph:phone-light {
+}
+.header-cart {
+	max-width: 12.6rem;
+	a {
+		@include flex-start;
+		color: $medium-gray;
+		font-size: $sm;
+	}
+
+	.icons {
+		min-width: 4.7rem;
+		width: 4.7rem;
+		height: 4.7rem;
+		@include flex-center;
+		border: .1rem solid $light-gray;
+		border-radius: 100%;
+		color: $green;
+		margin-right: 1.5rem;
+		svg {
+			font-size: $md;
+		}
+	}
+}
+.solar:cart--outline {
+}
+.header-cart--total {
+}
+.header-bottom {
+	@include flex-start;
+}
+.header_shop {
+	@include flex-start;
+	background-color:$green;
+	border-radius: $rounded-sm;
+	padding: 1.2rem 5.7rem 1.2rem 2rem;
+	color: $white;
+	position: relative;
+	margin-right: 7rem;
+	cursor: pointer;
+	.header-burger {
+		margin-right: 1.5rem;
+		width: 2.4rem;
+		height: 2.4rem;
+		@include flex-center;
+		font-size: $xl-2;
+	}
+	.icon-arrow {
+		position: absolute;
+		top: 55%;
+		right: 2.5rem;
+		transform: translateY(-50%) rotate(-90deg);
+		height: 1.1rem;
+		width: .7rem;
+		font-size: $sm;
+	}
+
+	p {
+
+	}
+
+}
+.gg:menu-right-alt {
+}
+.icon-arrow {
+}
+.material-symbols:arrow-back-ios-rounded {
+}
+.header-nav {
+
+	ul {
+		@include flex-start;
+
+		li {
+			a {
+				color: $dark;
+				font-family: $font_2;
+				&:hover, &.current-page-item {
+					color: $green;
+				}
+			}
+			&:not(:last-child) {
+				margin-right: 7.1rem;
+			}
+		}
+	}
 }

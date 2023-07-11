@@ -1,4 +1,51 @@
 header.header 
 	.section_in 
 		.header_main
+			.header_top 
+				.logo 
+					a(href="#")
+						img(src="i/svg/logo.svg", alt="")
+						img(src="i/svg/txt-logo.svg", alt="")
+				.search-input 
+					input(type="search" placeholder="Поиск")
+					button(type="submit") 
+						+iconify({
+							icon: 'heroicons:magnifying-glass-solid'
+						})
+				.top-menu
+					.top_menu--label Заказ растений
+					ul
+						each item in ['Заказ растений', 'Реквизиты', 'Прайс-лист', 'Как заказать', 'Статьи']
+							li
+								a(href="#")=item
+				.phone 
+					a(href="#")
+						+iconify({
+							icon: 'ph:phone-light'
+						})
+						p +7 000 000 00 00
+				.header-cart
+					a(href="#")
+						+iconify({
+							icon: 'solar:cart-5-outline'
+						})
+						.header-cart--total#header-total Корзина пуста
+			.header-bottom 
+				.header_shop
+					.header-burger
+						+iconify({
+							icon: 'gg:menu-right-alt'
+						})
+					p Каталог растений
+					.icon-arrow 
+						+iconify({
+							icon: 'material-symbols:arrow-back-ios-rounded'
+						})
+				nav.header-nav 
+					ul 
+						each item in ['Картофель', 'Малина', 'Ежевика', 'Голубика', 'Смородина', 'Земляника', 'Черника', 'Жимолость']
+							li 
+								a(href="#")=item 
+				
+
 				

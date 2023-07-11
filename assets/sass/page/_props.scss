@@ -1,0 +1,10 @@
+.props_main {
+	margin-top: -3rem;
+	margin-bottom: 8rem;
+	p {
+		color: $gray;
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}

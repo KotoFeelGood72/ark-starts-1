@@ -1,0 +1,114 @@
+// Product card
+
+
+mixin products-card
+	.product-card.card
+		.product_cardSlider_w
+			a(href="#") 
+				.productCard_slide--img
+					img(src="i/product/product.jpg", alt="")
+					.overlay
+						.image-trigger(data-index="i/product/product.jpg") 
+						.image-trigger(data-index="i/home/hero.jpg") 
+						.image-trigger(data-index="i/home/about.jpg") 
+						.image-trigger(data-index="i/home/lab.jpg") 
+				.product_card--pagination.pagination
+		.product_card--content 
+			p 1500 ₽
+			h3 Название растения
+			.product_card--pay.small-btn
+				a(href="#") В корзину
+
+
+
+// End
+
+
+
+
+// Product card
+
+
+mixin card-popular
+	.product-card
+		a(href="#") 
+			.product_card--img
+				img(src="i/product/product.jpg", alt="")
+		.product_card--content 
+			p 1500 ₽
+			h3 Название растения
+			.product_card--pay.small-btn 
+				a(href="#") В корзину
+
+
+
+// End
+
+// Section head
+
+
+mixin section-head(data)
+	.section-head 
+		.section-title!=`<h${data.tag}>${data.title}</h${data.tag}>`
+		if data.link 
+			.section_head--link 
+				a(href="#")
+					p=data.link
+					+iconify({
+						icon: 'material-symbols:arrow-back-ios-rounded'
+					})
+// end
+
+// Btn
+
+mixin btn(data)
+	.btn(class=data.class ? data.class : '' class="btn") 
+		if data.submit 
+			button(type="button" class="trigger" class=data.class ? data.class : '' data=target=data.target)=data.submit
+		else if data.link 
+			a(href="#")=data.link 
+
+
+
+// end
+
+// Post
+
+
+
+mixin post(data)
+	.post 
+		a(href="#")
+			.post-img 
+				img(src="i/home/hero.jpg", alt="")
+			.post-content 
+				.post-date 
+					+iconify({
+						icon: 'solar:clock-circle-linear',
+					})
+					p 20.25.23
+				.post-title 
+					h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+				.post-excerpt 
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+
+
+// end
+
+mixin input(data)
+	.app-input(class=data.class ? data.class : '')
+		input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="Ваше имя")
+
+
+
+
+
+
+
+
+
+mixin seo
+	.seo 
+		h2 Заголовок для СЕО текста
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

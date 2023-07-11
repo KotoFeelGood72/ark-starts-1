@@ -1,6 +1,6 @@
 // Global 
-$header: 6rem;
-$footer: 22.8rem;
+$header: 16.6rem;
+$footer: 50rem;
 
 // Mobile
 $header_mob: 6rem;
@@ -8,10 +8,11 @@ $footer_mob: 10rem;
 
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Roboto-Light', sans-serif;
-$font_11: 'Roboto-Regular', sans-serif;
-$font_2: 'Roboto-Medium', serif;
-$font_3: 'Roboto-Bold', serif;
+$font_0: 'IBMPlexSans-Light', sans-serif;
+$font_1: 'IBMPlexSans-Regular', sans-serif;
+$font_2: 'IBMPlexSans-Medium', sans-serif;
+$font_3: 'IBMPlexSans-SemiBold', sans-serif;
+$font_4: 'IBMPlexSans-Bold', sans-serif;
 
 $font_size_base: 1.8rem;
 //---------------------------------------------fonts###
@@ -19,13 +20,22 @@ $font_size_base: 1.8rem;
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
-$dark: #282828;
+$dark: #2C2C2C;
+$gray: rgba(44, 44, 44, 0.70);
+$medium-gray: #2C2C2C80;
+$light-gray: rgba(44, 44, 44, 0.20);
+$green: #8FAA1A;
+$light-green: rgba(143, 170, 26, 0.10);
 $trans: transparent;
 
+$rounded-sm: 1rem;
+$rounded-md: 3rem;
+$rounded-s: 2rem;
 
 
-$color_text_base: $black;
-$color_link_base: $black;
+
+$color_text_base: $dark;
+$color_link_base: $green;
 $body_bg: $white;
 //---------------------------------------------colors###
 
@@ -40,7 +50,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 132.1rem;
+$page_width: 152rem;
 
 //---------------------------------------------layout###
 
@@ -67,4 +77,16 @@ $input_border_color_active: $dark;
 $input_placeholder_color: rgba($dark, .5);
 $input_text_color: $dark;
 
-//---------------------------------------------forms###
+
+
+// Variable fonts
+
+$sm: 1.6rem;
+$md: 2rem;
+$xl: 2.3rem;
+$xl-2: 2.5rem;
+$xl-3: 3rem;
+$xl-4: 3.5rem;
+$xl-5: 4rem;
+
+$base-txt: 1.8rem;

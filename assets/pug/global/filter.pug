@@ -1,0 +1,214 @@
+.filter-shop 
+	ul.filter-row
+		li.filter-item 
+			.filter_item--head 
+				p Цвет
+				+iconify({
+					icon: 'material-symbols:arrow-back-ios-rounded'
+				})
+				.count-filter 3
+			.filter_item--body
+				.filter_item--bodyWrapper 
+					ul.filter_group--checkbox 
+						-
+							let colors = [
+								{
+									color: 'FF0000',
+									name: 'Красный',
+									active: true
+								},
+								{
+									color: '0000FF',
+									name: 'Синий',
+									active: false
+								},
+								{
+									color: 'FFFF00',
+									name: 'Желтый',
+									active: false
+								},
+								{
+									color: 'FF1493',
+									name: 'Розовый',
+									active: false
+								},
+								{
+									color: '32CD32',
+									name: 'Зёленый',
+									active: false
+								},
+								{
+									color: '8A2BE2',
+									name: 'Фиолетовый',
+									active: false
+								},
+								{
+									color: '00BFFF',
+									name: 'Голубой',
+									active: false
+								},
+								{
+									color: '424242',
+									name: 'Черный',
+									active: false
+								},
+								{
+									color: '808080',
+									name: 'Серый',
+									active: false
+								},
+								{
+									color: '00FFFF',
+									name: 'Морской',
+									active: false
+								},
+							]
+						each item in colors 
+							li 
+								input(type="checkbox" checked=item.active id=`filter-${item.color}`)
+								label(for=`filter-${item.color}`)
+									.circle-color(style=`background-color: #${item.color}`)
+									p=item.name
+				+btn({
+					submit: 'Готово',
+					class: 'filtered-btn'
+				})
+		li.filter-item 
+				.filter_item--head 
+					p Фасовка
+					+iconify({
+						icon: 'material-symbols:arrow-back-ios-rounded'
+					})
+					#count-filter
+				.filter_item--body
+					.filter_item--bodyWrapper  
+						ul.filter_group--checkbox 
+							-
+								let packing = [
+									{ name: 'Пробирка, 15 мл', active: true, id: 1 },
+									{ name: 'Кассета, 75 мл', active: false, id: 2 },
+									{ name: 'Горшок Р9, 500 мл', active: false, id: 3 },
+									{ name: 'Горшок С2, 2000 мл', active: false, id: 4 },
+									{ name: 'Горшок С3, 3000 мл', active: false, id: 5 },
+								]
+							each item in packing 
+								li 
+									input(type="checkbox" checked=item.active id=`packing-${item.id}`)
+									label(for=`packing-${item.id}`)
+										p=item.name
+					+btn({
+						submit: 'Готово',
+						class: 'filtered-btn'
+					})
+		li.filter-item 
+				.filter_item--head 
+					p Вид
+					+iconify({
+						icon: 'material-symbols:arrow-back-ios-rounded'
+					})
+					#count-filter
+				.filter_item--body
+					.filter_item--bodyWrapper  
+						ul.filter_group--checkbox 
+							-
+								let view = [
+									{ name: 'Пробирка, 15 мл', active: true, id: 1 },
+									{ name: 'Кассета, 75 мл', active: false, id: 2 },
+									{ name: 'Горшок Р9, 500 мл', active: false, id: 3 },
+									{ name: 'Горшок С2, 2000 мл', active: false, id: 4 },
+									{ name: 'Горшок С3, 3000 мл', active: false, id: 5 },
+								]
+							each item in view 
+								li 
+									input(type="checkbox" checked=item.active id=`view-${item.id}`)
+									label(for=`view-${item.id}`)
+										p=item.name
+					+btn({
+						submit: 'Готово',
+						class: 'filtered-btn'
+					})
+		li.filter-item 
+				.filter_item--head 
+					p Сорт
+					+iconify({
+						icon: 'material-symbols:arrow-back-ios-rounded'
+					})
+					#count-filter
+				.filter_item--body
+					.filter_item--bodyWrapper  
+						ul.filter_group--checkbox 
+							-
+								let variety = [
+									{ name: 'Пробирка, 15 мл', active: true, id: 1 },
+									{ name: 'Кассета, 75 мл', active: false, id: 2 },
+									{ name: 'Горшок Р9, 500 мл', active: false, id: 3 },
+									{ name: 'Горшок С2, 2000 мл', active: false, id: 4 },
+									{ name: 'Горшок С3, 3000 мл', active: false, id: 5 },
+								]
+							each item in variety 
+								li 
+									input(type="checkbox" checked=item.active id=`variety-${item.id}`)
+									label(for=`variety-${item.id}`)
+										p=item.name
+					+btn({
+						submit: 'Готово',
+						class: 'filtered-btn'
+					})
+		li.filter-item 
+				.filter_item--head 
+					p Жизненный цикл
+					+iconify({
+						icon: 'material-symbols:arrow-back-ios-rounded'
+					})
+					#count-filter
+				.filter_item--body
+					.filter_item--bodyWrapper  
+						ul.filter_group--checkbox 
+							-
+								let cycle = [
+									{ name: 'Пробирка, 15 мл', active: true, id: 1 },
+									{ name: 'Кассета, 75 мл', active: false, id: 2 },
+									{ name: 'Горшок Р9, 500 мл', active: false, id: 3 },
+									{ name: 'Горшок С2, 2000 мл', active: false, id: 4 },
+									{ name: 'Горшок С3, 3000 мл', active: false, id: 5 },
+								]
+							each item in cycle 
+								li 
+									input(type="checkbox" checked=item.active id=`cycle-${item.id}`)
+									label(for=`cycle-${item.id}`)
+										p=item.name
+					+btn({
+						submit: 'Готово',
+						class: 'filtered-btn'
+					})
+		li.filter-item 
+				.filter_item--head 
+					p Место выращивания
+					+iconify({
+						icon: 'material-symbols:arrow-back-ios-rounded'
+					})
+					#count-filter
+				.filter_item--body
+					.filter_item--bodyWrapper  
+						ul.filter_group--checkbox 
+							-
+								let place = [
+									{ name: 'Пробирка, 15 мл', active: true, id: 1 },
+									{ name: 'Кассета, 75 мл', active: false, id: 2 },
+									{ name: 'Горшок Р9, 500 мл', active: false, id: 3 },
+									{ name: 'Горшок С2, 2000 мл', active: false, id: 4 },
+									{ name: 'Горшок С3, 3000 мл', active: false, id: 5 },
+								]
+							each item in place 
+								li 
+									input(type="checkbox" checked=item.active id=`place-${item.id}`)
+									label(for=`place-${item.id}`)
+										p=item.name
+					+btn({
+						submit: 'Готово',
+						class: 'filtered-btn'
+					})
+	.sort-filter 
+		select(name="sort filter")
+			each item in ['По размеру скидки', 'По популярности', 'По новизне', 'Сначала дешёвые', 'Сначала дорогие']
+				option(value=item)=item 

@@ -1,0 +1,931 @@
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script>
+<!-- Product card-->
+<!-- End-->
+<!-- Product card-->
+<!-- End-->
+<!-- Section head-->
+<!-- end-->
+<!-- Btn-->
+<!-- end-->
+<!-- Post-->
+<!-- end--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Картофель</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" media="all" href="styles/main_global.css"/>
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="section_in"> 
+        <div class="header_main">
+          <div class="header_top"> 
+            <div class="logo"> <a href="#"><img src="i/svg/logo.svg" alt=""><img src="i/svg/txt-logo.svg" alt=""></a></div>
+            <div class="search-input"> 
+              <input type="search" placeholder="Поиск">
+              <button type="submit"> 
+                <div class="icons heroicons:magnifying-glass-solid"><span class="iconify" data-icon="heroicons:magnifying-glass-solid"></span></div>
+              </button>
+            </div>
+            <div class="top-menu">
+              <div class="top_menu--label">Заказ растений</div>
+              <ul>
+                <li><a href="#">Заказ растений</a></li>
+                <li><a href="#">Реквизиты</a></li>
+                <li><a href="#">Прайс-лист</a></li>
+                <li><a href="#">Как заказать</a></li>
+                <li><a href="#">Статьи</a></li>
+              </ul>
+            </div>
+            <div class="phone"> <a href="#">
+                <div class="icons ph:phone-light"><span class="iconify" data-icon="ph:phone-light"></span></div>
+                <p>+7 000 000 00 00</p></a></div>
+            <div class="header-cart"><a href="#">
+                <div class="icons solar:cart--outline"><span class="iconify" data-icon="solar:cart-5-outline"></span></div>
+                <div class="header-cart--total" id="header-total">Корзина пуста</div></a></div>
+          </div>
+          <div class="header-bottom"> 
+            <div class="header_shop">
+              <div class="header-burger">
+                <div class="icons gg:menu-right-alt"><span class="iconify" data-icon="gg:menu-right-alt"></span></div>
+              </div>
+              <p>Каталог растений</p>
+              <div class="icon-arrow"> 
+                <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+              </div>
+            </div>
+            <nav class="header-nav"> 
+              <ul> 
+                <li> <a href="#">Картофель</a></li>
+                <li> <a href="#">Малина</a></li>
+                <li> <a href="#">Ежевика</a></li>
+                <li> <a href="#">Голубика</a></li>
+                <li> <a href="#">Смородина</a></li>
+                <li> <a href="#">Земляника</a></li>
+                <li> <a href="#">Черника</a></li>
+                <li> <a href="#">Жимолость</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="base">
+        <div class="block-head">
+          <div class="section_in">
+            <div class="block_head--main">
+              <div class="breadcrumb">
+                <div class="section_in"> 
+                  <div class="breadcrumb_main">
+                    <ul class="breadcrumb__list">
+                      <li class="breadcrumb__item">
+                        <!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+                      </li>
+                      <li class="breadcrumb__item"><span class="breadcrumb__link-current">Картофель</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="block_head--title">
+                <h1>Картофель</h1>
+                <p>Всего товаров: 200</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-shop">
+          <div class="section_in"> 
+            <div class="block_shop--main"> 
+              <div class="filter-shop"> 
+                <ul class="filter-row">
+                  <li class="filter-item"> 
+                    <div class="filter_item--head"> 
+                      <p>Цвет</p>
+                      <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+                      <div class="count-filter">3</div>
+                    </div>
+                    <div class="filter_item--body">
+                      <div class="filter_item--bodyWrapper"> 
+                        <ul class="filter_group--checkbox"> 
+                          <li> 
+                            <input type="checkbox" checked id="filter-FF0000">
+                            <label for="filter-FF0000">
+                              <div class="circle-color" style="background-color: #FF0000"></div>
+                              <p>Красный</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-0000FF">
+                            <label for="filter-0000FF">
+                              <div class="circle-color" style="background-color: #0000FF"></div>
+                              <p>Синий</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-FFFF00">
+                            <label for="filter-FFFF00">
+                              <div class="circle-color" style="background-color: #FFFF00"></div>
+                              <p>Желтый</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-FF1493">
+                            <label for="filter-FF1493">
+                              <div class="circle-color" style="background-color: #FF1493"></div>
+                              <p>Розовый</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-32CD32">
+                            <label for="filter-32CD32">
+                              <div class="circle-color" style="background-color: #32CD32"></div>
+                              <p>Зёленый</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-8A2BE2">
+                            <label for="filter-8A2BE2">
+                              <div class="circle-color" style="background-color: #8A2BE2"></div>
+                              <p>Фиолетовый</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-00BFFF">
+                            <label for="filter-00BFFF">
+                              <div class="circle-color" style="background-color: #00BFFF"></div>
+                              <p>Голубой</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-424242">
+                            <label for="filter-424242">
+                              <div class="circle-color" style="background-color: #424242"></div>
+                              <p>Черный</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-808080">
+                            <label for="filter-808080">
+                              <div class="circle-color" style="background-color: #808080"></div>
+                              <p>Серый</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="filter-00FFFF">
+                            <label for="filter-00FFFF">
+                              <div class="circle-color" style="background-color: #00FFFF"></div>
+                              <p>Морской</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn filtered-btn btn"> 
+                        <button class="trigger filtered-btn" type="button">Готово</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filter-item"> 
+                    <div class="filter_item--head"> 
+                      <p>Фасовка</p>
+                      <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+                      <div id="count-filter"></div>
+                    </div>
+                    <div class="filter_item--body">
+                      <div class="filter_item--bodyWrapper"> 
+                        <ul class="filter_group--checkbox"> 
+                          <li> 
+                            <input type="checkbox" checked id="packing-1">
+                            <label for="packing-1">
+                              <p>Пробирка, 15 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="packing-2">
+                            <label for="packing-2">
+                              <p>Кассета, 75 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="packing-3">
+                            <label for="packing-3">
+                              <p>Горшок Р9, 500 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="packing-4">
+                            <label for="packing-4">
+                              <p>Горшок С2, 2000 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="packing-5">
+                            <label for="packing-5">
+                              <p>Горшок С3, 3000 мл</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn filtered-btn btn"> 
+                        <button class="trigger filtered-btn" type="button">Готово</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filter-item"> 
+                    <div class="filter_item--head"> 
+                      <p>Вид</p>
+                      <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+                      <div id="count-filter"></div>
+                    </div>
+                    <div class="filter_item--body">
+                      <div class="filter_item--bodyWrapper"> 
+                        <ul class="filter_group--checkbox"> 
+                          <li> 
+                            <input type="checkbox" checked id="view-1">
+                            <label for="view-1">
+                              <p>Пробирка, 15 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="view-2">
+                            <label for="view-2">
+                              <p>Кассета, 75 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="view-3">
+                            <label for="view-3">
+                              <p>Горшок Р9, 500 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="view-4">
+                            <label for="view-4">
+                              <p>Горшок С2, 2000 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="view-5">
+                            <label for="view-5">
+                              <p>Горшок С3, 3000 мл</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn filtered-btn btn"> 
+                        <button class="trigger filtered-btn" type="button">Готово</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filter-item"> 
+                    <div class="filter_item--head"> 
+                      <p>Сорт</p>
+                      <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+                      <div id="count-filter"></div>
+                    </div>
+                    <div class="filter_item--body">
+                      <div class="filter_item--bodyWrapper"> 
+                        <ul class="filter_group--checkbox"> 
+                          <li> 
+                            <input type="checkbox" checked id="variety-1">
+                            <label for="variety-1">
+                              <p>Пробирка, 15 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="variety-2">
+                            <label for="variety-2">
+                              <p>Кассета, 75 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="variety-3">
+                            <label for="variety-3">
+                              <p>Горшок Р9, 500 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="variety-4">
+                            <label for="variety-4">
+                              <p>Горшок С2, 2000 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="variety-5">
+                            <label for="variety-5">
+                              <p>Горшок С3, 3000 мл</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn filtered-btn btn"> 
+                        <button class="trigger filtered-btn" type="button">Готово</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filter-item"> 
+                    <div class="filter_item--head"> 
+                      <p>Жизненный цикл</p>
+                      <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+                      <div id="count-filter"></div>
+                    </div>
+                    <div class="filter_item--body">
+                      <div class="filter_item--bodyWrapper"> 
+                        <ul class="filter_group--checkbox"> 
+                          <li> 
+                            <input type="checkbox" checked id="cycle-1">
+                            <label for="cycle-1">
+                              <p>Пробирка, 15 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="cycle-2">
+                            <label for="cycle-2">
+                              <p>Кассета, 75 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="cycle-3">
+                            <label for="cycle-3">
+                              <p>Горшок Р9, 500 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="cycle-4">
+                            <label for="cycle-4">
+                              <p>Горшок С2, 2000 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="cycle-5">
+                            <label for="cycle-5">
+                              <p>Горшок С3, 3000 мл</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn filtered-btn btn"> 
+                        <button class="trigger filtered-btn" type="button">Готово</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filter-item"> 
+                    <div class="filter_item--head"> 
+                      <p>Место выращивания</p>
+                      <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
+                      <div id="count-filter"></div>
+                    </div>
+                    <div class="filter_item--body">
+                      <div class="filter_item--bodyWrapper"> 
+                        <ul class="filter_group--checkbox"> 
+                          <li> 
+                            <input type="checkbox" checked id="place-1">
+                            <label for="place-1">
+                              <p>Пробирка, 15 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="place-2">
+                            <label for="place-2">
+                              <p>Кассета, 75 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="place-3">
+                            <label for="place-3">
+                              <p>Горшок Р9, 500 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="place-4">
+                            <label for="place-4">
+                              <p>Горшок С2, 2000 мл</p>
+                            </label>
+                          </li>
+                          <li> 
+                            <input type="checkbox" id="place-5">
+                            <label for="place-5">
+                              <p>Горшок С3, 3000 мл</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn filtered-btn btn"> 
+                        <button class="trigger filtered-btn" type="button">Готово</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="sort-filter"> 
+                  <select name="sort filter">
+                    <option value="По размеру скидки">По размеру скидки</option>
+                    <option value="По популярности">По популярности</option>
+                    <option value="По новизне">По новизне</option>
+                    <option value="Сначала дешёвые">Сначала дешёвые</option>
+                    <option value="Сначала дорогие">Сначала дорогие</option>
+                  </select>
+                </div>
+              </div>
+              <div class="block-products"> 
+                <ul class="products-grid">
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="products-item--w"> 
+                    <div class="products-item">
+                      <div class="product-card card">
+                        <div class="product_cardSlider_w"><a href="#"> 
+                            <div class="productCard_slide--img"><img src="i/product/product.jpg" alt=""/>
+                              <div class="overlay">
+                                <div class="image-trigger" data-index="i/product/product.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/hero.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/about.jpg"> </div>
+                                <div class="image-trigger" data-index="i/home/lab.jpg"> </div>
+                              </div>
+                            </div>
+                            <div class="product_card--pagination pagination"></div></a></div>
+                        <div class="product_card--content"> 
+                          <p>1500 ₽</p>
+                          <h3>Название растения</h3>
+                          <div class="product_card--pay small-btn"><a href="#">В корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="pag_block">
+                  <ul class="pag_list">
+                    <li class="pag_item prev_mod"><a class="pag_link prev_mod" href="#"></a></li>
+                    <li class="pag_item"><a class="pag_link active_mod" title="1">1</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="2">2</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="3">3</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="4">4</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="5">5</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="6">6</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="7">7</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="8">8</a></li>
+                    <li class="pag_item"><a class="pag_link dots_mod">&hellip;</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="9">9</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="10">10</a></li>
+                    <li class="pag_item next_mod"><a class="pag_link next_mod" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="seo"> 
+                <h2>Заголовок для СЕО текста</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="app_main--w py8">
+                <div class="app-main">
+                  <div class="app_head"> 
+                    <h5>Закажите оптовый прайс-лист</h5>
+                  </div>
+                  <div class="app_form">
+                    <ul class="app_form--row">
+                      <li> 
+                        <div class="app-input">
+                          <input type="text" placeholder="Ваше имя"/>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="app-input">
+                          <input type="tel" placeholder="Телефон"/>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="app-input">
+                          <input type="email" placeholder="E-Mail"/>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="app_btn btn"> 
+                          <input type="submit" value="Отправить">
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="app-policy">Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности.</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer"> 
+        <div class="section_in"> 
+          <div class="footer_main">
+            <div class="footer_col--contact"> 
+              <div class="footer-logo"> <a href="#"><img src="i/svg/logo-white.svg" alt=""></a></div>
+              <ul class="footer-list"> 
+                <li> <a href="#">
+                    <div class="icons ph:phone-light"><span class="iconify" data-icon="ph:phone-light"></span></div>
+                    <p>+7 000 000 00 00</p></a></li>
+                <li> <a href="#">
+                    <div class="icons octicon:mail-"><span class="iconify" data-icon="octicon:mail-24"></span></div>
+                    <p>mail@mail.ru</p></a></li>
+              </ul>
+              <ul class="social-list"> 
+                <li> <a href="#">
+                    <div class="icons uit:telegram-alt"><span class="iconify" data-icon="uit:telegram-alt"></span></div></a></li>
+                <li> <a href="#">
+                    <div class="icons ph:whatsapp-logo-light"><span class="iconify" data-icon="ph:whatsapp-logo-light"></span></div></a></li>
+                <li> <a href="#">
+                    <div class="icons simple-line-icons:social-vkontakte"><span class="iconify" data-icon="simple-line-icons:social-vkontakte"></span></div></a></li>
+              </ul>
+            </div>
+            <div class="footer-nav">
+              <div class="footer_col--nav">
+                <h6>Каталог </h6>
+                <nav>
+                  <ul class="menu-catalog"> 
+                    <li> <a href="#">Картофель</a></li>
+                    <li> <a href="#">Малина</a></li>
+                    <li> <a href="#">Ежевика</a></li>
+                    <li> <a href="#">Голубика</a></li>
+                    <li> <a href="#">Смородина</a></li>
+                    <li> <a href="#">Земляника</a></li>
+                    <li> <a href="#">Черника</a></li>
+                    <li> <a href="#">Жимолость</a></li>
+                    <li> <a href="#">Гейхера</a></li>
+                    <li> <a href="#">Клюква</a></li>
+                    <li> <a href="#">Цитрусовые</a></li>
+                    <li> <a href="#">Гвоздика</a></li>
+                    <li> <a href="#">Гортензия</a></li>
+                    <li> <a href="#">Роза Горшечная</a></li>
+                    <li> <a href="#">Бегония</a></li>
+                    <li> <a href="#">Ирга</a></li>
+                    <li> <a href="#">Брусника</a></li>
+                    <li> <a href="#">Барбарис</a></li>
+                    <li> <a href="#">Боярышник</a></li>
+                    <li> <a href="#">Вереск</a></li>
+                    <li> <a href="#">Кальмия</a></li>
+                    <li> <a href="#">Клематис</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer_col--nav">
+                <h6>Покупателю </h6>
+                <nav>
+                  <ul class="menu-site"> 
+                    <li> <a href="#">Заказ растений</a></li>
+                    <li> <a href="#">Реквизиты</a></li>
+                    <li> <a href="#">Как заказать</a></li>
+                    <li> <a href="#">Прайс лист</a></li>
+                    <li> <a href="#">Статьи</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="footer_main--bottom">
+            <div class="footer_col--left"> <span>© 2023. Все права защищены</span></div>
+            <div class="footer_col--right">
+              <div class="arkada-logo"> <a href="#"><img src="i/all/arkada-logo.png" alt=""></a></div>
+              <div class="policy-link"> <a href="#">Политика конфиденциальности </a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script>window.TweenMax || document.write('<script src="js/gsap.min.js"><\/script>')</script>
+    <script type="text/javascript">window.productionStatus = 'development';</script>
+    <script src="js/libs.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script><script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <div class="alert success">
+      <div class="alert_main"> 
+        <p>Ваше сообщение успешно отправлено!</p>
+        <div class="alert_icon">
+           <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg></div>
+      </div>
+    </div>
+    <div class="alert failed">
+      <div class="alert_main"> 
+        <p>Проверьте правильность полей!</p>
+        <div class="alert_icon">
+           <svg class="checkmark" class="test-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="3" stroke-dasharray="100"><circle class="alert__circle" cx="26" cy="26" r="25" fill="none"/><path class="icon-path" id="check" d="M 15,15 L 32,33 M 32,15 L 15,33"></path></svg></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+.hero {
+}
+.section_in {
+}
+.hero_main {
+	padding: 10rem;
+	border-radius: $rounded-md;
+	overflow: hidden;
+	color: $white;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hero-content {
+	max-width: 46.8rem;
+	h1 {
+		margin-bottom: 2rem;
+		font-size: 5rem;
+		span {
+			color: $green;
+		}
+	}
+	p {
+		font-size: $xl;
+		font-weight: 300;
+		font-family: $font_0;
+		margin-bottom: 4rem;
+	}
+
+	ul {
+		li {
+			border-radius: $rounded-sm;
+			background: rgba(255, 255, 255, 0.20);
+			backdrop-filter: blur(.2rem);
+			padding: 1.5rem 5.1rem;
+			font-size: $md;
+			position: relative;
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 2.1rem;
+				width: .8rem;
+				height: .8rem;
+				background-color:$green;
+				border-radius: 100%;
+				transform: translateY(-50%);
+				content: '';
+			}
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+.popular {
+}
+.section-head {
+}
+.section-title {
+}
+.populart_slider--w {
+}
+.popular-slider {
+
+	.swiper-wrapper {
+		@include bp($point_2, $direction:min) {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+			grid-gap: 2.5rem
+		}
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.product-card {
+}
+.product_card--img {
+	height: 23.3rem;
+	border-radius: $rounded-sm;
+	overflow: hidden;
+	margin-bottom: 2rem;
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.product_card--content {
+
+	p {
+		margin-bottom: 0.7rem;
+		font-size: $md;
+		font-family: $font_3;
+	}
+
+	h3, h4, h5, h6 {
+		font-size: $base-txt;
+		font-family: $font_1;
+		margin-bottom: 2rem;
+	}
+}
+.product_card--pay {
+}
+.culture {
+}
+.section_head--link {
+}
+.icons {
+}
+.material-symbols:arrow-back-ios-rounded {
+}
+.iconify {
+}
+.grid-culture {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+	grid-gap: 2.5rem 2.6rem;
+
+	li {
+		border-radius: $rounded-s;
+		overflow: hidden;
+		position: relative;
+		&:hover {
+			&:before {
+				transform: translateY(100%)
+			}
+		}
+		&:before {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(180deg, rgba(44, 44, 44, 0) 0%, rgba(44, 44, 44, 0.6) 100%);
+			content: '';
+			z-index: 2;
+			pointer-events: none;
+			transition: all .6s ease;
+		}
+		a {
+			min-height: 45.1rem;
+			display: flex;
+			align-items: flex-end;
+			padding: 3rem;
+			color: $white;
+			h3 {
+				position: relative;
+				z-index: 3;
+				font-size: $xl-3;
+				font-family: $font_1;
+				font-weight: 400;
+			}
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include z-index(el)
+		}
+	}
+}
+.culture_item {
+}
+
+.home-popular {
+	padding-top: 5rem;
+}
+.about {
+}
+.about_main {
+	padding: 5.5rem 7rem 11.3rem 7rem;
+	border-radius: $rounded-s;
+	overflow: hidden;
+
+	h2,h3,h4,h5,h6, p {
+		padding: 1.5rem 0;
+	}
+}
+.about_content {
+	max-width: 62.3rem;
+}
+.txt-block {
+}
+
+.service-small--main {
+	.section-title {
+		margin-bottom: 10rem;
+		max-width: 39.6rem;
+	}
+}
+.service-small {
+}
+.serviceSmall_main {
+}
+.serviceSmall_list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(17%, 1fr));
+	grid-gap: 4rem 12.5rem;
+
+	h3 {
+		font-size: $md;
+		padding: 3rem 0 1.5rem 0;
+	}
+
+	.icons {
+		font-size: $xl-5;
+		color: $green;
+	}
+
+	li {
+		position: relative;
+		&:after {
+			position: absolute;
+			bottom: 0;
+			right: -6.2rem;
+			// transform: translateX(-50%);
+			height: 11.3rem;
+			border-right: .1rem solid #2C2C2C1A;
+			content: '';
+		}
+	}
+}
+.serviceSmall_item {
+}
+.ion:leaf-outline {
+}
+.octicon:bug- {
+}
+.ph:coins-light {
+}
+.streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow {
+}
+.company {
+}
+.company_main {
+	@include flex-start;
+	align-items: flex-start;
+}
+.block-img {
+	margin-right: 7rem;
+	width: 100%;
+	overflow: hidden;
+	border-radius: $rounded-s;
+}
+.block-content {
+	max-width: 77.5rem;
+	margin-top: -1.5rem;
+	.txt-block {
+		margin-bottom: 5rem;
+	}
+	h2, h3, h4, h5, h6 {
+		padding: 1.5rem 0;
+	}
+}
+.btn {
+}
+.trigger {
+}
+.home-blog {
+}
+.home-blog_main {
+}
+.home-blog_list {
+}
+.post {
+}
+.post-img {
+}
+.post-content {
+}
+.post-date {
+}
+.solar:clock-circle-linear {
+}
+.post-title {
+}
+.post-excerpt {
+}
+.app {
+}
+.app_main {
+}
+.app_head {
+}
+.app_form {
+}
+.app_form--row {
+}
+.app-input {
+}
+.app_btn {
+}
+.app-policy {
+}

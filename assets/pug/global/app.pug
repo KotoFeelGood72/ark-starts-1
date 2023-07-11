@@ -1,0 +1,22 @@
+.app_main--w.py8
+	.app-main
+		.app_head 
+			h5 Закажите оптовый прайс-лист
+		.app_form
+			ul.app_form--row
+				li 
+					+input({})
+				li
+					+input({
+						place: 'Телефон',
+						type: 'tel'
+					})
+				li
+					+input({
+						place: 'E-Mail',
+						type: 'email'
+					})
+				li
+					.app_btn.btn 
+						input(type="submit", value="Отправить")
+			.app-policy!='Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>'

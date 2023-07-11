@@ -1,0 +1,94 @@
+// Margin variable
+
+.mb10 {
+	margin-bottom: 10rem;
+}
+.mb5 {
+	margin-bottom: 5rem;
+}
+.mt10 {
+	margin-top: 10rem;
+}
+.mt5 {
+	margin-top: 5rem;
+}
+
+.my10 {
+	margin: 10rem 0;
+}
+.my5 {
+	margin: 5rem 0;
+}
+
+.my8 {
+	margin: 8rem 0;
+}
+
+
+// Padding variable
+
+.pb10 {
+	padding-bottom: 10rem;
+}
+.pb5 {
+	padding-bottom: 5rem;
+}
+.pt10 {
+	padding-top: 10rem;
+}
+.pt5 {
+	padding-top: 5rem;
+}
+
+.py10 {
+	padding: 10rem 0;
+}
+
+.py5 {
+	padding: 5rem 0;
+}
+
+.py8 {
+	padding: 8rem 0;
+}
+
+
+
+
+
+// Btn variant
+
+.small-btn {
+	a, button, input[type="submit"] {
+		background-color:$green;
+		color: $white;
+		border-radius: .7rem;
+		font-size: $sm;
+		font-family: $font_2;
+		font-weight: 500;
+		display: inline-flex;
+		padding: 1rem 2rem;
+	}
+}
+
+// Default btn
+
+.btn {
+	a, button, input[type="submit"] {
+		background-color:$green;
+		color: $white;
+		border-radius: $rounded-sm;
+		font-family: $font_2;
+		font-weight: 500;
+		display: inline-flex;
+		padding: 2.2rem 5rem;
+		transition: all .3s ease;
+		&:hover {
+			box-shadow: 0 1rem 2rem 0 #90aa1a50;
+		}
+	}
+}
+
+.page-title {
+	margin-bottom: 5rem;
+}

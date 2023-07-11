@@ -1,0 +1,27 @@
+.section-title {
+}
+
+.section-head {
+	margin-bottom: 5rem;
+	@include flex-space;
+}
+
+.section_head--link {
+	a {
+		@include flex-start;
+		font-size: $md;
+		font-family: $font_2;
+		transition: all .3s ease;
+		&:hover {
+			color: $gray;
+		}
+		p {
+			margin-right: 1rem;
+		}
+		.icons {
+			transform: rotate(-180deg);
+			font-size: 1.4rem;
+		}
+
+	}
+}

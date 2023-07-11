@@ -3,9 +3,131 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
-	section.start(style="background: url('../i/start.jpg') center/cover no-repeat") 
+	section.hero.pb5
 		.section_in 
-			.start_row 
-				h1 Start development by Arkada Web Studio
-				<span class="iconify-inline" data-icon="fa-solid:home"></span>
-	
+			.hero_main(style="background-image: url('i/home/hero.jpg')") 
+				.hero-content 
+					h1!='Меристемные растения <span>под заказ<span/>'
+					p Мы - лаборатория инновационного растениеводства “Меристема”.
+					ul 
+						each item in ['Высокая выживаемость растений;', 'Быстрый рост растений;', 'Большое разнообразие сортов.']
+							li=item
+	section.popular 
+		.section_in
+			.popular_main.py8.home-popular
+				+section-head({
+					tag: 2,
+					title: 'Популярные сорта'
+				}) 
+				.populart_slider--w 
+					.popular-slider.swiper
+						.swiper-wrapper
+							-for(i = 0; i < 6; i++)
+								.swiper-slide 
+									+card-popular
+	section.culture 
+		.section_in
+			.culture_main.py8
+				+section-head({
+					tag: 2,
+					title: 'Популярные культуры',
+					link: 'Перейти ко всем категориям'
+				}) 
+				ul.grid-culture 
+					-for(i = 0; i < 8; i++)
+						- let catTitle = ['Картофель', 'Малина', 'Ежевика', 'Голубика', 'Смородина', 'Земляника', 'Черника', 'Жимолость']
+							li.culture_item
+								a(href="#")
+									img(src=`i/culture/${i}.jpg`, alt="")
+									h3=catTitle[i]
+	section.about 
+		.section_in 
+			.about_main.my8(style="background-image: url('i/home/about.jpg')")
+				.about_content 
+					h3 О меристемных растениях
+					.txt-block 
+						p Меристемные растения - это растения, в которых основным источником роста являются меристемные ткани, которые расположены в их верхушках и боковых побегах.
+						p Эти ткани производят новые клетки, которые затем дифференцируются в различные виды тканей и органов растения. В результате меристемные растения могут расти и развиваться на протяжении всей своей жизни.
+	section.service-small 
+		.section_in
+			.service-small--main.py8
+				+section-head({
+					tag: 4,
+					title: 'Преимущества меристемных растений'
+				})
+				.serviceSmall_main
+					ul.serviceSmall_list 
+						-
+							let serviceSmall = [
+								{
+									icon: 'ion:leaf-outline',
+									title: 'Быстрый</br> размножительный путь',
+									txt: 'Имея даже одно растение можно получить  множество дубликатов'
+								},
+								{
+									icon: 'octicon:bug-24',
+									title: 'Устойчивость</br> к болезням и вредителям',
+									txt: 'Меристемы устойчивы к большинству заболеваний.'
+								},
+								{
+									icon: 'ph:coins-light',
+									title: 'Экономическая эффективность',
+									txt: 'Растения дают высокие урожаи качественных товарных плодов.'
+								},
+								{
+									icon: 'streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow',
+									title: 'Высокая адаптивность </br>и продуктивность',
+									txt: 'Растения быстрее развиваются, раньше цветут и плодоносят.'
+								},
+							]
+						each item in serviceSmall 
+							li.serviceSmall_item
+								+iconify({
+									icon: item.icon
+								})
+								h3!=item.title 
+								p=item.txt
+	section.company 
+		.section_in 
+			.company_main.py8
+				.block-img 
+					img(src="i/home/lab.jpg", alt="")
+				.block-content 
+					h4 О нашей лаборатории
+					.txt-block 
+						p Компания была создана с целью развития современных технологий в области селекции растений. Лаборатория работает с различными видами растений, включая овощные, плодовые, зерновые и декоративные.
+						p Методы, используемые лабораторией меристемных растений, основаны на культуре тканей. Это позволяет создавать новые генетически модифицированные сорта растений, которые обладают высокой устойчивостью к болезням и погодным условиям, а также более высоким урожайным потенциалом.
+					+btn({
+						submit: 'Оставить заявку',
+						target: 'form'
+					})
+	section.home-blog 
+		.section_in
+			.home_blog--main.py8
+				+section-head({
+					tag: 4,
+					title: 'Наши статьи',
+					link: 'Перейти ко всем статьям'
+				}) 
+				.home-blog_main
+					ul.home-blog_list 
+						-for(i = 0; i < 3; i++)
+							+post
+	section.app 
+		.section_in 
+			include global/app
+	section.popular 
+		.section_in
+			.popular-main.py8
+				+section-head({
+					tag: 2,
+					title: 'Лидеры заказов'
+				}) 
+				.populart_slider--w 
+					.popular-slider.swiper
+						.swiper-wrapper
+							-for(i = 0; i < 6; i++)
+								.swiper-slide 
+									+card-popular
+				
+

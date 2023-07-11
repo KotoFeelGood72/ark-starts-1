@@ -1,0 +1,35 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Как заказать'}
+block content_block
+	.block-head
+		.section_in
+			.block_head--main
+				+bread(['Главная'], 'Как заказать')
+				.block_head--title
+					h1=array.title_inner
+	section.order 
+		.section_in 
+			.order_main
+				p!='Для участия в проекте «ТОЧКА РОСТА» необходимо заключить договор в срок за 9 месяцев до отгрузки в кассетах</br> или за 12 месяцев до отгрузки в горшках Р9.'
+				.order-img 
+					img(src="i/all/order.jpg", alt="")
+				ul.order-list 
+					-for(i = 0; i < 4; i++)
+						- let title = ['Минимальный заказ', 'Условия оплаты', 'Кассеты P36', 'Горшки Р9']
+						- let txt = ['1 000 шт.', '30% - предоплата, 70% - оплата перед отгрузкой.', 'Имеют объём ячейки 150 мл, возраст 8 – 9 месяцев, высоту саженцев до 10 см.', 'Имеют объём ячейки 500 мл, возраст 11 – 12, месяцев высоту саженцев до 20 см.']
+						li.order-item 
+							+iconify({
+								icon: 'ion:leaf-outline'
+							})
+							p=title[i]
+							span=txt[i]
+				.order-delivery 
+					h3 Варианты доставки
+					ul 
+						each item in ['Самовывоз из Нижнего Новгорода;', 'Отправка любой удобной транспортной компанией, отправка СДЭК.']
+							li=item
+	section.app 
+		.section_in
+			include global/app

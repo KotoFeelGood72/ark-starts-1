@@ -1,0 +1,21 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Категории товаров'}
+block content_block
+	.block-head
+		.section_in
+			.block_head--main
+				+bread(['Главная'], 'Каталог растений')
+				.block_head--title
+					h1=array.title_inner
+		.block-cat
+			.section_in
+				ul.grid-culture 
+						- let catTitle = ['Картофель', 'Малина', 'Ежевика', 'Голубика', 'Смородина', 'Земляника', 'Черника', 'Жимолость', 'Гейхера', 'Клюква', 'Цитрусовые', 'Гвоздика', 'Гортензия', 'Роза горшечная', 'Бегония', 'Ирга', 'Брусника', 'Барбарис', 'Боярышник', 'Вереск', 'Кальмия', 'Клематис']
+						-for(i = 0; i < catTitle.length; i++)
+							li.culture_item
+								a(href="#")
+									img(src=`i/culture/${i}.jpg`, alt="")
+									h3=catTitle[i]
+

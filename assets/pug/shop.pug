@@ -1,0 +1,28 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Картофель'}
+block content_block
+	.block-head
+		.section_in
+			.block_head--main
+				+bread(['Главная'], 'Картофель')
+				.block_head--title
+					h1=array.title_inner
+					p Всего товаров: 200
+	.block-shop
+		.section_in 
+			.block_shop--main 
+				include global/filter
+				.block-products 
+					ul.products-grid
+						-for(i = 0; i < 16; i++)
+							li.products-item--w 
+								.products-item
+									+products-card
+					+pagination({
+						pages:10,
+						arrows:true
+					})
+				+seo
+				include global/app

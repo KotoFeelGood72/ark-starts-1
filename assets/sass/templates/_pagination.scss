@@ -1,0 +1,32 @@
+.pag_list {
+	@include flex-start;
+	flex-wrap: wrap;
+}
+
+.pag_link.active_mod {
+	background-color: $green;
+	color: $white;
+}
+.pag_link {
+	@include flex-center;
+	padding: 1rem 1.3rem;
+	border-radius: 0.7rem;
+	color: $dark;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.pag_link.next_mod {
+	width: .7rem;
+	height: .8rem;
+	@include flex-center;
+	background: url('https://api.iconify.design/material-symbols/arrow-back-ios-rounded.svg?color=%238faa1a&width=7&height=11&rotate=180deg') no-repeat center center / contain;
+}
+
+.pag_link.prev_mod {
+	display: none;
+// 	width: .7rem;
+// 	height: .8rem;
+// 	@include flex-center;
+// 	background: url('https://api.iconify.design/material-symbols/arrow-back-ios-rounded.svg?color=%238faa1a&width=7&height=11') no-repeat center center / contain;
+}

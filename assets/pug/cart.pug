@@ -1,0 +1,53 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Корзина'}
+block content_block
+	.block-head
+		.section_in
+			.block_head--main
+				+bread(['Главная'], 'Корзина')
+				.block_head--title
+					h1=array.title_inner
+					a(href="#") Очистить
+			.block-cart 
+				ul.cart_list
+					-for(i = 0; i < 3; i++)
+						li.cart-item
+							input(type="checkbox" id=`cartItem-${i}`)
+							label(for=`cartItem-${i}`)
+							.cartItem_col--left
+								.cart_item--img 
+									a(href="#")
+										img(src="i/product/product.jpg", alt="") 
+								.cart_item--content 
+									h3 Название растения
+									ul
+										each item in ['Цвет: красный', 'Фасовка: 0.3']
+											li!=item
+									.cart_item--delete 
+										a(href="#" id="delete-products") Удалить
+							.cartItem_col--right 
+								.cart_item--price 10 000 
+								.cart_item--qty 
+									.products_quantity 
+										button(type="button" id="qty-minus")
+											+iconify({
+												icon: 'ic:round-minus'
+											})
+										input(type="number" id="qty-input" value="1")
+										button(type="button" id="qty-plus")
+											+iconify({
+												icon: 'tabler:plus'
+											})
+				.cart-total 
+					.cart_total--card 
+						p Условия заказа
+						ul
+							li 
+								span 300 ед. товара
+								p 30 000 
+						+btn({
+							link: 'Перейти к оформлению'
+						})
+						

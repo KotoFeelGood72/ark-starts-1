@@ -1,0 +1,168 @@
+.block-cart {
+	@include flex-start;
+	align-items: flex-start;
+}
+
+.cart-item {
+	@include flex-space;
+	align-items: flex-start;
+	width: 100%;
+	padding-left: 4.3rem;
+	position: relative;
+	user-select: none;
+
+	label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2.3rem;
+			height: 2.3rem;
+			border-radius: 0.5rem;
+			border: .1rem solid $light-gray;
+			content: '';
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2.3rem;
+			height: 2.3rem;
+			border-radius: 0.5rem;
+			background-color:$green;
+			content: url('https://api.iconify.design/material-symbols/check-small-rounded.svg?color=white&width=22&height=22');
+			@include flex-center;
+			transition: all .3s ease;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&>input {
+		display: none;
+		&:checked + label {
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+.cart_item--img {
+	width: 17.7rem;
+	height: 17.7rem;
+	border-radius: 1.5rem;
+	overflow: hidden;
+	margin-right: 2rem;
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.cart-total {
+	max-width: 41.4rem;
+	background-color:$light-green;
+	border-radius: 1.5rem;
+	overflow: hidden;
+	padding: 3rem;
+}
+
+.cart_list {
+	width: 100%;
+	margin-right: 10rem;
+	max-width: 100rem;
+
+	&>li {
+		border-bottom: .1rem solid $light-gray;
+		padding-bottom: 2.5rem;
+
+		&:not(:last-child) {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+
+.cartItem_col--left {
+	@include flex-start;
+	flex-wrap: wrap;
+}
+
+.cart_item--content {
+	position: relative;
+	min-height: 17.5rem;
+	h3 {
+		font-size: 2rem;
+		font-family: $font_1;
+		font-weight: 400;
+		margin-bottom: 1.5rem;
+	}
+
+	ul {
+		li {
+			font-size: 1.6rem;
+			color: $gray;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+.cart_item--delete {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	a {
+		color: #FF3131;
+		font-size: 1.6rem;
+	}
+}
+
+.cartItem_col--right {
+	@include flex-end;
+
+	.cart_item--price {
+		font-size: 2.2rem;
+		font-family: $font_4;
+		font-weight: 700;
+		margin-right: 6.9rem;
+		&:after {
+			content: ' ₽';
+		}
+	}
+}
+
+
+.cart_total--card {
+	&>p {
+		font-size: 2.3rem;
+		font-family: $font_2;
+		padding-bottom: 2.6rem;
+		margin-bottom: 2.6rem;
+	}
+
+	ul {
+		margin-bottom: 5.3rem;
+		li {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+			grid-gap: 2rem;
+
+			p {
+				font-size: 2.2rem;
+				font-family: $font_2;
+				@include flex-end;
+			}
+			span {
+				@include flex-start;
+			}
+		}
+	}
+}

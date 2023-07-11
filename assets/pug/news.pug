@@ -1,0 +1,17 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Наши статьи'}
+block content_block
+	+bread(['Главная'], 'Статьи')
+	section.news 
+		.section_in 
+			.news_main 
+				h1.page-title=array.title_inner
+				ul.home-blog_list 
+						-for(i = 0; i < 5; i++)
+							+post
+				+pagination({
+					pages:10,
+					arrows:true
+				})

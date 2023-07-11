@@ -1,0 +1,50 @@
+.app {
+}
+.section_in {
+}
+.app-main {
+	background-color:$light-green;
+	border-radius: $rounded-s;
+	padding: 7rem;
+}
+.app_head {
+	margin-bottom: 3rem;
+}
+.app_form {
+}
+.app_form--row {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -1.5rem -1.5rem 2rem 0;
+	& li {
+		padding: 1.5rem 1.5rem 0 0;
+		flex: 1;
+	}
+	.app-input {
+		width: 34rem;
+	}
+	input {
+		@include app;
+		border: .1rem solid #2C2C2C1A;
+		background-color: $white;
+		padding: 2.2rem 2rem;
+		border-radius: $rounded-sm;
+		width: 100%;
+		transition: all .3s ease;
+		&:focus {
+			border-color: $light-gray;
+		}
+	}
+}
+.app-input {
+}
+.app_btn {
+	max-width: 30.5rem;
+	input {
+		@include flex-center;
+		cursor: pointer;
+		border-color: $green;
+	}
+}
+.app-policy {
+}

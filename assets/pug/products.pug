@@ -1,0 +1,110 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Название растения'}
+block content_block 
+	- 
+		let prodColor = [
+				{ color: '#FF3131', name: 'Красный' },
+				{ color: '#3531FF', name: 'Синий' },
+				{ color: '#FFAD31', name: 'Желтый' },
+				{ color: 'white', name: 'Белый' },
+				{ color: '#008857', name: 'Зеленый' },
+		]  
+	section.products 
+		.section_in
+			+bread(['Главная'], 'Картофель') 
+			.products_hero 
+				.products_slider_w 
+					.product_slider--thumb.swiper 
+						.swiper-wrapper 
+							-for(i = 0; i < 10; i++)
+								.swiper-slide 
+									img(src="i/product/product.jpg", alt="")
+						.product_thumbNav 
+							.product-prev 
+								+iconify({
+									icon: 'material-symbols:arrow-back-ios-rounded'
+								})
+							.product-next 
+								+iconify({
+									icon: 'material-symbols:arrow-back-ios-rounded'
+								})
+					.product_slider.swiper
+						.swiper-wrapper 
+							-for(i = 0; i < 10; i++)
+								.swiper-slide
+									a(href="i/product/product.jpg" data-fancybox="products")  
+										img(src="i/product/product.jpg", alt="")
+										+iconify({
+											icon: 'iconamoon:zoom-in-thin'
+										})
+				.products_info 
+					h1=array.title_inner 
+					.products_price 1500
+					.products_colors 
+						.products_color--label!=`Цвет: ${prodColor[0].name}`
+						ul.products_color--list
+							each item, i in prodColor
+								li 
+									input(type="radio" id=`productsColor-${i}` name="productsColors")
+									label(for=`productsColor-${i}`)
+										.color-item(style=`background-color: ${item.color}`)
+					.products_packing 
+						.label-packing Фасовка, кг:
+						ul.packing-variant 
+							each item, i in ['Пробирка, 15 мл', 'Кассета, 75 мл', 'Горшок Р9, 500 мл', 'Горшок С2, 2000 мл', 'Горшок С3, 3000 мл']
+								li 
+									input(type="radio" id=`prodPacking-${i}` name="packings")
+									label(for=`prodPacking-${i}`)=item
+					.products_addToCart 
+						+btn({
+							link: 'Добавить в корзину'
+						})
+						.products_quantity 
+							button(type="button" id="qty-minus")
+								+iconify({
+									icon: 'ic:round-minus'
+								})
+							input(type="number" id="qty-input" value="1")
+							button(type="button" id="qty-plus")
+								+iconify({
+									icon: 'tabler:plus'
+								})
+			.products_body 
+				.products_content 
+					h2 Описание
+					p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				.products_params 
+					h2 О товаре
+					ul 
+						li 
+							span Вид
+							.line-doted
+							p Клубни
+						li 
+							span Сорт
+							.line-doted
+							p Коломбо
+						li 
+							span Жизненный цикл
+							.line-doted
+							p Многолетник
+						li 
+							span Место выращивания
+							.line-doted
+							p Для огорода
+	section.popular.mb-8  
+		.section_in
+			+section-head({
+				tag: 4,
+				title: 'Похожие товары'
+			}) 
+			.populart_slider--w 
+				.popular-slider.swiper
+					.swiper-wrapper
+						-for(i = 0; i < 6; i++)
+							.swiper-slide 
+								+card-popular
+	

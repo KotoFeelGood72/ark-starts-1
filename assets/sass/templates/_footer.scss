@@ -1,8 +1,134 @@
 .footer {
 	width: 100%;
-	min-height: $footer;
+	// min-height: $footer;
 	flex: 0 0 auto;
-	will-change: transform;
+	// will-change: transform;
+	margin-top: 8rem;
 	position: relative;
-	display: none;
+	background-color: #2C2C2CE5;
+	color: $white;
+	padding-top: 6rem;
+	a {
+		color: $white
+	}
+}
+
+.footer {
+}
+.section_in {
+}
+.footer_main {
+	@include flex-start;
+	align-items: flex-start;
+}
+.footer_col--contact {
+	margin-right: 30rem;
+}
+.footer-logo {
+	margin-bottom: 5.3rem;
+	max-width: 23rem;
+}
+.footer-list {
+	margin-bottom: 5rem;
+	li {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+		a {
+			@include flex-start;
+			.icons {
+				font-size: $md;
+				margin-right: 1.5rem;
+			}
+		}
+	}
+}
+.icons {
+}
+.ph:phone-light {
+}
+.iconify {
+}
+.octicon:mail- {
+}
+.social-list {
+	font-size: 2.2rem;
+	margin: -2rem -2rem 0 0;
+	@include flex-start;
+	flex-wrap: wrap;
+	li {
+		padding: 2rem 2rem 0 0;
+		a {
+			width: 5.3rem;
+			height: 5.3rem;
+			@include flex-center;
+			display: inline-flex;
+			border: .1rem solid #FFFFFF33;
+			border-radius: 100%;
+			&:hover {
+				border-color: $white;
+			}
+		}
+	}
+}
+.uit:telegram-alt {
+}
+.ph:whatsapp-logo-light {
+}
+.simple-line-icons:social-vkontakte {
+}
+.footer-nav {
+	@include flex-start;
+	align-items: flex-start;
+	.footer_col--nav {
+		&:first-child {
+			margin-right: 10rem;
+			min-width: 47.6rem;
+		}
+	}
+}
+.footer_col--nav {
+
+	h6 {
+		margin-bottom: 2.2rem;
+		font-size: $xl;
+	}
+}
+.menu-catalog {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	max-height: 36.5rem;
+	margin: 0 -8rem -1.5rem 0;
+	li {
+		padding: 0 8rem 1.5rem 0;
+	}
+}
+.menu-site {
+	li {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+.footer_main--bottom {
+	@include flex-space;
+	align-items: flex-end;
+	font-size: $sm;
+	color: rgba(255, 255, 255, 0.800);
+	padding-bottom: 1.5rem;
+	margin-top: -2rem;
+}
+.footer_col--left {
+}
+.footer_col--right {
+	@include flex-end;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.arkada-logo {
+	max-width: 21rem;
+	margin-bottom: 2.5rem;
+}
+.policy-link {
 }

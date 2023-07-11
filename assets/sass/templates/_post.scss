@@ -1,0 +1,49 @@
+.post {
+	border-bottom: .1rem solid $light-gray;
+	padding-bottom: 5rem;
+	&:not(:last-child) {
+		margin-bottom: 5rem;
+	}
+	a {
+		@include flex-start;
+
+		.post-img {
+			max-width: 36.1rem;
+			width: 100%;
+			border-radius: 1.5rem;
+			overflow: hidden;
+			height: 21.9rem;
+			margin-right: 4rem;
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.post-content {
+	max-width: 119rem;
+	color: $dark;
+	h3 {
+		font-size: $xl;
+		font-family: $font_1;
+		margin: 1.5rem 0 2.5rem 0
+	}
+}
+
+.post-date {
+	@include flex-start;
+	color: $gray;
+	font-size: $sm;
+
+	.icons {
+		margin-right: 0.8rem;
+		font-size: 1.4rem;
+		@include flex-center;
+	}
+}
+
+.post-excerpt {
+	color: $gray;
+}

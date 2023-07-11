@@ -1,0 +1,24 @@
+.breadcrumb__list {
+	@include flex-start;
+	margin: -1rem -3.2rem 5rem 0;
+	padding-top: 1.5rem;
+	li {
+		padding: 1rem 3.2rem 0 0;
+		position: relative;
+		font-size: $sm;
+		a {
+			color: #2C2C2C4D;
+			&:hover {
+				color: $dark;
+			}
+		}
+		&:not(:last-child) {
+			&:after {
+				content: url('https://api.iconify.design/material-symbols/arrow-back-ios-rounded.svg?color=rgba(44%2C%2044%2C%2044%2C%200.30196078431372547)&width=12&height=11&rotate=180deg');
+				position: absolute;
+				top: 50%;
+				right: 1.3rem;
+			}
+		}
+	}
+}

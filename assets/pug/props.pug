@@ -1,0 +1,27 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Реквизиты'}
+block content_block
+	.block-head
+		.section_in
+			.block_head--main
+				+bread(['Главная'], 'Реквизиты')
+				.block_head--title
+					h1=array.title_inner
+	section.props 
+		.section_in 
+			.props_main 
+				p ООО «МЕРИСТЕМА»
+				p ИНН: 5259151077
+				p КПП: 525901001
+				p ОГРН: 1215200008649
+				p Банк: ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ"
+				p К/счет: 30101810845250000999
+				p БИК: 044525999
+				p Р/счет: 40702810002500093381
+				p Юридический адрес: 603116, Нижегородская обл., Нижний Новгород г., Чехова ул., дом 1, помещение 1
+				p (На основании Устава, в лице Генерального директора Анны Валерьевны Авериной)
+	section.app 
+		.section_in 
+			include global/app

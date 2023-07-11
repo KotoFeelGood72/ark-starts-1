@@ -1,3 +1,54 @@
 footer.footer 
 	.section_in 
-		.footer_main 
+		.footer_main
+			.footer_col--contact 
+				.footer-logo 
+					a(href="#")
+						img(src="i/svg/logo-white.svg", alt="")
+				ul.footer-list 
+					each item, i in ['+7 000 000 00 00', 'mail@mail.ru']
+						if i < 1
+							li 
+								a(href="#")
+									+iconify({
+										icon: 'ph:phone-light'
+									}) 
+									p=item
+						else if i === 1
+							li 
+								a(href="#")
+									+iconify({
+										icon: 'octicon:mail-24'
+									}) 
+									p=item
+				ul.social-list 
+					each item in ['uit:telegram-alt', 'ph:whatsapp-logo-light', 'simple-line-icons:social-vkontakte']
+						li 
+							a(href="#")
+								+iconify({
+									icon: item
+								})
+			.footer-nav
+				.footer_col--nav
+					h6 Каталог 
+					nav
+						ul.menu-catalog 
+							each item in ['Картофель', 'Малина', 'Ежевика', 'Голубика', 'Смородина', 'Земляника', 'Черника', 'Жимолость', 'Гейхера', 'Клюква', 'Цитрусовые', 'Гвоздика', 'Гортензия', 'Роза Горшечная', 'Бегония', 'Ирга', 'Брусника', 'Барбарис', 'Боярышник', 'Вереск', 'Кальмия', 'Клематис']
+								li 
+									a(href="#")=item
+				.footer_col--nav
+					h6 Покупателю 
+					nav
+						ul.menu-site 
+							each item in ['Заказ растений', 'Реквизиты', 'Как заказать', 'Прайс лист', 'Статьи']
+								li 
+									a(href="#")=item
+		.footer_main--bottom
+			.footer_col--left 
+				span © 2023. Все права защищены
+			.footer_col--right
+				.arkada-logo 
+					a(href="#")
+						img(src="i/all/arkada-logo.png", alt="")
+				.policy-link 
+					a(href="#") Политика конфиденциальности 

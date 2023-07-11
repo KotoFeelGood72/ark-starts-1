@@ -14,6 +14,32 @@ let $body,
 
 $(document).ready(function ($) {
 	$body = $('body');
+	if(devStatus) {
+		pageWidget(['index']);
+		pageWidget(['news']);
+		pageWidget(['article']);
+		pageWidget(['policy']);
+		pageWidget(['shop-cat']);
+		pageWidget(['shop']);
+		pageWidget(['cart']);
+		pageWidget(['order']);
+		pageWidget(['products']);
+		pageWidget(['props']);
+		pageWidget(['checkout']);
+		getAllClasses('html', '.elements_list');
+	}
+	if($('.sort-filter select')) {
+		selectFilter();
+	}
+
+	if($('.products')) {
+		singleProductsSlider();
+	}
+	
+	if($('.productCard_slide--img')) {
+		productCardSlider();
+	}
+	checkColor();
 });
 
 $(window).on('load', function () {
@@ -246,10 +272,216 @@ async function maps(street, city, size) {
 }
 
 
-function getData() {
-  return axios.get('https://api.example.com/data')
-              .then(response => response.data)
-              .catch(error => console.error(error));
+
+function selectFilter() {
+
+	const select = document.querySelectorAll('.sort-filter select');
+
+	const selectCollection = Array.from(select).map(item => new Choices(item, {
+		// Дополнительные параметры и настройки Choice.js
+		searchEnabled: false,
+		itemSelectText: '',
+	}));
+	
+
+}
+
+
+	
+function productCardSlider() {
+  var cards = document.querySelectorAll('.product-card');
+
+  cards.forEach(function(card) {
+    var images = [];
+    var img = card.querySelector('.productCard_slide--img img');
+    var triggers = card.querySelectorAll('.image-trigger');
+    var pagination = card.querySelector('.pagination');
+
+    triggers.forEach(function(trigger, index) {
+      var imageURL = trigger.getAttribute('data-index');
+      images.push(imageURL);
+
+      trigger.addEventListener('mouseenter', function() {
+        img.src = imageURL;
+        setActiveBullet(pagination, index); // Устанавливаем активный буллет при наведении на триггер
+      });
+
+      trigger.addEventListener('mouseleave', function() {
+        img.src = images[0];
+        resetActiveBullet(pagination); // Сбрасываем активный буллет при отведении курсора от триггера
+      });
+    });
+		if(pagination) {
+			generatePagination(pagination, images, img);
+		}
+  });
+
+  function generatePagination(pagination, images, img) {
+    var paginationHTML = '';
+    for (var i = 0; i < images.length; i++) {
+      var bulletHTML = '<span class="pagination-bullet" data-index="' + i + '"></span>';
+      paginationHTML += bulletHTML;
+    }
+		if(paginationHTML) {
+			pagination.innerHTML = paginationHTML;
+			var bullets = pagination.querySelectorAll('.pagination-bullet');
+		}
+		
+    bullets.forEach(function(bullet, index) {
+      bullet.addEventListener('mouseenter', function() {
+        img.src = images[index];
+        setActiveBullet(pagination, index); // Устанавливаем активный буллет при наведении на буллет
+      });
+
+      bullet.addEventListener('mouseleave', function() {
+        img.src = images[0];
+        resetActiveBullet(pagination); // Сбрасываем активный буллет при отведении курсора от буллета
+      });
+
+      bullet.addEventListener('click', function() {
+        img.src = images[index];
+        setActiveBullet(pagination, index); // Устанавливаем активный буллет при клике на буллет
+      });
+    });
+
+    setActiveBullet(pagination, 0); // Устанавливаем активный буллет по умолчанию
+  }
+
+  function setActiveBullet(pagination, activeIndex) {
+    var bullets = pagination.querySelectorAll('.pagination-bullet');
+    bullets.forEach(function(bullet, index) {
+      if (index === activeIndex) {
+        bullet.classList.add('active');
+      } else {
+        bullet.classList.remove('active');
+      }
+    });
+  }
+
+  function resetActiveBullet(pagination) {
+    var bullets = pagination.querySelectorAll('.pagination-bullet');
+    bullets.forEach(function(bullet) {
+      bullet.classList.remove('active');
+    });
+  }
+}
+
+function filteredRow() {
+  const filterItems = document.querySelectorAll('.filter-item');
+
+  document.addEventListener('click', (e) => {
+    const isFilterItem = e.target.closest('.filter-item');
+
+    if (!isFilterItem) {
+      filterItems.forEach((item) => {
+        item.classList.remove('active');
+      });
+    }
+  });
+
+  filterItems.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      let target = e.currentTarget;
+
+      if (e.target.classList.contains('filter_item--head')) {
+        if (target.classList.contains('active')) {
+          target.classList.remove('active');
+        } else {
+          filterItems.forEach((item) => {
+            item.classList.remove('active');
+          });
+
+          target.classList.add('active');
+        }
+      }
+    });
+  });
+}
+
+filteredRow();
+
+// tabs
+function tabs(link, block) {
+	let linkSelector = $(link),
+		blockSelector = $(block);
+
+	$(linkSelector).on('click', function (e) {
+		e.preventDefault();
+
+		let $this = $(this),
+			currentData = $(this).data('tab');
+
+		$(blockSelector).removeClass('active_tab');
+		$(linkSelector).removeClass('active_tab');
+
+		$(block + '[data-tab="' + currentData + '"]').addClass('active_tab');
+		$this.addClass('active_tab');
+
+	});
+}
+
+tabs('.delivery_links>li', '.delivery-tabs>li');
+
+
+
+function singleProductsSlider() {
+	var galleryThumbs = new Swiper(".product_slider--thumb", {
+		spaceBetween: 11,
+		slidesPerView: 4,
+		freeMode: false,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		watchOverflow: true,
+		
+		navigation: {
+			prevEl: '.product-prev',
+			nextEl: '.product-next'
+		},
+		breakpoints: {
+			480: {
+				direction: "horizontal",
+				slidesPerView: 4
+			},
+			768: {
+				direction: "horizontal",
+				slidesPerView: 4
+			},
+			1200: {
+				direction: "vertical",
+				slidesPerView: 5,
+				spaceBetween: 10,
+			}
+		},
+	});
+	var galleryTop = new Swiper(".product_slider ", {
+		direction: "horizontal",
+		spaceBetween: 10,
+		navigation: {
+			prevEl: '.product-prev',
+			nextEl: '.product-next'
+		},
+		a11y: {
+			prevSlideMessage: "Предыдущий слайд",
+			nextSlideMessage: "Следущий слайд",
+		},
+		keyboard: {
+			enabled: true,
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
+}
+
+function checkColor() {
+	let colorCheck = document.querySelectorAll('.color-item')
+	for(let i = 0; i < colorCheck.length; i++) {
+		let color = colorCheck[i]
+		if(color.style.backgroundColor == 'white') {
+			color.classList.add('invert')
+		}
+	}
+
 }
 
 
