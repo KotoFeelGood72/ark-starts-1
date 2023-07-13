@@ -7,6 +7,13 @@
 .article-head {
 	max-width: 90rem;
 	width: 100%;
+
+	h1 {
+		@include bp($point_2) {
+			font-size: $xl-2;
+			margin-bottom: 3rem;
+		}
+	}
 }
 
 .quote-txt {
@@ -21,6 +28,9 @@
 	overflow: hidden;
 	max-width: 53rem;
 	margin-bottom: 10rem;
+	@include bp($point_2) {
+		margin: 0 0 3rem 0;
+	}
 }
 
 .article-time {
@@ -37,6 +47,9 @@
 
 .article-hero {
 	margin-bottom: 10rem;
+	@include bp($point_2) {
+		margin-bottom: 6rem;
+	}
 }
 
 
@@ -48,10 +61,16 @@
 		width: auto;
 		border-radius: 1.5rem;
 		overflow: hidden;
+		@include bp($point_2) {
+			margin: 1.5rem 0;
+		}
 	}
 
 	h2, h3, h4, h5, h6 {
 		padding: 5rem 0 1.5rem 0;
+		@include bp($point_2) {
+			padding: 3rem 0 1.5rem 0;
+		}
 	}
 
 
@@ -64,8 +83,14 @@
 .article-reco {
 	&>h2, &>h3, &>h4, &>h5, &>h6 {
 		margin-bottom: 5rem;
+		@include bp($point_2) {
+			margin-bottom: 3.5rem;
+		}
 	}
 	.home-blog_list {
 		margin-bottom: 8rem;
+		@include bp($point_2) {
+			margin-bottom: 6rem;
+		}
 	}
 }

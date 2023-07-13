@@ -1,6 +1,9 @@
 .block-cart {
 	@include flex-start;
 	align-items: flex-start;
+	@include bp($point_2) {
+		flex-direction: column
+	}
 }
 
 .cart-item {
@@ -55,6 +58,7 @@
 
 .cart_item--img {
 	width: 17.7rem;
+	min-width: 17.7rem;
 	height: 17.7rem;
 	border-radius: 1.5rem;
 	overflow: hidden;
@@ -77,6 +81,9 @@
 	width: 100%;
 	margin-right: 10rem;
 	max-width: 100rem;
+	@include bp($point_2) {
+		margin: 0 0 5rem 0;
+	}
 
 	&>li {
 		border-bottom: .1rem solid $light-gray;
@@ -91,17 +98,31 @@
 
 .cartItem_col--left {
 	@include flex-start;
-	flex-wrap: wrap;
+	@include bp($point_2) {
+		// flex-wrap: wrap;
+	}
 }
 
 .cart_item--content {
 	position: relative;
 	min-height: 17.5rem;
+	flex-grow: 1;
+	width: 100%;
+	max-width: 21.6rem;
+	@include bp($point_2) {
+		position: static;
+	}
 	h3 {
 		font-size: 2rem;
 		font-family: $font_1;
 		font-weight: 400;
 		margin-bottom: 1.5rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		max-height: 6rem;
 	}
 
 	ul {
@@ -119,6 +140,11 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	@include bp($point_2) {
+		right: 0;
+		bottom: 2rem;
+		left: auto;
+	}
 	a {
 		color: #FF3131;
 		font-size: 1.6rem;
@@ -127,12 +153,19 @@
 
 .cartItem_col--right {
 	@include flex-end;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-end;
+	}
 
 	.cart_item--price {
 		font-size: 2.2rem;
 		font-family: $font_4;
 		font-weight: 700;
 		margin-right: 6.9rem;
+		@include bp($point_2) {
+			margin: 0 0 3rem 0;
+		}
 		&:after {
 			content: ' ₽';
 		}

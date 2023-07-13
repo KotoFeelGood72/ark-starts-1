@@ -8,9 +8,10 @@ block content_block
 		.section_in 
 			.news_main 
 				h1.page-title=array.title_inner
-				ul.home-blog_list 
+				ul.home-blog_list
 						-for(i = 0; i < 5; i++)
-							+post
+							li
+								+post
 				+pagination({
 					pages:10,
 					arrows:true

@@ -4,6 +4,9 @@
 .section-head {
 	margin-bottom: 5rem;
 	@include flex-space;
+	@include bp($point_2) {
+		margin-bottom: 3.5rem;
+	}
 }
 
 .section_head--link {

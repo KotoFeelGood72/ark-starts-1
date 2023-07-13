@@ -10,8 +10,14 @@
 	@include flex-start;
 	flex-wrap: wrap;
 	margin: -2rem -2rem 0 0;
+	@include bp($point_2) {
+		margin: -1rem -1rem 1rem 0;
+	}
 	&>li {
 		padding: 2rem 2rem 0 0;
+		@include bp($point_2) {
+			padding: 1rem 1rem 0 0;
+		}
 
 		&.active {
 			.filter_item--body {
@@ -91,6 +97,10 @@
 	margin-bottom: 5rem;
 	position: relative;
 	z-index: 2;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 .filter_item--bodyWrapper {
 	max-height: 23rem;

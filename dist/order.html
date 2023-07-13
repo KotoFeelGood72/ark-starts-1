@@ -33,8 +33,8 @@
               </button>
             </div>
             <div class="top-menu">
-              <div class="top_menu--label">Заказ растений</div>
-              <ul>
+              <div class="top_menu--label btn-expand">Заказ растений</div>
+              <ul class="menu-expand">
                 <li><a href="#">Заказ растений</a></li>
                 <li><a href="#">Реквизиты</a></li>
                 <li><a href="#">Прайс-лист</a></li>
@@ -50,7 +50,7 @@
                 <div class="header-cart--total" id="header-total">Корзина пуста</div></a></div>
           </div>
           <div class="header-bottom"> 
-            <div class="header_shop">
+            <div class="header_shop btn-expand">
               <div class="header-burger">
                 <div class="icons gg:menu-right-alt"><span class="iconify" data-icon="gg:menu-right-alt"></span></div>
               </div>
@@ -59,6 +59,33 @@
                 <div class="icons material-symbols:arrow-back-ios-rounded"><span class="iconify" data-icon="material-symbols:arrow-back-ios-rounded"></span></div>
               </div>
             </div>
+            <div class="shop-menu menu-expand"> 
+              <nav>
+                <ul> 
+                  <li> <a href="#">Картофель</a></li>
+                  <li> <a href="#">Малина</a></li>
+                  <li> <a href="#">Ежевика</a></li>
+                  <li> <a href="#">Голубика</a></li>
+                  <li> <a href="#">Смородина</a></li>
+                  <li> <a href="#">Земляника</a></li>
+                  <li> <a href="#">Черника</a></li>
+                  <li> <a href="#">Жимолость</a></li>
+                  <li> <a href="#">Гейхера</a></li>
+                  <li> <a href="#">Клюква</a></li>
+                  <li> <a href="#">Цитрусовые</a></li>
+                  <li> <a href="#">Гвоздика</a></li>
+                  <li> <a href="#">Гортензия</a></li>
+                  <li> <a href="#">Роза Горшечная</a></li>
+                  <li> <a href="#">Бегония</a></li>
+                  <li> <a href="#">Ирга</a></li>
+                  <li> <a href="#">Брусника</a></li>
+                  <li> <a href="#">Барбарис</a></li>
+                  <li> <a href="#">Боярышник</a></li>
+                  <li> <a href="#">Вереск</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="burger-trigger trigger" data-target="burger"><span> </span><span> </span><span> </span></div>
             <nav class="header-nav"> 
               <ul> 
                 <li> <a href="#">Картофель</a></li>
@@ -252,6 +279,39 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script><script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <div class="popup popup_form" data-id="form">
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main form_main"> 
+        <div class="form-close remove"> 
+          <div class="icons radix-icons:cross-"><span class="iconify" data-icon="radix-icons:cross-1"></span></div>
+        </div>
+        <h3>Оставить заявку</h3>
+        <div class="popup_form--action"> 
+          <div class="popup_input"> 
+            <input type="text" placeholder="Имя">
+          </div>
+          <div class="popup_input"> 
+            <input type="tel" placeholder="Телефон">
+          </div>
+          <div class="popup_input"> 
+            <input type="email" placeholder="E-mail">
+          </div>
+          <div class="popup_btn"> 
+            <input type="submit" value="Отправить">
+          </div>
+          <div class="popup_notice">Отправляя форму, вы соглашаетесь с <a target="_blank" href="#"> политикой конфиденциальности.</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_burger" data-id="burger">
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main burger_main"> 
+        <div class="burger-close remove"> 
+          <div class="icons radix-icons:cross-"><span class="iconify" data-icon="radix-icons:cross-1"></span></div>
+        </div>
+        <div class="burger-logo logo"> <a href="#"><img src="i/svg/logo.svg" alt=""><img src="i/svg/txt-logo.svg" alt=""></a></div>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

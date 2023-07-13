@@ -6,6 +6,10 @@
 	width: 100%;
 	will-change: transform;
 	@include z-index(header);
+
+	@include bp($point_2) {
+		height: $header_mob;
+	}
 }
 
 .header {
@@ -13,11 +17,19 @@
 .section_in {
 }
 .header_main {
-	padding: 1.5rem 0 2.2rem 0
+	padding: 1.5rem 0 2.2rem 0;
+	@include bp($point_2) {
+		padding: 2rem 0
+	}
 }
 .header_top {
 	@include flex-space;
 	margin-bottom: 3.6rem;
+	@include bp($point_2) {
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		border-bottom: .1rem solid #00000027;
+	}
 }
 .logo {
 	margin-right: 7rem;
@@ -37,6 +49,10 @@
 	max-width: 45.2rem;
 	width: 100%;
 	margin-right: 8rem;
+
+	@include bp($point_2) {
+		display: none
+	}
 	input {
 		@include app;
 		border: .1rem solid $light-gray;
@@ -74,7 +90,7 @@
 }
 .top-menu {
 	margin-right: 9rem;
-	ul {
+	@include bp($point_2) {
 		display: none;
 	}
 }
@@ -84,6 +100,14 @@
 	padding-right: 2.4rem;
 	cursor: pointer;
 	transition: all .3s ease;
+
+	&.active {
+		color: $green;
+		&:after {
+			top: 75%;
+			transform: translateY(-56%) rotate(90deg);
+		}
+	}
 	&:hover {
 		color: $green;
 	}
@@ -101,6 +125,9 @@
 }
 .phone {
 	margin-right: 10rem;
+	@include bp($point_2) {
+		margin-right: 5rem;
+	}
 	a {
 		@include flex-start;
 		color: $dark;
@@ -118,6 +145,9 @@
 }
 .header-cart {
 	max-width: 12.6rem;
+	@include bp($point_2) {
+		margin-right: 2rem;
+	}
 	a {
 		@include flex-start;
 		color: $medium-gray;
@@ -144,6 +174,10 @@
 }
 .header-bottom {
 	@include flex-start;
+	position: relative;
+	@include bp($point_2) {
+		justify-content: space-between
+	}
 }
 .header_shop {
 	@include flex-start;
@@ -154,6 +188,14 @@
 	position: relative;
 	margin-right: 7rem;
 	cursor: pointer;
+
+
+	&.active {
+		.icon-arrow {
+			transform: rotate(-270deg) translateY(-50%);
+			top: 40%;
+		}
+	}
 	.header-burger {
 		margin-right: 1.5rem;
 		width: 2.4rem;
@@ -171,18 +213,47 @@
 		font-size: $sm;
 	}
 
-	p {
-
+}
+.shop-menu {
+	position: absolute;
+	top: calc(100% + 1.5rem);
+	left: 0;
+	background-color:$white;
+	padding: 4rem;
+	min-width: 60rem;
+	border-radius: 1rem;
+	box-shadow: 0 .4rem 2rem 0 rgba(44, 44, 44, 0.20);
+	transition: all .3s ease;
+	transform: translateY(5rem);
+	opacity: 0;
+	visibility: hidden;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0);
 	}
-
-}
-.gg:menu-right-alt {
-}
-.icon-arrow {
-}
-.material-symbols:arrow-back-ios-rounded {
+	ul {
+		max-height: 38rem;
+		@include flex-start;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: -1.5rem -5rem 0 0;
+		li {
+			width: 33%;
+			padding: 1.5rem 5rem 0 0;
+			a {
+				color: $dark;
+				&:hover {
+					color: $green
+				}
+			}
+		}
+	}
 }
 .header-nav {
+	@include bp($point_2) {
+		display: none
+	}
 
 	ul {
 		@include flex-start;
@@ -198,6 +269,70 @@
 			&:not(:last-child) {
 				margin-right: 7.1rem;
 			}
+		}
+	}
+}
+
+.top-menu {
+	position: relative;
+	.menu-expand {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: calc(100% + 1.5rem);
+		transform: translateY(3rem);
+		border-radius: 1rem;
+		background: #FFF;
+		box-shadow: 0px .4rem 2rem 0 rgba(44, 44, 44, 0.20);
+		padding: 2rem;
+		z-index: 98;
+		min-width: 22.2rem;
+		transition: all .3s ease;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+		a {
+			color: $dark;
+			&:hover {
+				color: $green;
+			}
+		}
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+}
+
+.burger-trigger {
+	display: none;
+	position: relative;
+	width: 5rem;
+	height: 3rem;
+	@include bp($point_2) {
+		display: block;
+	}
+
+	span {
+		position: absolute;
+		width: 100%;
+		display: block;
+		border-bottom: .4rem solid $dark;
+		right: 0;
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-50%);
+			max-width: 60%;
+		}
+		&:nth-child(3) {
+			bottom: 0;
+			max-width: 80%;
 		}
 	}
 }

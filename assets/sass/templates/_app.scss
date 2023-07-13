@@ -6,6 +6,9 @@
 	background-color:$light-green;
 	border-radius: $rounded-s;
 	padding: 7rem;
+	@include bp($point_2) {
+		padding: 7rem 4rem;
+	}
 }
 .app_head {
 	margin-bottom: 3rem;
@@ -16,21 +19,43 @@
 	@include flex-start;
 	flex-wrap: wrap;
 	margin: -1.5rem -1.5rem 2rem 0;
+	@include bp($point_2) {
+		flex-direction: column;
+		margin: 0;
+		width: 100%;
+	}
 	& li {
 		padding: 1.5rem 1.5rem 0 0;
 		flex: 1;
+		&:not(:last-child) {
+			@include bp($point_2) {
+				margin-bottom: 1.5rem;
+			}
+		}
+		@include bp($point_2) {
+			padding: 0;
+			width: 100%;
+		}
 	}
 	.app-input {
 		width: 34rem;
+		@include bp($point_2) {
+			width: 100%;
+		}
 	}
 	input {
 		@include app;
 		border: .1rem solid #2C2C2C1A;
-		background-color: $white;
 		padding: 2.2rem 2rem;
 		border-radius: $rounded-sm;
 		width: 100%;
 		transition: all .3s ease;
+		@include bp($point_2) {
+			width: 100%;
+		}
+		&:not([type="submit"]) {
+			background-color: $white!important;
+		}
 		&:focus {
 			border-color: $light-gray;
 		}
@@ -40,6 +65,10 @@
 }
 .app_btn {
 	max-width: 30.5rem;
+	@include bp($point_2) {
+		max-width: 100%;
+		margin-bottom: 2rem;
+	}
 	input {
 		@include flex-center;
 		cursor: pointer;

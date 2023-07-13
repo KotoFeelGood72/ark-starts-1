@@ -8,6 +8,9 @@
 	background-color: #2C2C2CE5;
 	color: $white;
 	padding-top: 6rem;
+	@include bp($point_2) {
+		margin-top: 6rem;
+	}
 	a {
 		color: $white
 	}
@@ -20,9 +23,15 @@
 .footer_main {
 	@include flex-start;
 	align-items: flex-start;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
 }
 .footer_col--contact {
 	margin-right: 30rem;
+	@include bp($point_2) {
+		margin: 0 0 5rem 0;
+	}
 }
 .footer-logo {
 	margin-bottom: 5.3rem;

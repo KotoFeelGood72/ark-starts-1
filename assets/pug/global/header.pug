@@ -13,8 +13,8 @@ header.header
 							icon: 'heroicons:magnifying-glass-solid'
 						})
 				.top-menu
-					.top_menu--label Заказ растений
-					ul
+					.top_menu--label.btn-expand Заказ растений
+					ul.menu-expand
 						each item in ['Заказ растений', 'Реквизиты', 'Прайс-лист', 'Как заказать', 'Статьи']
 							li
 								a(href="#")=item
@@ -31,7 +31,7 @@ header.header
 						})
 						.header-cart--total#header-total Корзина пуста
 			.header-bottom 
-				.header_shop
+				.header_shop.btn-expand
 					.header-burger
 						+iconify({
 							icon: 'gg:menu-right-alt'
@@ -41,11 +41,22 @@ header.header
 						+iconify({
 							icon: 'material-symbols:arrow-back-ios-rounded'
 						})
+				.shop-menu.menu-expand 
+					nav
+						ul 
+							each item in ['Картофель', 'Малина', 'Ежевика', 'Голубика', 'Смородина', 'Земляника', 'Черника', 'Жимолость', 'Гейхера', 'Клюква', 'Цитрусовые', 'Гвоздика', 'Гортензия', 'Роза Горшечная', 'Бегония', 'Ирга', 'Брусника', 'Барбарис', 'Боярышник', 'Вереск']
+								li 
+									a(href="#")=item 
+				.burger-trigger.trigger(data-target="burger")
+					span 
+					span 
+					span 
 				nav.header-nav 
 					ul 
 						each item in ['Картофель', 'Малина', 'Ежевика', 'Голубика', 'Смородина', 'Земляника', 'Черника', 'Жимолость']
 							li 
-								a(href="#")=item 
+								a(href="#")=item
+				
 				
 
 				

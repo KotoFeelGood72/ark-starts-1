@@ -1,0 +1,33 @@
+.popup.popup_form(data-id="form")
+  .popup_bg.remove 
+  .popup_main.form_main 
+    .form-close.remove 
+      +iconify({
+        icon: 'radix-icons:cross-1'
+      })
+    h3 Оставить заявку
+    .popup_form--action 
+      .popup_input 
+        input(type="text" placeholder="Имя")
+      .popup_input 
+        input(type="tel" placeholder="Телефон")
+      .popup_input 
+        input(type="email" placeholder="E-mail")
+      .popup_btn 
+        input(type="submit", value="Отправить")
+      .popup_notice!='Отправляя форму, вы соглашаетесь с <a target="_blank" href="#"> политикой конфиденциальности.</a>'
+
+
+
+.popup.popup_burger(data-id="burger")
+  .popup_bg.remove 
+  .popup_main.burger_main 
+    .burger-close.remove 
+      +iconify({
+        icon: 'radix-icons:cross-1'
+      })
+    .burger-logo.logo 
+      a(href="#")
+        img(src="i/svg/logo.svg", alt="")
+        img(src="i/svg/txt-logo.svg", alt="")
+    

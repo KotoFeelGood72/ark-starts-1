@@ -2,12 +2,23 @@
 	@include flex-start;
 	max-width: 80rem;
 	margin-right: 7rem;
+	@include bp($point_2) {
+		margin: 0 0 3rem 0;
+		flex-direction: column;
+		max-width: 100%;
+	}
 }
 
 .product_slider--thumb {
 	max-width: 12rem;
 	max-height: 65rem;
 	margin-right: 3rem!important;
+
+	@include bp($point_2) {
+		order: 1;
+		max-width: 100%;
+		height: 15rem;
+	}
 
 	.swiper-slide {
 		border-radius: 1rem;
@@ -27,6 +38,10 @@
 
 .product_slider  {
 	max-width: 65rem;
+	@include bp($point_2) {
+		max-width: 100%;
+		margin: 0 0 3rem 0;
+	}
 	
 	.swiper-slide {
 		position: relative;
@@ -73,6 +88,10 @@
 	@include flex-space;
 	flex-direction: column;
 	max-height: 64.8rem;
+	@include bp($point_2) {
+		flex-direction: row;
+		max-width: 100%;
+	}
 
 	&>div {
 		width: 7rem;
@@ -82,12 +101,21 @@
 		@include flex-center;
 		cursor: pointer;
 		transition: all .3s ease;
+		@include bp($point_2) {
+			height: 3rem;
+		}
 		&:hover {
 			color: $white;
 			background-color:$green;
 		}
 		&:nth-child(1) {
 			border-radius: 0 0 1rem 1rem;
+			@include bp($point_2) {
+				transform: rotate(-90deg) translateY(-50%);
+				position: absolute;
+				top: 43%;
+				left: -.5rem;
+			}
 			.icons {
 				transform: rotate(-270deg);
 				height: .9rem;
@@ -98,6 +126,14 @@
 		}
 		&:nth-child(2) {
 			border-radius:1rem 1rem 0 0;
+			@include bp($point_2) {
+				@include bp($point_2) {
+					transform: rotate(-90deg) translateY(-50%);
+					position: absolute;
+					top: 43%;
+					right: -3.5rem;
+				}
+			}
 			.icons {
 				transform: rotate(-90deg);
 				height: .9rem;
@@ -127,6 +163,11 @@
 	@include flex-start;
 	align-items: flex-start;
 	margin-bottom: 8rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 6rem;
+	}
 }
 
 .products_colors {
@@ -225,9 +266,16 @@
 	@include flex-start;
 	align-items: flex-start;
 	margin-bottom: 16rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		margin-bottom: 12rem;
+	}
 	.products_content {
 		max-width: 74rem;
 		margin-right: 13rem;
+		@include bp($point_2) {
+			margin: 0 0 3rem 0;
+		}
 
 		h2, h3, h4, h5, h6 {
 			padding: 1.5rem 0;

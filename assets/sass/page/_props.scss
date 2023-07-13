@@ -1,6 +1,9 @@
 .props_main {
 	margin-top: -3rem;
 	margin-bottom: 8rem;
+	@include bp($point_2) {
+		margin-bottom: 6rem;
+	}
 	p {
 		color: $gray;
 		&:not(:last-child) {
