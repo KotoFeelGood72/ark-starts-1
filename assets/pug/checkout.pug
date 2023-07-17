@@ -4,61 +4,63 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Оформление заказа'}
 block content_block
 	.block-head
-		.section_in
 			.block_head--main
 				+bread(['Главная'], 'Оформление заказа')
 				.block_head--title
-					h1=array.title_inner
-			.block-checkout
-				.checkout_form--w 
-					p Данные покупателя
-					form.checkout-form
-						+input({
-							place: 'ФИО'
-						})
-						.checkout_input--group 
+					.section_in
+						h1=array.title_inner
+			.section_in
+				.block-checkout
+					.checkout_form--w 
+						p Данные покупателя
+						form.checkout-form
 							+input({
-								place: 'Телефон',
-								type: 'tel'
+								place: 'ФИО'
 							})
-							+input({
-								place: 'E-Mail',
-								type: 'email'
-							})
-						.checkout-delivery 
-							p Способ доставки
-							ul.delivery_links 
-								-for(i = 0; i < 2; i++)
-									- let del = ['Самовывоз', 'Доставка СДЭК']
-										if i < 1
-											li(data-tab=`del-${i}`)
-												p=del[i]
-										else
-											li(data-tab=`del-${i}` class="active_tab")
-												p=del[i]
-							ul.delivery-tabs 
-								li(data-tab="del-0")
-									p Вы можете забрать свой заказ в магазине по адресу: г. Нижний Новгород, ул ____ д _______
-									span Ежедневно с 9:00 до 18:00
-								li(data-tab="del-1" class="active_tab")
-									.checkout_input--group
-										.search-city-w 
+							.checkout_input--group 
+								+input({
+									place: 'Телефон',
+									type: 'tel'
+								})
+								+input({
+									place: 'E-Mail',
+									type: 'email'
+								})
+							.checkout-delivery 
+								p Способ доставки
+								ul.delivery_links 
+									-for(i = 0; i < 2; i++)
+										- let del = ['Самовывоз', 'Доставка СДЭК']
+											if i < 1
+												li(data-tab=`del-${i}`)
+													p=del[i]
+											else
+												li(data-tab=`del-${i}` class="active_tab")
+													p=del[i]
+								ul.delivery-tabs 
+									li(data-tab="del-0")
+										p Вы можете забрать свой заказ в магазине по адресу: г. Нижний Новгород, ул ____ д _______
+										span Ежедневно с 9:00 до 18:00
+									li(data-tab="del-1" class="active_tab")
+										.checkout_input--group
+											.search-city-w 
+												+input({
+													class: 'search-city',
+													place: 'Регион',
+												})
+												input(type="hidden" id="seachHidden")
+												ul.city-list
 											+input({
-												class: 'search-city',
-												place: 'Регион',
+												place: 'Улица, дом, квартира/офис',
 											})
-											ul.region-list
-										+input({
-											place: 'Улица, дом, квартира/офис',
-										})
-				.cart-total 
-					.cart_total--card 
-						p Условия заказа
-						ul
-							li 
-								span 300 ед. товара
-								p 30 000 
-						+btn({
-							link: 'Перейти к оформлению'
-						})
-								
+					.cart-total 
+						.cart_total--card 
+							p Условия заказа
+							ul
+								li 
+									span 300 ед. товара
+									p 30 000 
+							+btn({
+								link: 'Перейти к оформлению'
+							})
+									

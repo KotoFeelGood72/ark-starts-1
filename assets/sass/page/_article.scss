@@ -13,6 +13,9 @@
 			font-size: $xl-2;
 			margin-bottom: 3rem;
 		}
+		@include bp($point_5) {
+			font-size: 2.8rem
+		}
 	}
 }
 
@@ -20,6 +23,10 @@
 	width: 100%;
 	flex: 1;
 	font-size: $xl;
+
+	@include bp($point_5) {
+		font-size: $sm;
+	}
 }
 
 .article-img {
@@ -56,6 +63,9 @@
 
 .article-content {
 	margin-bottom: 10rem;
+	@include bp($point_5) {
+		margin-bottom: 6rem;
+	}
 	img {
 		margin: 5rem 0;
 		width: auto;
@@ -63,6 +73,9 @@
 		overflow: hidden;
 		@include bp($point_2) {
 			margin: 1.5rem 0;
+		}
+		@include bp($point_5) {
+			width: 100%;
 		}
 	}
 
@@ -91,6 +104,9 @@
 		margin-bottom: 8rem;
 		@include bp($point_2) {
 			margin-bottom: 6rem;
+		}
+		@include bp($point_5) {
+			margin-bottom: 3rem;
 		}
 	}
 }

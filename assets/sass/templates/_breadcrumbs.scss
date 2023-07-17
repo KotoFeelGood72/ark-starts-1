@@ -2,6 +2,9 @@
 	@include flex-start;
 	margin: -1rem -3.2rem 5rem 0;
 	padding-top: 1.5rem;
+	@include bp($point_5) {
+		margin: -1rem -3.2rem 3rem 0;
+	}
 	li {
 		padding: 1rem 3.2rem 0 0;
 		position: relative;
@@ -22,3 +25,11 @@
 		}
 	}
 }
+
+// .breadcrumb {
+// 	.section_in {
+// 		@include bp($point_5) {
+// 			padding: 0;
+// 		}
+// 	}
+// }

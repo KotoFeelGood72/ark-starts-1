@@ -7,6 +7,11 @@
 	@include bp($point_2) {
 		margin-bottom: 3.5rem;
 	}
+	@include bp($point_5) {
+		margin-bottom: 2.5rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 .section_head--link {
@@ -26,5 +31,21 @@
 			font-size: 1.4rem;
 		}
 
+	}
+}
+
+.section_head--link {
+	@include bp($point_5) {
+		padding-top: 1rem;
+	}
+	.icons {
+		@include bp($point_5) {
+			display: none;
+		}
+	}
+	p {
+		@include bp($point_5) {
+			font-size: $sm;
+		}
 	}
 }

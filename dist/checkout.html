@@ -47,7 +47,10 @@
                 <p>+7 000 000 00 00</p></a></div>
             <div class="header-cart"><a href="#">
                 <div class="icons solar:cart--outline"><span class="iconify" data-icon="solar:cart-5-outline"></span></div>
-                <div class="header-cart--total" id="header-total">Корзина пуста</div></a></div>
+                <div class="header-cart--total" id="header-total" data-count="1">
+                  <p>Корзина пуста</p>
+                </div></a></div>
+            <div class="burger-trigger trigger" data-target="burger"><span> </span><span> </span><span> </span></div>
           </div>
           <div class="header-bottom"> 
             <div class="header_shop btn-expand">
@@ -105,24 +108,26 @@
     <div class="wrapper">
       <div class="base">
         <div class="block-head">
-          <div class="section_in">
-            <div class="block_head--main">
-              <div class="breadcrumb">
-                <div class="section_in"> 
-                  <div class="breadcrumb_main">
-                    <ul class="breadcrumb__list">
-                      <li class="breadcrumb__item">
-                        <!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
-                      </li>
-                      <li class="breadcrumb__item"><span class="breadcrumb__link-current">Оформление заказа</span></li>
-                    </ul>
-                  </div>
+          <div class="block_head--main">
+            <div class="breadcrumb">
+              <div class="section_in"> 
+                <div class="breadcrumb_main">
+                  <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                      <!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item"><span class="breadcrumb__link-current">Оформление заказа</span></li>
+                  </ul>
                 </div>
               </div>
-              <div class="block_head--title">
+            </div>
+            <div class="block_head--title">
+              <div class="section_in">
                 <h1>Оформление заказа</h1>
               </div>
             </div>
+          </div>
+          <div class="section_in">
             <div class="block-checkout">
               <div class="checkout_form--w"> 
                 <p>Данные покупателя</p>
@@ -158,7 +163,8 @@
                             <div class="app-input search-city">
                               <input type="text" placeholder="Регион"/>
                             </div>
-                            <ul class="region-list"></ul>
+                            <input type="hidden" id="seachHidden">
+                            <ul class="city-list"></ul>
                           </div>
                           <div class="app-input">
                             <input type="text" placeholder="Улица, дом, квартира/офис"/>
@@ -300,6 +306,24 @@
           <div class="icons radix-icons:cross-"><span class="iconify" data-icon="radix-icons:cross-1"></span></div>
         </div>
         <div class="burger-logo logo"> <a href="#"><img src="i/svg/logo.svg" alt=""><img src="i/svg/txt-logo.svg" alt=""></a></div>
+        <div class="search-input"> 
+          <input type="search" placeholder="Поиск">
+          <button type="submit"> 
+            <div class="icons heroicons:magnifying-glass-solid"><span class="iconify" data-icon="heroicons:magnifying-glass-solid"></span></div>
+          </button>
+        </div>
+        <nav class="burger_nav"> 
+          <ul> 
+            <li><a href="#">Заказ растений</a></li>
+            <li><a href="#">Реквизиты</a></li>
+            <li><a href="#">Прайс-лист</a></li>
+            <li><a href="#">Как заказать</a></li>
+            <li><a href="#">Статьи</a></li>
+          </ul>
+        </nav>
+        <div class="phone"> <a href="#">
+            <div class="icons ph:phone-light"><span class="iconify" data-icon="ph:phone-light"></span></div>
+            <p>+7 000 000 00 00</p></a></div>
       </div>
     </div>
     <div class="alert success">

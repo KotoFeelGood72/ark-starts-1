@@ -29,7 +29,12 @@ header.header
 						+iconify({
 							icon: 'solar:cart-5-outline'
 						})
-						.header-cart--total#header-total Корзина пуста
+						.header-cart--total#header-total(data-count="1")
+							p Корзина пуста
+				.burger-trigger.trigger(data-target="burger")
+					span 
+					span 
+					span 
 			.header-bottom 
 				.header_shop.btn-expand
 					.header-burger

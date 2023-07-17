@@ -1,19 +1,32 @@
 .block_head--title {
 	@include flex-start;
 	align-items: flex-end;
+	@include bp($point_5) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
 	p {
 		padding: 0 0 .5rem 2rem;
 		color: $gray;
+		@include bp($point_5) {
+			padding: .5rem 0;
+		}
 	}
 	a {
 		padding: 0 0 .5rem 2rem;
 		display: block;
+		@include bp($point_5) {
+			display: none;
+		}
 	}
 }
 
 .sort-filter {
 	width: 25.7rem;
+	@include bp($point_5) {
+		width: 100%;
+	}
 
 	.choices__inner {
 		background-color:$trans;
@@ -21,6 +34,9 @@
 		font-family: $font_1;
 		&>.choices__item {
 			font-size: 1.6rem;
+			@include bp($point_5) {
+				font-size: 1.4rem;
+			}
 		}
 	}
 	.choices.is-open {
@@ -39,6 +55,11 @@
 	transform: translateY(-50%);
 	content: '';
 	right: 2rem!important;
+	@include bp($point_5) {
+		width: 2rem!important;
+		height: 1.3rem!important;
+		top: 55%;
+	}
 }
 
 .choices[data-type*=select-one].is-open::after {
@@ -56,6 +77,9 @@
 	.choices__item {
 		font-size: 1.6rem;
 		padding: 0!important;
+		@include bp($point_5) {
+			font-size: 1.4rem;
+		}
 		&:hover {
 			background-color:$trans!important;
 			color: $green!important;
@@ -81,6 +105,12 @@
 	@include bp($point_2) {
 		margin: -2rem -2rem 4rem 0;
 	}
+	@include bp($point_5) {
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+		grid-gap: 2rem;
+	}
 }
 
 .products-item--w {
@@ -94,12 +124,21 @@
 			max-width: 33.3%;
 			border: none;
 		}
+
+		@include bp($point_5) {
+			max-width: 100%;
+			width: 100%;
+			padding: 0;
+		}
 }
 
 .products-item {
 	flex: 25%;
 	@include bp($point_2) {
 		flex: 33.3%;
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;
 	}
 }
 
@@ -119,6 +158,10 @@
 	overflow: hidden;
 	@include bp($point_2) {
 		height: 25rem;
+	}
+
+	@include bp($point_5) {
+		height: 18rem;
 	}
 	img {
 		object-fit: cover;
@@ -181,10 +224,32 @@
 .product_card--pay a {
 	padding: 1.3rem 2.5rem;
 	font-size: 1.8rem;
+	@include bp($point_5) {
+		font-size: 1.6rem;
+		padding: 1rem 2rem;
+	}
+}
+
+.choices__inner {
+	@include bp($point_5) {
+		padding: .7rem 1rem!important;
+		min-height: 4.1rem!important;
+		display: flex!important;
+		align-items: center!important;
+	}
+}
+
+.choices__list--single {
+	@include bp($point_5) {
+		padding: 0!important;
+	}
 }
 
 .choices__item.choices__item--selectable {
 	font-size: 1.6rem!important;
+	@include bp($point_5) {
+		font-size: 1.4rem!important;
+	}
 }
 
 .block-products {

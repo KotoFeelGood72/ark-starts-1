@@ -19,6 +19,9 @@
 		@include bp($point_2) {
 			align-items: flex-start;
 		}
+		@include bp($point_5) {
+			flex-direction: column;
+		}
 
 		.post-img {
 			max-width: 36.1rem;
@@ -27,6 +30,10 @@
 			overflow: hidden;
 			height: 21.9rem;
 			margin-right: 4rem;
+
+			@include bp($point_5) {
+				margin: 0 0 3rem 0;
+			}
 			img {
 				height: 100%;
 				object-fit: cover;
@@ -41,6 +48,9 @@
 	@include bp($point_2) {
 		max-width: 50%;
 	}
+	@include bp($point_5) {
+		max-width: 100%;
+	}
 	h3 {
 		font-size: $xl;
 		font-family: $font_1;
@@ -54,6 +64,11 @@
 			-webkit-line-clamp: 2;
 			line-height: 2.4rem;
 			max-height: 7rem;
+		}
+
+		@include bp($point_5) {
+			font-size: 1.8rem;
+			margin: 1rem 0
 		}
 	}
 }
@@ -81,5 +96,8 @@
 		-webkit-line-clamp: 4;
 		line-height: 1.8rem;
 		max-height: 9rem;
+	}
+	@include bp($point_5) {
+		display: none;
 	}
 }

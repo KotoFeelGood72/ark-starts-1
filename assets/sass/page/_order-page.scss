@@ -1,10 +1,19 @@
 .order_main {
 	margin-top: -3rem;
 
+	@include bp($point_5) {
+		margin-top: 0;
+	}
+
 	&>p {
 		margin-bottom: 5rem;
 		font-size: 2.3rem;
 		color: $gray;
+
+		@include bp($point_5) {
+			font-size: 1.6rem;
+			margin: 2rem 0;
+		}
 	}
 }
 
@@ -14,6 +23,11 @@
 	border-radius: 1.5rem;
 	overflow: hidden;
 	margin-bottom: 10rem;
+	@include bp($point_5) {
+		height: 20rem;
+		margin-bottom: 6rem;
+		border-radius: 0.5rem;
+	}
 	img {
 		height: 100%;
 		object-fit: cover;
@@ -58,8 +72,14 @@
 
 .order-delivery {
 	margin-bottom: 8rem;
+	@include bp($point_5) {
+		margin-bottom: 6rem;
+	}
 	h3 {
 		margin-bottom: 5rem;
+		@include bp($point_5) {
+			margin-bottom: 3rem;
+		}
 	}
 
 	ul {
@@ -67,8 +87,15 @@
 			position: relative;
 			padding-left: 6.6rem;
 			font-size: 2.3rem;
+			@include bp($point_5) {
+				font-size: 1.8rem;
+				padding-left: 4rem;
+			}
 			&:not(:last-child) {
 				margin-bottom: 4rem;
+				@include bp($point_5) {
+					margin-bottom: 2rem;
+				}
 			}
 			&:after {
 				position: absolute;
@@ -81,6 +108,11 @@
 				background-color:$green;
 				content: url('https://api.iconify.design/material-symbols/check-small-rounded.svg?color=white&width=35&height=35');
 				@include flex-center;
+				@include bp($point_5) {
+					width: 2.5rem;
+					height: 2.5rem;
+					content: url('https://api.iconify.design/material-symbols/check-small-rounded.svg?color=white&width=25&height=25');
+				}
 			}
 		}
 	}

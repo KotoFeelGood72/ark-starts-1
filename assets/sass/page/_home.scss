@@ -9,19 +9,32 @@
 	color: $white;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+	overflow: hidden;
 	@include bp($point_2) {
 		padding: 5rem;
 		border-radius: 1rem;
 		background-position: right center;
 	}
+
+	@include bp($point_5) {
+		padding: 2rem;
+		border-radius: 1rem;
+	}
 }
 .hero-content {
 	max-width: 46.8rem;
+	position: relative;
+	z-index: 1;
 	h1 {
 		margin-bottom: 2rem;
 		font-size: 5rem;
 		@include bp($point_2) {
 			font-size: 4rem;
+		}
+		@include bp($point_5) {
+			font-size: 3.6rem;
+			line-height: 4.2rem;
 		}
 		span {
 			color: $green;
@@ -32,6 +45,10 @@
 		font-weight: 300;
 		font-family: $font_0;
 		margin-bottom: 4rem;
+		@include bp($point_5) {
+			font-size: 1.6rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	ul {
@@ -42,6 +59,10 @@
 			padding: 1.5rem 5.1rem;
 			font-size: $md;
 			position: relative;
+			@include bp($point_5) {
+				font-size: $sm;
+				padding: 1rem 4rem 1rem 4rem;
+			}
 			&:before {
 				position: absolute;
 				top: 50%;
@@ -129,10 +150,17 @@
 		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
 	}
 
+	@include bp($point_5) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
+
 	li {
 		border-radius: $rounded-s;
 		overflow: hidden;
 		position: relative;
+		@include bp($point_5) {
+			border-radius: 0.5rem;
+		}
 		&:hover {
 			&:before {
 				transform: translateY(100%)
@@ -159,12 +187,18 @@
 			@include bp($point_2) {
 				min-height: 40rem;
 			}
+			@include bp($point_5) {
+				min-height: 30rem;
+			}
 			h3 {
 				position: relative;
 				z-index: 3;
 				font-size: $xl-3;
 				font-family: $font_1;
 				font-weight: 400;
+				@include bp($point_5) {
+					font-size: $xl;
+				}
 			}
 		}
 		img {
@@ -183,6 +217,9 @@
 
 .home-popular {
 	padding-top: 5rem;
+	@include bp($point_5) {
+		padding-top: 3rem;
+	}
 }
 .about {
 }
@@ -226,9 +263,19 @@
 		grid-gap: 3rem;
 	}
 
+	@include bp($point_5) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+		grid-gap: 3rem;
+	}
+
 	h3 {
 		font-size: $md;
 		padding: 3rem 0 1.5rem 0;
+
+		@include bp($point_5) {
+			font-size: 1.8rem;
+			padding: 2rem 0 1rem 0;
+		}
 	}
 
 	.icons {

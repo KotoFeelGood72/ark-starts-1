@@ -36,12 +36,21 @@
 .footer-logo {
 	margin-bottom: 5.3rem;
 	max-width: 23rem;
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+	}
 }
 .footer-list {
 	margin-bottom: 5rem;
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+	}
 	li {
 		&:not(:last-child) {
 			margin-bottom: 3rem;
+			@include bp($point_5) {
+				margin-bottom: 1.5rem;
+			}
 		}
 		a {
 			@include flex-start;
@@ -109,6 +118,11 @@
 	align-items: flex-start;
 	max-height: 36.5rem;
 	margin: 0 -8rem -1.5rem 0;
+	@include bp($point_5) {
+		max-height: 55rem;
+		width: 100%;
+		margin-bottom: 3rem;
+	}
 	li {
 		padding: 0 8rem 1.5rem 0;
 	}
@@ -127,17 +141,36 @@
 	color: rgba(255, 255, 255, 0.800);
 	padding-bottom: 1.5rem;
 	margin-top: -2rem;
+	@include bp($point_5) {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 0;
+	} 
 }
 .footer_col--left {
+	@include bp($point_5) {
+		order: 1;
+	}
 }
 .footer_col--right {
 	@include flex-end;
 	flex-direction: column;
 	align-items: flex-end;
+	@include bp($point_5) {
+		order: 0;
+		align-items: flex-start;
+	}
 }
 .arkada-logo {
 	max-width: 21rem;
 	margin-bottom: 2.5rem;
+	@include bp($point_5) {
+		margin-bottom: 1.5rem;
+		max-width: 15rem;
+	}
 }
 .policy-link {
+	@include bp($point_5) {
+		margin-bottom: 1.5rem;
+	}
 }

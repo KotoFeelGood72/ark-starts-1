@@ -4,11 +4,11 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Реквизиты'}
 block content_block
 	.block-head
-		.section_in
 			.block_head--main
 				+bread(['Главная'], 'Реквизиты')
 				.block_head--title
-					h1=array.title_inner
+					.section_in
+						h1=array.title_inner
 	section.props 
 		.section_in 
 			.props_main 

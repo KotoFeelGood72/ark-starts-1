@@ -4,6 +4,9 @@
 	@include bp($point_2) {
 		margin-bottom: 6rem;
 	}
+	@include bp($point_5) {
+		margin: 2rem 0 4rem 0;
+	}
 	p {
 		color: $gray;
 		&:not(:last-child) {

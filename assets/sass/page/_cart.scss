@@ -14,11 +14,20 @@
 	position: relative;
 	user-select: none;
 
+	@include bp($point_5) {
+		padding-left: 0;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	label {
 		position: absolute;
 		top: 0;
 		left: 0;
 		cursor: pointer;
+		@include bp($point_5) {
+			display: none;
+		}
 		&:before {
 			position: absolute;
 			top: 0;
@@ -75,6 +84,9 @@
 	border-radius: 1.5rem;
 	overflow: hidden;
 	padding: 3rem;
+	@include bp($point_5) {
+		width: 100%;
+	}
 }
 
 .cart_list {
@@ -98,8 +110,8 @@
 
 .cartItem_col--left {
 	@include flex-start;
-	@include bp($point_2) {
-		// flex-wrap: wrap;
+	@include bp($point_5) {
+		margin-bottom: 2rem;
 	}
 }
 
@@ -123,14 +135,23 @@
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
 		max-height: 6rem;
+		@include bp($point_5) {
+			font-size: 1.6rem;
+		}
 	}
 
 	ul {
 		li {
 			font-size: 1.6rem;
 			color: $gray;
+			@include bp($point_5) {
+				font-size: 1.4rem;
+			}
 			&:not(:last-child) {
 				margin-bottom: 1rem;
+				@include bp($point_5) {
+					margin-bottom: 0.5rem;
+				}
 			}
 		}
 	}
@@ -145,6 +166,9 @@
 		bottom: 2rem;
 		left: auto;
 	}
+	@include bp($point_5) {
+		bottom: 3rem;
+	}
 	a {
 		color: #FF3131;
 		font-size: 1.6rem;
@@ -156,6 +180,9 @@
 	@include bp($point_2) {
 		flex-direction: column;
 		align-items: flex-end;
+	}
+	@include bp($point_5) {
+		align-items: flex-start;
 	}
 
 	.cart_item--price {
@@ -179,6 +206,10 @@
 		font-family: $font_2;
 		padding-bottom: 2.6rem;
 		margin-bottom: 2.6rem;
+		@include bp($point_5) {
+			margin-bottom: 1.5rem;
+			padding-bottom: 1.5rem;
+		}
 	}
 
 	ul {

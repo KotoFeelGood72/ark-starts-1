@@ -20,6 +20,10 @@
 		height: 15rem;
 	}
 
+	@include bp($point_5) {
+		height: 10rem;
+	}
+
 	.swiper-slide {
 		border-radius: 1rem;
 		overflow: hidden;
@@ -104,6 +108,9 @@
 		@include bp($point_2) {
 			height: 3rem;
 		}
+		@include bp($point_5) {
+			height: 2rem;
+		}
 		&:hover {
 			color: $white;
 			background-color:$green;
@@ -115,6 +122,9 @@
 				position: absolute;
 				top: 43%;
 				left: -.5rem;
+			}
+			@include bp($point_5) {
+				left: -1.7rem;
 			}
 			.icons {
 				transform: rotate(-270deg);
@@ -227,8 +237,16 @@
 	@include flex-start;
 	flex-wrap: wrap;
 	margin: -1rem -1rem 5rem 0;
+
+	@include bp($point_5) {
+		margin: -.5rem -.5rem 3rem 0 0;
+	}
 	li {
 		padding: 1rem 1rem 0 0;
+		@include bp($point_5) {
+			padding: .5rem .5rem 0 0;
+			flex-grow: 1;
+		}
 		input {
 			display: none;
 			&:checked + label {
@@ -244,6 +262,10 @@
 			border-radius: 0.7rem;
 			border: .2rem solid $light-gray;
 			cursor: pointer;
+			@include bp($point_5) {
+				padding: 1rem 2rem;
+				font-size: 1.4rem;
+			}
 		}
 	}
 }
@@ -252,11 +274,33 @@
 	@include flex-start;
 	.btn {
 		margin-right: 1.5rem;
+		@include bp($point_5) {
+			min-width: 20rem;
+		}
 	}
 
 	.products_quantity {
+		@include bp($point_5) {
+			width: 100%;
+		}
 		button {
 			font-size: 2.6rem;
+			@include bp($point_5) {
+				font-size: 2rem;
+			}
+		}
+		
+	}
+
+	.products_quantity button {
+		@include bp($point_5) {
+			width: 3rem;
+			height: 5rem
+		}
+	}
+	.products_quantity input {
+		@include bp($point_5) {
+			font-size: 1.8rem;
 		}
 	}
 }
@@ -269,6 +313,9 @@
 	@include bp($point_2) {
 		flex-direction: column;
 		margin-bottom: 12rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 8rem;
 	}
 	.products_content {
 		max-width: 74rem;
@@ -302,6 +349,9 @@
 			text-align: left;
 			@include flex-start;
 			align-items: flex-end;
+			@include bp($point_2) {
+				flex-wrap: wrap;
+			}
 			span {
 				margin-right: 1rem;
 				color: $gray;
@@ -310,12 +360,18 @@
 				margin-left: 1rem;
 				min-width: 11.5rem;
 				font-family: $font_2;
+				@include bp($point_5) {
+					margin-left: 0;
+				}
 			}
 			.line-doted {
 				flex-grow: 1;
 				border-bottom: .1rem dotted $light-gray;
 				margin-top: -0.3rem;
 				margin-bottom: 0.6rem;
+				@include bp($point_5) {
+					margin-right: 1rem;
+				}
 			}
 			&:not(:last-child) {
 				margin-bottom: 3rem;
@@ -326,4 +382,7 @@
 
 .mb-8 {
 	margin-bottom: 8rem;
+	@include bp($point_5) {
+		margin-bottom: 6rem;
+	}
 }

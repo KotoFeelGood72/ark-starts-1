@@ -4,11 +4,11 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Как заказать'}
 block content_block
 	.block-head
-		.section_in
 			.block_head--main
 				+bread(['Главная'], 'Как заказать')
 				.block_head--title
-					h1=array.title_inner
+					.section_in
+						h1=array.title_inner
 	section.order 
 		.section_in 
 			.order_main

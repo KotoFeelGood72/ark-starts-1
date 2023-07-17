@@ -16,6 +16,11 @@
 		font-size: 2.5rem;
 		font-family: $font_2;
 		font-weight: 500;
+
+		@include bp($point_5) {
+			font-size: 2rem;
+			margin: 3rem 0 2rem 0;
+		}
 	}
 }
 .checkout_form--w {
@@ -23,12 +28,19 @@
 	.app-input {
 		width: 100%;
 		margin-bottom: 2rem;
+		@include bp($point_5) {
+			margin-bottom: 1rem;
+		}
 		input {
 			@include app;
 			padding: 2.2rem 2rem;
 			border: .1rem solid $light-gray;
 			width: 100%;
 			border-radius: 1rem;
+			@include bp($point_5) {
+				padding: 1.5rem 2rem;
+				font-size: 1.6rem;
+			}
 			&:focus {
 				border-color: $green;
 			}
@@ -41,8 +53,12 @@
 	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
 	grid-gap: 2rem;
 	margin-bottom: 6rem;
+	position: relative;
 	@include bp($point_2) {
 		margin-bottom: 0;
+	}
+	@include bp($point_5) {
+		grid-gap: 1rem;
 	}
 }
 
@@ -50,8 +66,16 @@
 	@include flex-start;
 	flex-wrap: wrap;
 	margin: -1.5rem -1.5rem 2rem 0;
+	@include bp($point_5) {
+		margin: -1rem -1rem 1rem 0;
+	}
 	li {
 		padding: 1.5rem 1.5rem 0 0;
+		@include bp($point_5) {
+			padding: 1rem 1rem 0 0;
+			flex-grow: 1;
+			text-align: center;
+		}
 		&.active_tab {
 			p {
 				background-color: $green;
@@ -68,6 +92,11 @@
 			color: $green;
 			cursor: pointer;
 			font-family: $font_2;
+			@include bp($point_5) {
+				font-size: 1.6rem;
+				padding: 1.2rem 2rem;
+				font-family: $font_4;
+			}
 		}
 	}
 }
@@ -82,12 +111,15 @@
 		max-width: 47.5rem;
 		margin-bottom: 2rem;
 		font-family: $font_1;
+		@include bp($point_5) {
+			font-size: 1.6rem;
+		}
 	}
 
 	span {
 		color: $gray;
 	}
-	li {
+	&>li {
 		display: none;
 		&.active_tab {
 			display: block;
@@ -105,4 +137,58 @@
 .checkout-form {
 	width: 100%;
 	flex-grow: 1;
+}
+
+
+
+
+.city-list {
+	border-radius: 1rem;
+	background: $white;
+	box-shadow: 0 .4rem 2rem 0 rgba(44, 44, 44, 0.20);
+	padding: 2rem;
+	max-height: 20.5rem;
+	overflow-y: auto;
+	display: none;
+	position: absolute;
+	top: calc(100% + 1rem);
+	z-index: 66;
+	@include bp($point_5) {
+		width: 100%;
+	}
+	&.active {
+		display: block;
+	}
+
+	li {
+		font-size: 1.6rem;
+		cursor: pointer;
+		transition: all .3s ease;
+		&:hover {
+			color: $green;
+		}
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+.search-city-w {
+	position: relative;
+	@include bp($point_5) {
+		position: static;
+	}
+}
+
+.city-list::-webkit-scrollbar {
+  width: .5rem; /* в основном для вертикальных полос прокрутки */
+  height: 1rem; /* в основном для горизонтальных полос прокрутки */
+}
+.city-list::-webkit-scrollbar-thumb { /* плашка-бегунок */
+  background: $light-gray;
+	border-radius: 10rem;
+}
+.city-list::-webkit-scrollbar-track { /* фон */
+  background: #c4c4c444;
+	border-radius: 10rem;
 }

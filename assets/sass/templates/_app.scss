@@ -9,9 +9,18 @@
 	@include bp($point_2) {
 		padding: 7rem 4rem;
 	}
+
+	@include bp($point_5) {
+		padding: 4rem 2rem;
+	}
 }
 .app_head {
 	margin-bottom: 3rem;
+	@include bp($point_5) {
+		text-align: center;
+		max-width: 90%;
+		margin: 0 auto 2rem auto;
+	}
 }
 .app_form {
 }
@@ -52,6 +61,10 @@
 		transition: all .3s ease;
 		@include bp($point_2) {
 			width: 100%;
+		}
+		@include bp($point_5) {
+			padding: 1.5rem 2rem;
+			font-size: 1.6rem;
 		}
 		&:not([type="submit"]) {
 			background-color: $white!important;

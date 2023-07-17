@@ -1,0 +1,193 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include z-index(popup);
+	@include flex-end;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		.popup_main  {
+			transform: translate(0)
+		}
+	}
+	&.popup_form {
+		@include flex-center;
+
+		@include bp($point_5) {
+			padding: 2rem;
+		}
+	}
+}
+
+
+.popup_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $dark;
+	opacity: .7;
+}
+
+.popup_main {
+	position: relative;
+	background: $white;
+	transition: all .4s ease;
+	&.burger_main {
+		height: 100%;
+		transform: translateX(100%);
+		.logo {
+			img {
+				display: block!important;
+				max-width: 12rem;
+				&:nth-child(1) {
+					max-width: 5rem;
+				}
+			}
+		}
+		@include bp($point_2) {
+			max-width: 40rem;
+			padding: 4rem 2rem;
+			overflow-y: auto;
+			max-height: 100%;
+		}
+
+		@include bp($point_5) {
+			max-width: 80%;
+		}
+	}
+}
+
+.burger-close {
+	position: absolute;
+	top: 4.5rem;
+	right: 0;
+	width: 4rem;
+	height: 4rem;
+	background-color: $light-green;
+	@include flex-center;
+	font-size: 2.4rem;
+}
+
+.burger-logo {
+	margin-bottom: 4rem;
+}
+
+.burger_nav {
+	ul {
+		margin-bottom: 6rem;
+		li {
+			a {
+				font-size: 2.2rem;
+				color: $dark;
+			}
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}
+
+.burger_main {
+	.phone {
+		font-size: 2.6rem;
+		font-family: $font_3;
+
+		.icons {
+			font-size: 2.6rem;
+			margin-top: -0.3rem;
+		}
+	}
+
+
+	.search-input {
+		display: block;
+		margin-bottom: 3rem;
+	}
+}
+
+.form_main {
+	border-radius: 2rem;
+	background: #EFF4EB;
+	padding: 7rem;
+	max-width: 48rem;
+	width: 100%;
+	transform: translateY(3rem);
+
+	@include bp($point_5) {
+		padding: 5rem 2rem;
+	}
+	h3 {
+		margin-bottom: 3rem;	
+		text-align: center;
+	}
+}
+
+.form-close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	color: #ff3131;
+	font-size: 3rem;
+	cursor: pointer;
+	transition: all .3s ease;
+	&:hover {
+		opacity: .7;
+	}
+}
+
+.popup_input {
+	margin-bottom: 1.5rem;
+	@include bp($point_5) {
+		margin-bottom: 1rem;
+	}
+	input {
+		@include app;
+		background-color: $white;
+		border-radius: 1rem;
+		border: .1rem solid rgba(44, 44, 44, 0.10);
+		padding: 2.2rem 2rem;
+		width: 100%;
+		@include bp($point_5) {
+			padding: 1.5rem 2rem;
+			font-size: 1.6rem;
+		}
+		&:focus {
+			border-color: $green;
+		}
+	}
+}
+
+.popup_btn {
+	margin-bottom: 2rem;
+	input {
+		@include app;
+		background-color:$green;
+		color: $white;
+		font-family: $font_3;
+		padding: 2.2rem;
+		border-radius: 1rem;
+		width: 100%;
+		cursor: pointer;
+		@include bp($point_5) {
+			font-size: 1.6rem;
+			padding: 1.5rem 2rem;
+		}
+	}
+}
+
+.popup_notice {
+	@include flex-center;
+	flex-direction: column;
+
+	@include bp($point_5) {
+		font-size: 1.4rem;
+	}
+}

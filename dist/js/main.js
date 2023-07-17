@@ -50,6 +50,7 @@ $(document).ready(function ($) {
 
 	shopMenu();
 	checkColor();
+	modal();
 });
 
 $(window).on('load', function () {
@@ -559,8 +560,16 @@ function removeProducts() {
 function mobilePopularSlider() {
 
 	let mobileSLider = new Swiper(".popular-slider", {
-		spaceBetween: 20,
-		slidesPerView: 2,
+		breakpoints: {
+			480: {
+				spaceBetween: 20,
+				slidesPerView: 1
+			},
+			768: {
+				spaceBetween: 20,
+				slidesPerView: 2
+			},
+		},
 	});
 }
 
@@ -607,9 +616,106 @@ function mobilePopularSlider() {
 
 
 
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			popup.forEach((el) => {
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
 
 
 
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
+}
+
+
+
+
+
+
+
+const search = document.querySelector('.search-city input')
+const results = document.querySelector(".city-list");
+
+let hiddenSearch = document.querySelector('#seachHidden')
+let search_term = "";
+
+
+
+
+const showList = (city) => {
+  const API_URL = `https://sunbeach.arkada-web-studio.ru/wp-json/wp/v2/${city}?per_page=100`;
+
+  console.log(city)
+
+
+  fetch(API_URL)
+    .then(response => response.json())
+    .then(data => {
+      results.innerHTML = "";
+      data
+        .filter((item) => {
+          return (
+            item.name.toLowerCase().includes(search_term)
+          );
+        })
+        .forEach((e, i) => {
+          const li = document.createElement("li");
+          li.innerHTML = e.name;
+          li.dataset.slug = e.slug
+          results.appendChild(li);
+          results.classList.add('active')
+          
+
+          li.addEventListener('click', (e) => {
+            search.value = e.target.innerHTML
+            search.dataset.slug = e.target.dataset.slug
+            hiddenSearch.value = e.target.dataset.slug
+            results.classList.remove('active')
+						console.log('Good')
+          })
+        });
+    })
+};
+
+if(search){
+  search.addEventListener("input", (event) => {
+    search_term = event.target.value.toLowerCase();
+    if(search_term) {
+      showList('cities');
+    } else  {
+      results.classList.remove('active')
+    }
+  });
+}
 
 
 

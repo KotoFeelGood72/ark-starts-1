@@ -1,5 +1,10 @@
-.filter-shop 
-	ul.filter-row
+.filter-shop
+	.filter-trigger.btn-expand 
+		p Фильтры
+		+iconify({
+			icon: 'clarity:plus-line'
+		})
+	ul.menu-expand.filter-row
 		li.filter-item 
 			.filter_item--head 
 				p Цвет

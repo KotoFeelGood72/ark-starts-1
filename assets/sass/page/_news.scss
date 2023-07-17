@@ -1,6 +1,14 @@
 .news_main, .home-blog_list {
 	margin-bottom: 10rem;
 	@include bp($point_2) {
-		margin-bottom: 3rem;
+		margin-bottom: 5rem;
 	}
+
+	// @include bp($point_5) {
+	// 	margin-bottom: 1.5rem;
+	// }
+}
+
+.next_mod, .prev_mod {
+	display: none;
 }
