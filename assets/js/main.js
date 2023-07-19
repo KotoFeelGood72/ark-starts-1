@@ -560,16 +560,20 @@ function removeProducts() {
 function mobilePopularSlider() {
 
 	let mobileSLider = new Swiper(".popular-slider", {
+		spaceBetween: 20,
 		breakpoints: {
 			480: {
+				slidesPerView: 1,
 				spaceBetween: 20,
-				slidesPerView: 1
 			},
 			768: {
 				spaceBetween: 20,
 				slidesPerView: 2
 			},
 		},
+		pagination: {
+			el: '.popular-pagination'
+		}
 	});
 }
 

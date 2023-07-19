@@ -16,7 +16,9 @@
 	@include flex-start;
 	flex-wrap: wrap;
 	margin: -2rem -2rem 0 0;
-	display: none;
+	@include bp($point_5) {
+		display: none;
+	}
 	&.active {
 		display: block;
 	}
