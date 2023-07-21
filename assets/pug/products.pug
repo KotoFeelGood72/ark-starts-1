@@ -66,11 +66,12 @@ block content_block
 								+iconify({
 									icon: 'ic:round-minus'
 								})
-							input(type="number" id="qty-input" value="1")
+							input(type="number" id="qty-input" value="100" min="100" max="999" maxlength="3" oninput="limitInputLength(this, 3);" )
 							button(type="button" id="qty-plus")
 								+iconify({
 									icon: 'tabler:plus'
 								})
+							.qty-notice Минимальный размер заказа 100 шт.
 			.products_body 
 				.products_content 
 					h2 Описание

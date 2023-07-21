@@ -68,6 +68,16 @@
 	}
 }
 
+.pt8 {
+	padding-top: 8rem;
+	@include bp($point_2) {
+		padding-top: 6rem;
+	}
+	@include bp($point_5) {
+		padding-top: 4rem;
+	}
+}
+
 
 
 

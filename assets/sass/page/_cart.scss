@@ -84,8 +84,14 @@
 	border-radius: 1.5rem;
 	overflow: hidden;
 	padding: 3rem;
-	@include bp($point_5) {
+	width: 100%;
+
+	.btn {
 		width: 100%;
+		a {
+			width: 100%;
+			@include flex-center;
+		}
 	}
 }
 

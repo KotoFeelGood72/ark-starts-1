@@ -192,3 +192,28 @@
   background: #c4c4c444;
 	border-radius: 10rem;
 }
+
+
+
+
+.thanks {
+	// opacity: 1;
+	// visibility: visible;
+	@include flex-center;
+
+	.popup_main {
+		padding: 6.5rem;
+		border-radius: 2rem;
+		text-align: center;
+
+		p {
+			padding: 1.5rem 0 4rem 0;
+			opacity: .7;
+		}
+
+		.icons {
+			font-size: 7.3rem;
+			color: $green;
+		}
+	}
+}

@@ -272,6 +272,15 @@
 
 .products_addToCart {
 	@include flex-start;
+	position: relative;
+
+	.products_quantity {
+		position: static;
+		.qty-notice {
+			right: auto;
+			left: 0;
+		}
+	}
 	.btn {
 		margin-right: 1.5rem;
 		@include bp($point_5) {

@@ -144,73 +144,6 @@ $(document).ready(function() {
 
 
 
-// const btnSubmit = document.querySelectorAll('button[type="submit"]')
-// Array.from(btnSubmit).map((item) => {
-// 	item.addEventListener('click', (e) => {
-// 		e.preventDefault();
-// 		succes('.succes')
-// 	})
-// })
-
-
-// function allDefautAnim(bottom = false, start = '-=30% center', end = 'bottom') {
-// 	const paralaxWrapper = Array.from(document.querySelectorAll('.sec_anim')).map(function(el) {
-// 		const arr = Array.from(el.querySelectorAll('.el_anim')).map(function (item, index) {
-// 			const tl = gsap.timeline();
-// 			ScrollTrigger.create({
-// 				animation: tl,
-// 				trigger: el,
-// 				start: start,
-// 				end: end,
-// 				ease: 'none',
-// 			})
-// 			tl.fromTo(item, {
-// 				y: 100, 
-// 				duration: .4,
-// 				autoAlpha: 0,
-// 			}, {
-// 				y: 0,
-// 				autoAlpha: 1,
-// 				delay: 0.1 + (0.1 * index),
-// 			});
-// 		});
-// 	});
-// }
-
-// function popupForms(pr) {
-
-// 	let popupForms = document.querySelector('.callback')
-// 	let popupFormsTrigger = document.querySelectorAll('.btn_popup')
-// 	let popupFormsClose = document.querySelectorAll('.remove_popup')
-// 	let popupFormsSubmit = popupForms.querySelector('button[type="submit"]')
-// 	const burgerPopup = document.querySelector('.burger')
-	
-// 	Array.from(popupFormsTrigger).map((item) => {
-// 		item.addEventListener('click', () => {
-// 			popupForms.classList.add('active');
-// 			win.style.overflow = "hidden";
-// 			win.style.paddingRight = pr; 
-// 			burgerPopup.classList.remove('active')
-// 		})
-// 	})
-
-
-// 	Array.from(popupFormsClose).map((item) => {
-// 		item.addEventListener('click', () => {
-// 			popupForms.classList.remove('active')
-// 			win.style.overflow = "";
-// 			win.style.paddingRight = ""; 
-// 		})
-// 	})
-
-// 	popupFormsSubmit.addEventListener('click', () => {
-// 		popupForms.classList.remove('active')
-// 		win.style.overflow = "";
-// 		win.style.paddingRight = ""; 
-// 		succes('.succes')
-// 	})
-// }
-
 
 
 
@@ -263,11 +196,8 @@ async function maps(street, city, size) {
 
 
 function selectFilter() {
-
 	const select = document.querySelectorAll('.sort-filter select');
-
 	const selectCollection = Array.from(select).map(item => new Choices(item, {
-		// Дополнительные параметры и настройки Choice.js
 		searchEnabled: false,
 		itemSelectText: '',
 	}));
@@ -506,22 +436,29 @@ function shopMenu() {
 
 function setupQuantity() {
   let quantityBlocks = document.querySelectorAll('.products_quantity');
-
+	
   quantityBlocks.forEach((block) => {
+		let qtyNotice = document.querySelector('.qty-notice')
     let minusBtn = block.querySelector('#qty-minus');
     let plusBtn = block.querySelector('#qty-plus');
     let inputField = block.querySelector('#qty-input');
 
     minusBtn.addEventListener('click', () => {
       let currentValue = parseInt(inputField.value);
-      if (currentValue > 1) {
+			let minVal = inputField.getAttribute('min')
+      if (currentValue > minVal) {
         inputField.value = currentValue - 1;
-      }
+				qtyNotice.classList.remove('active')
+      } else {
+				qtyNotice.classList.add('active')
+			}
     });
 
     plusBtn.addEventListener('click', () => {
       let currentValue = parseInt(inputField.value);
       inputField.value = currentValue + 1;
+			
+			qtyNotice.classList.remove('active')
     });
   });
 }
@@ -576,41 +513,6 @@ function mobilePopularSlider() {
 		}
 	});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -721,6 +623,12 @@ if(search){
   });
 }
 
+
+function limitInputLength(input, maxLength) {
+	if (input.value.length > maxLength) {
+		input.value = input.value.slice(0, maxLength);
+	}
+}
 
 
 

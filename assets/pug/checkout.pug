@@ -61,6 +61,16 @@ block content_block
 									span 300 ед. товара
 									p 30 000 
 							+btn({
-								link: 'Перейти к оформлению'
+								link: 'Заказать',
+								class: 'order-btn trigger',
+								target: 'thanks'
 							})
+	.thanks.popup(data-id="thanks") 
+		.popup_bg.remove 
+		.popup_main.thanks_main 
+			h3 Ваш заказ принят!
+			p Мы свяжемся с вами в ближайшее время.
+			+iconify({
+				icon: 'streamline:interface-validation-check-circle-checkmark-addition-circle-success-check-validation-add-form'
+			})
 									

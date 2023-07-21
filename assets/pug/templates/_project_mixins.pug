@@ -61,7 +61,7 @@ mixin section-head(data)
 // Btn
 
 mixin btn(data)
-	.btn(class=data.class ? data.class : '' class="btn") 
+	.btn(class=data.class ? data.class : '' class="btn" data-target=data.target ? data.target : '') 
 		if data.submit 
 			button(type="button" class="trigger" class=data.class ? data.class : '' data-target=data.target)=data.submit
 		else if data.link 

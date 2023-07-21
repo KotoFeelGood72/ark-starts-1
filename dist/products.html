@@ -234,16 +234,17 @@
                   </ul>
                 </div>
                 <div class="products_addToCart"> 
-                  <div class="btn btn"> <a href="#">Добавить в корзину</a>
+                  <div class="btn btn" data-target=""> <a href="#">Добавить в корзину</a>
                   </div>
                   <div class="products_quantity"> 
                     <button type="button" id="qty-minus">
                       <div class="icons ic:round-minus"><span class="iconify" data-icon="ic:round-minus"></span></div>
                     </button>
-                    <input type="number" id="qty-input" value="1">
+                    <input type="number" id="qty-input" value="100" min="100" max="999" maxlength="3" oninput="limitInputLength(this, 3);">
                     <button type="button" id="qty-plus">
                       <div class="icons tabler:plus"><span class="iconify" data-icon="tabler:plus"></span></div>
                     </button>
+                    <div class="qty-notice">Минимальный размер заказа 100 шт.</div>
                   </div>
                 </div>
               </div>
