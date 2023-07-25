@@ -166,6 +166,20 @@
 		font-size: 3rem;
 		font-family: $font_3;
 		margin-bottom: 4rem;
+		@include flex-start;
+		flex-direction: column;
+		align-items: flex-start;
+		&:after {
+			background-color: $light-green;
+			margin-top: 1rem;
+			border-radius: .7rem;
+			padding: .5rem 1.5rem;
+			content: 'Цена за 1 товар';
+			font-size: 1.2rem;
+			color: $green;
+			font-family: $font_1;
+			font-weight: 500;
+		}
 	}
 }
 
@@ -273,6 +287,7 @@
 .products_addToCart {
 	@include flex-start;
 	position: relative;
+	flex-wrap: wrap;
 
 	.products_quantity {
 		position: static;
@@ -394,4 +409,12 @@
 	@include bp($point_5) {
 		margin-bottom: 6rem;
 	}
+}
+
+.product_total--price {
+	font-size: 4rem;
+	font-family: $font_2;
+	color: $dark;
+	width: 100%;
+	margin-bottom: 2.5rem;
 }
