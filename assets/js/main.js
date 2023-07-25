@@ -568,60 +568,67 @@ function isRemove(popup) {
 
 
 
-const search = document.querySelector('.search-city input')
-const results = document.querySelector(".city-list");
+const searchInputs = document.querySelectorAll('.search_input');
+const resultsContainers = document.querySelectorAll('.search_result');
+const hiddenSearchInputs = document.querySelectorAll('.searchHidden');
 
-let hiddenSearch = document.querySelector('#seachHidden')
-let search_term = "";
-
-
-
-
-const showList = (city) => {
+const showList = (city, search_term, results) => {
   const API_URL = `https://sunbeach.arkada-web-studio.ru/wp-json/wp/v2/${city}?per_page=100`;
-
-  console.log(city)
-
 
   fetch(API_URL)
     .then(response => response.json())
     .then(data => {
-      results.innerHTML = "";
+      results.innerHTML = ""; // Обновление результатов для текущего поля
       data
         .filter((item) => {
-          return (
-            item.name.toLowerCase().includes(search_term)
-          );
+          return item.name.toLowerCase().includes(search_term);
         })
         .forEach((e, i) => {
           const li = document.createElement("li");
           li.innerHTML = e.name;
-          li.dataset.slug = e.slug
+          li.dataset.slug = e.slug;
           results.appendChild(li);
-          results.classList.add('active')
-          
+          results.classList.add('active');
 
           li.addEventListener('click', (e) => {
-            search.value = e.target.innerHTML
-            search.dataset.slug = e.target.dataset.slug
-            hiddenSearch.value = e.target.dataset.slug
-            results.classList.remove('active')
-						console.log('Good')
-          })
+            const parentContainer = results.closest('.search-city-w');
+            const relatedInput = parentContainer.querySelector('.search_input input');
+            relatedInput.value = e.target.innerHTML;
+            relatedInput.dataset.slug = e.target.dataset.slug;
+
+            const relatedHiddenSearch = parentContainer.querySelector('.seachHidden');
+            relatedHiddenSearch.value = e.target.dataset.slug;
+
+            results.classList.remove('active');
+          });
         });
-    })
+    });
 };
 
-if(search){
-  search.addEventListener("input", (event) => {
-    search_term = event.target.value.toLowerCase();
-    if(search_term) {
-      showList('cities');
-    } else  {
-      results.classList.remove('active')
-    }
-  });
-}
+searchInputs.forEach((searchInput, index) => {
+  const relatedResultsContainer = resultsContainers[index];
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (event) => {
+      const search_term = event.target.value.toLowerCase();
+      const city = event.target.dataset.type;
+
+      if (search_term) {
+        showList(city, search_term, relatedResultsContainer);
+      } else {
+        relatedResultsContainer.innerHTML = "";
+        relatedResultsContainer.classList.remove('active');
+      }
+    });
+  }
+});
+
+
+
+
+
+
+
 
 
 function limitInputLength(input, maxLength) {

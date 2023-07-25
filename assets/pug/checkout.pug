@@ -45,11 +45,12 @@ block content_block
 										.checkout_input--group
 											.search-city-w 
 												+input({
-													class: 'search-city',
+													class: 'search-city search_input',
 													place: 'Регион',
+													types: 'cities'
 												})
-												input(type="hidden" id="seachHidden")
-												ul.city-list
+												input(type="hidden" class="seachHidden")
+												ul.city-list.search_result
 											+input({
 												place: 'Улица, дом, квартира/офис',
 											})

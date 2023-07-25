@@ -6,12 +6,14 @@ header.header
 					a(href="#")
 						img(src="i/svg/logo.svg", alt="")
 						img(src="i/svg/txt-logo.svg", alt="")
-				.search-input 
-					input(type="search" placeholder="Поиск")
+				.search-input.search_input.search-city-w  
+					input(type="text" placeholder="Поиск" data-type="cities")
+					input(type="hidden" class="seachHidden")
 					button(type="submit") 
 						+iconify({
 							icon: 'heroicons:magnifying-glass-solid'
 						})
+					ul.city-list.search_result
 				.top-menu
 					.top_menu--label.btn-expand Заказ растений
 					ul.menu-expand

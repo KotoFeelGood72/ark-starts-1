@@ -26,11 +26,13 @@
         <div class="header_main">
           <div class="header_top"> 
             <div class="logo"> <a href="#"><img src="i/svg/logo.svg" alt=""><img src="i/svg/txt-logo.svg" alt=""></a></div>
-            <div class="search-input"> 
-              <input type="search" placeholder="Поиск">
+            <div class="search-input search_input search-city-w"> 
+              <input type="text" placeholder="Поиск" data-type="cities">
+              <input class="seachHidden" type="hidden">
               <button type="submit"> 
                 <div class="icons heroicons:magnifying-glass-solid"><span class="iconify" data-icon="heroicons:magnifying-glass-solid"></span></div>
               </button>
+              <ul class="city-list search_result"></ul>
             </div>
             <div class="top-menu">
               <div class="top_menu--label btn-expand">Заказ растений</div>
@@ -852,17 +854,17 @@
                     <ul class="app_form--row">
                       <li> 
                         <div class="app-input">
-                          <input type="text" placeholder="Ваше имя"/>
+                          <input type="text" placeholder="Ваше имя" data-type=""/>
                         </div>
                       </li>
                       <li>
                         <div class="app-input">
-                          <input type="tel" placeholder="Телефон"/>
+                          <input type="tel" placeholder="Телефон" data-type=""/>
                         </div>
                       </li>
                       <li>
                         <div class="app-input">
-                          <input type="email" placeholder="E-Mail"/>
+                          <input type="email" placeholder="E-Mail" data-type=""/>
                         </div>
                       </li>
                       <li>

@@ -113,6 +113,14 @@
 	}
 }
 
+
+.search-input button {
+	background-color: $white;
+	z-index: 3;
+	pointer-events: none;
+	padding-right: 1rem;
+	margin-right: -1rem;
+}
 .form_main {
 	border-radius: 2rem;
 	background: #EFF4EB;
