@@ -26,6 +26,7 @@ $(document).ready(function ($) {
 		pageWidget(['products']);
 		pageWidget(['props']);
 		pageWidget(['checkout']);
+		pageWidget(['thanks']);
 		getAllClasses('html', '.elements_list');
 	}
 	if($('.sort-filter select')) {

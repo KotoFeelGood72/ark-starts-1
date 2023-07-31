@@ -1,0 +1,35 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Спасибо за заказ!'}
+block content_block
+	.block-head
+		.block_head--main
+			+bread(['Главная'], 'Спасибо за заказ!')
+			.block_head--title
+				.section_in 
+					h1=array.title_inner
+	.block-default 
+		.section_in 
+			.block_thanks
+				.block_table--w 
+					ul.block_table--head 
+						each item in ['Наименование', 'Кол-во', 'Стоимость']
+							li=item 
+					ul.block-table
+						-for(i = 0; i < 3; i++)
+							li 
+								ul 
+									each item in ['Бриггита Блю', '100 шт', '10 000 ₽']
+										li=item
+				.block_thanks--result 
+					ul 
+						li 
+							span Номер заказа
+							p 12345
+						li 
+							span Дата
+							p 07.11.2023
+						li 
+							span Способ доставки
+							p Доставка СДЭК

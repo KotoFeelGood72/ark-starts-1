@@ -1,0 +1,118 @@
+.block_thanks {
+	@include flex-start;
+	align-items: flex-start;
+
+	@include bp($point_2) {
+		flex-direction: column;
+	}
+}
+
+.block_table--w {
+	margin-right: 10.6rem;
+	max-width: 100rem;
+	width: 100%;
+	border: .1rem solid #2C2C2C26;
+	border-radius: 1rem;
+
+	@include bp($point_2) {
+		margin: 0 0 6rem 0;
+	}
+}
+
+.block_table--head {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	width: 100%;
+	text-align: center;
+	background-color: $green;
+	border-radius: 1rem 1rem 0 0;
+	color: $white;
+	font-size: 2rem;
+	font-family: $font_2;
+	@include bp($point_2) {
+		font-size: 1.6rem;
+	}
+	li {
+		padding: 2rem;
+		@include bp($point_5) {
+			font-size: 1rem;
+			padding: 1rem 1rem;
+		}
+
+		&:nth-child(2) {
+			border-left: .1rem solid #FFFFFF33;
+			border-right: .1rem solid #FFFFFF33;
+		}
+	}
+}
+
+.block-table {
+	@include bp($point_2) {
+		font-size: 1.2rem;
+	}
+
+	&>li {
+		&:nth-child(2n + 2) {
+			background-color: $light-green;
+		}
+		ul {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+			width: 100%;
+		}
+		li {
+			padding: 2rem;
+			@include bp($point_6) {
+				padding: 1rem 1.5rem;
+				font-size: 1.2rem;
+			}
+			&:nth-child(2) {
+				&:nth-child(2) {
+					border-left: .1rem solid #2C2C2C1A;
+					border-right: .1rem solid #2C2C2C1A;
+				}
+			}
+			&:nth-child(2n + 2), &:nth-child(3n + 3) {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.block_thanks--result {
+	width: 100%;
+	max-width: 41.4rem;
+	background-color: $light-green;
+	padding: 5rem;
+	border-radius: 2rem;
+
+	@include bp($point_2) {
+		padding: 2rem;
+	}
+
+	li  {
+
+		span {
+			color: #2C2C2C80;
+			display: block;
+			margin-bottom: 1.5rem;
+			font-size: 1.6rem;
+			@include bp($point_2) {
+				margin-bottom: .5rem;
+				font-size: 1.4rem;
+			}
+		}
+		p {
+			font-size: 2rem;
+			@include bp($point_2) {
+				font-size: 1.4rem;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+			@include bp($point_5) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
